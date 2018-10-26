@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  26 OCT 2018 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  26 OCT 2018 17:42
 entering extended mode
 **./main.tex
 (main.tex
@@ -984,11 +984,11 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
  [4] (Files/introduction.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-) [5
+ [5
 
-]
-(Files/overview.tex
-<Images/11.png, id=243, 3156.54282pt x 1885.79532pt>
+])
+[6] (Files/overview.tex
+<Images/11.png, id=257, 3156.54282pt x 1885.79532pt>
 File: Images/11.png Graphic file (type png)
 <use Images/11.png>
 Package pdftex.def Info: Images/11.png  used on input line 5.
@@ -999,27 +999,27 @@ Package pdftex.def Info: Images/11.png  used on input line 11.
 (pdftex.def)             Requested size: 455.24411pt x 271.95142pt.
 
 
-LaTeX Warning: Citation `DAM' on page 6 undefined on input line 15.
+LaTeX Warning: Citation `DAM' on page 7 undefined on input line 15.
 
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 15.
 ("C:\Users\ERTY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-[6
+[7
 
-] [7 <./Images/11.png>] [8] (Files/requirements.tex) [9
+] [8 <./Images/11.png>] [9] (Files/requirements.tex) [10
 
 ] (Files/alloy.tex)
-[10
+[11
 
 ] (Files/effort.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
-) [11
+) [12
 
-] [12
+] [13
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
@@ -1036,9 +1036,9 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 19972 strings out of 492970
- 376361 string characters out of 3127037
- 447456 words of memory out of 3000000
+ 19983 strings out of 492970
+ 376429 string characters out of 3127037
+ 447457 words of memory out of 3000000
  23360 multiletter control sequences out of 15000+200000
  37693 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1051,9 +1051,9 @@ lm/lmtt10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
 times/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (12 pages, 844115 bytes).
+Output written on main.pdf (13 pages, 847082 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
  351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
