@@ -1,28 +1,35 @@
-This document has been prepared to help you approaching Latex as a formatting tool for your Travlendar+ deliverables. This document suggests you a possible style and format for your deliverables and contains information about basic formatting commands in Latex. A good guide to Latex is available here \href{https://tobi.oetiker.ch/lshort/lshort.pdf}{https://tobi.oetiker.ch/lshort/lshort.pdf}, but you can find many other good references on the web. 
-
-Writing in Latex means writing textual files having a \texttt{.tex} extension and exploiting the Latex markup commands for formatting purposes. Your files then need to be compiled using the Latex compiler. Similarly to programming languages, you can find many editors that help you writing and compiling your latex code. Here \href{https://beebom.com/best-latex-editors/}{https://beebom.com/best-latex-editors/} you have a short oviewview of some of them. Feel free to choose the one you like.  
-
-Include a subsection for each of the following items\footnote{By the way, what follows is the structure of an itemized list in Latex.}:
-\begin{itemize}
-\item
-Purpose: here we include the goals of the project
-\item
-Scope: here we include an analysis of the world and of the shared phenomena
-\item
-Definitions, Acronyms, Abbreviations
-\item
-Revision history
-\item
-Reference Documents 
-\item
-Document Structure
-\end{itemize}
-Below you see how to define the header for a subsection.
 \subsection{Purpose}
 ... Here you see a subsubsection
 \subsection{Scope}
 ... Here you see a subsubsection
 \subsubsection{Goals}
+
+\begin{enumerate}
+\item[•] {\Large Data4Help}
+	\begin{enumerate}
+		\item [G.1] Locate users' position on demand and in real time.
+		\item [G.2] Retrieve users’ health status on demand and track it in live.
+		\item [G.3] Allow third parties registered to retrieve information about users in 					single mode and in group mode.
+		\item [G.4] Ensure users' privacy.
+		\item [G.5] Allow third parties to retrieve historical data and statistics about 					users.
+	\end{enumerate}
+	
+\item[•] {\Large AutomatedSOS}
+	\begin{enumerate}
+		\item [G.1] Monitor in real time users’ health status with more attention to 						critical parameters.
+		\item [G.2] Allow only health-interested third parties the access to data detected 					by AutomatedSOS.
+		\item [G.3] Provides to send an ambulance if certain parameters are below critical 					values.
+	\end{enumerate}
+	
+\item[•] {\Large Track4Run}	
+	\begin{enumerate}
+		\item [G.1] Allow races organizer to promote into the system a new race and specify 			all the useful information about the race.
+		\item [G.2] Allow users to enrol on a specific race.
+		\item [G.3] Allow users to watch in real time the position of every athletes in a 				specific race during the run.
+	\end{enumerate}
+\end{enumerate}
+
+
 \subsubsection{World Phenomena}
 \subsection{Definitions, Acronyms, Abbrevations}
 ... Here you see a subsubsection
