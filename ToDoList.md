@@ -2,21 +2,20 @@
 
 - Introduction
 	- [X] Purpose
-	- [X] Scope
-		- [ ] Description
+	- [ ] Scope
 		- [X] Goals
-		- [ ] World Phenomenas
+		- [ ] World Phenomenas (Da mettere?/Cosa mettere?)
 		- [ ] Definitions/Acronyms/Abbreviations
 	- [ ] Revision History
 	- [ ] Reference documents
 	- [ ] Document Structure
 - Overall Description
 	- [ ] Product perspective
-		- [ ] Class diagram
+		- [X] Class diagram
 		- [ ] StateChart
 	- [ ] Product Functions
-	- [ ] User Characterisitcs
-	- [ ] Assumptions
+	- [X] User Characterisitcs
+	- [X] Assumptions
 		- [X] Text Assumptions
 		- [X] Domain Assumptions
 - Specfific Requirments
