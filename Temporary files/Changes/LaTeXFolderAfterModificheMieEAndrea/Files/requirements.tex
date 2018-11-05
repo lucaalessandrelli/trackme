@@ -1,0 +1,54 @@
+Organize this section according to the rules defined in the project description. 
+\subsection{External Interface Requirements}
+\subsubsection{User Interfaces}
+\subsubsection{Hardware Interfaces}
+\subsubsection{Software Interfaces}
+\subsubsection{Communication Interfaces}
+
+
+\subsection{Functional Requirements}
+\begin{enumerate}
+\item[•]{\Large Data4Help}
+	\begin{enumerate}
+	\item [G.1] Locate user's position on demand and in real time / G.2 Retrieve user's health status on demand and track it in live
+		\begin{enumerate}
+		\item [D.1.1] Users' information collected are coming from installed app on users' smartphone/smartwatch, that are partner of TrackMe.
+		\item [D.1.4] Devices used to monitor individuals always work and report 			the correct values.	
+		\item [D.1.6] Partner application always report correct values as well.
+		\item [R.1.5] The system in order to collect information has to request and receive data from partner applications installed on users' device.
+		\item [R.1.1] The system automatically has to collect and store data, for every tracked user, with a resolution of 10 minutes.
+    	\item [R.1.2] The system has to update statistic whenever a data is collected.
+    	\item [R.1.3] When a real time request is performed the system has to collect and store data, for the specific users, with a resolution of 1 minute.
+    	\item [R.1.6] The system has to manage data from different partner applications installed on users' device to optimize data interpolation.
+		\item [D.1.3] Individuals must always dress a smartwatch (or a smartphone) that retrieve health parameters and user's positions.    	
+		\end{enumerate}		
+		
+	\item [G.3] Allow third parties registered to retrieve information about users with single and group requests.
+		\begin{enumerate}
+		\item [D.1.7] In order to perform single mode acquisition, third parties has to insert fiscal code of tracked user (aka: nor security number neither fiscal code are visible on the application).
+		\item [R.1.7] Allow third parties to request single mode acquisition providing the fiscal code of interested user.	
+		\item [D.1.8] In order to perform group mode acquisition, third parties have to select attributes of individuals in which they are inserted.
+		\item [R.1.8] Allow third parties to request group mode acquisition providing the users' attributes which is interested in.		
+		
+		
+		\end{enumerate}		
+	\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\subsection{Performance Requirements}
+
+\subsection{Design Constraints}
+\subsubsection{Standards compliance}
+\subsubsection{Hardware limitations}
+\subsubsection{Any other constraint}
+
+\subsection{Software System Attributes}
+\subsubsection{Reliability}
+\subsubsection{Availability}
+\subsubsection{Security}
+\subsubsection{Maintainability}
+\subsubsection{Portability}

@@ -1,0 +1,113 @@
+
+\subsection{Product perspective}
+
+\begin{center}
+White class are dedicated to perform Data4Help service, the other two applications are listed below.
+\includegraphics[scale=0.5]{Images/Class_Data4Help.png}
+\end{center}
+
+\begin{center}
+{\color{Salmon} Red classes} are dedicated to {\color{Salmon} AutomatedSOS} application, supported by Data4Help service (White ones).
+\includegraphics[scale=0.5]{Images/Class_AutoSOS.png}
+\end{center}
+
+\begin{center}
+{\color{LimeGreen} Green classes} are dedicated to {\color{LimeGreen} Track4Run} application, supported by Data4Help service (White ones).
+\includegraphics[scale=0.5]{Images/Class_Track4Run.png}
+\end{center}
+
+
+\subsection{Product functions}
+"Track4Run"
+The main function of Track4Run is to define the path for the run and
+
+\subsection{User characteristics}
+\begin{enumerate}
+\item Third Party: Registered company interested in retrieve useful data from TrackMe's users. Usually this information can be useful for marketing strategy.
+	\begin{enumerate}
+		\item Health Third Party: Non-Profit Company interested to monitor 		individuals in order to prevent critical diseases. 
+	\end{enumerate}
+\item User: Individual that provides information about himself. His privacy must be protected by the system.
+	\begin{enumerate}
+		\item Athlete: Track4Run's user that is enrolled in one or more race.
+		\item Promoter: Track4Run's user that is the promoter of one or more race.
+		\item Spectator:Track4Run's user that want follow athletes in one or more race.
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Assumptions, dependencies and constraints}
+In the specification document certain parts were not specific and were ambiguous. So we decided to make the following assumptions.
+
+\subsubsection{Text Assumptions}
+\begin{enumerate}
+
+\item[•] {\Large Data4Help}
+	\begin{enumerate}
+	\item Users' information are collected from partner applications or from the other two TrackMe applications installed on users' devices.
+	\item Only third parties that are registered to Data4Help can request the monitoring service.
+	\item When the partner application is installed, the user is asked to accept or deny the treatment of retrieved data as information of an individual and not only as information of a group of individuals.
+	\item Individual monitoring requests are not accepted or denied one by one by the specific user. If the user agreed on the treatment of his data as information of an individual all Individual request by third parties are automatically accepted.	
+	\item Groups are characterized by its member’s attributes (age, gender, city, etc…).
+	\item Health status parameters that can be acquired are all the ones supported by a standard smartwatch as: Heart Rate, Blood Pressure, Pedometer, Calories Calculation.
+	\end{enumerate}
+	
+\item[•] {\Large AutomatedSOS}
+	\begin{enumerate}
+	\item AutomatedSOS exploit only smartwatches devices to retrieve all the information needed.
+	\item AutomatedSOS is an application that needs to be installed into the user's device.
+	\item All data retrieved by AutomatedSOS are sent to Data4Help.
+	\item In order to keep under systematic review the user's health status all the historical information about the user are received by Data4Help's Database.
+    \item This service can be used only by elderly people (70+) or by who really need it, in order to avoid useless waste of resources.
+    \item Users can see all his personal information that are sent to the Data4Help service. 
+	\end{enumerate}
+	
+\item[•] {\Large Track4Run}
+	\begin{enumerate}
+	\item When the user register to the application he's asked to accept or deny the treatment of his data by the Data4Help service.
+	\item The application has three functions: 
+	\begin{enumerate}
+	\item Promoter: allow the user to manage a run.  
+	\item Athlete: allow the user to participate to a run. In order to be an athlete the request of data treatment by the Data4Help service need to be accepted.
+	\item Spectator: Allow the user to watch in real time the positions of all the athletes in a given run.
+	\end{enumerate}
+	\item Any user can organize an event.
+    \item All the events can be spectated by users.
+    \item All users invited to a run can accept or discard the request.
+    \item Race path are always composed by citizen routes (never in private circuits or stadiums)
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Domain Assumptions}
+\begin{enumerate}
+
+\item[•] {\Large Data4Help}
+	\begin{enumerate}
+	\item [D.1] ??Is this a doman assumption?? Users' information are collected from partner applications or from the other two TrackMe applications installed on users' devices.
+	\item [D.2] The identification (fiscal code, social security number) and the secondary data (attributes) given by the individual during the registration are correct.
+    \item [D.3] Devices used to monitor individuals always report correct values.
+    \item [D.4] Partner application always report correct values to Data4Help.
+	\item [D.5] ??Is this a doman assumption?? In order to perform an individual request, third parties has to insert the user's fiscal code or security number.
+	\item [D.6] Security number and fiscal code are not information given to third parties by Data4Help.
+	\item [D.8] ??Is this a doman assumption?? In order to perform a group request, third parties have to select attributes that defines a set of individuals.
+	\end{enumerate}
+	
+\item[•] {\Large AutomatedSOS}
+	\begin{enumerate}
+	\item [D.3] Devices used to monitor individuals always report correct values.
+	\item [D.9] The user always dresses a smartwatch on which AutomatedSOS is installed.    
+	\item [D.10] The ambulance system is always up and ready to receive messages from AutomatedSOS.
+    \item [D.11] The ambulance successfully reach the location of the individual.
+    \item [D.12] The ambulance always get to the location in the minimum amount of time.
+    
+	\end{enumerate}
+	
+\item[•] {\Large Track4Run}
+	\begin{enumerate}
+	\item [D.3] Devices used to monitor individuals always report correct values.
+	\item [D.13] During a run athletes always dress a smartwatch on which Track4Run is installed.
+	\item [D.14] The path defined by the organizer actually exist.
+    \item [D.16] If an athlete enroll to a run then he also participates to the run.
+    \item [D.17] All athletes have their tracking devices with them for the entire duration of the run.
+    \item [D.18] Athletes never go out of the defined path.
+	\end{enumerate}
+\end{enumerate}
