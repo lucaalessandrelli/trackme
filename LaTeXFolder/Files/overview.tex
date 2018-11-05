@@ -33,6 +33,7 @@ The main function of Track4Run is to define the path for the run and
 		\item Promoter: Track4Run's user that is the promoter of one or more race.
 		\item Spectator:Track4Run's user that want follow athletes in one or more race.
 	\end{enumerate}
+\item Partner Application: Application installed on users' device, not necessarily developed by TrackMe, that is in charge with retrieve location and health status.
 \end{enumerate}
 
 \subsection{Assumptions, dependencies and constraints}
@@ -43,36 +44,42 @@ In the specification document certain parts were not specific and were ambiguous
 
 \item[•] {\Large Data4Help}
 	\begin{enumerate}
-	\item Users' information are collected from partner applications on users' devices.
-	\item For example all the fitness application developed for smartwatch can be partner applications, also AutomatedSOS and Track4Run can be them as well.
-	\item To be legally tracked users have to agree to TrackMe's privacy policy.
-	\item Only registered third parties can request monitoring service.
+	\item Users' information are collected from partner applications or from the other two TrackMe applications installed on users' devices.
+	\item All the partner applications require to submit user credentials.
+	\item When the partner application is installed and credentials are submitted
+	the user is required to accept privacy policy, composed in two parts:
+		\begin{enumerate}
+		\item The first, mandatory, user accept to be tracked in group mode.
+		\item The second, optional, user accept to be tracked in single mode.
+		\end{enumerate}
+	\item Individual monitoring requests are not accepted or denied one by one by the specific user. If the user agreed on the treatment of his data as information of an individual (second part of privacy policy) all Individual request by third parties are automatically accepted.	
+	\item Only third parties that are registered to Data4Help can request the monitoring service.
 	\item Groups are characterized by its member’s attributes (age, gender, city, etc…).
-	\item Discriminative attributes are all the credentials inserted by user (i.e. age, job etc...), their location more or less precise (country, region, city, neighbourhood ..) and the period of time interested (days, weeks, months..).
-	\item Third parties in group mode are interested in number of users that match attribute specified, their location statistics and the statistics of group health status.
-	\item Group mode acquisition can be performed without user's agreement.
-	\item Third parties in single mode are interested to retrieve the sequence of position and health status information, detected from a certain users during a selected time period.	
-	\item Single mode acquisition cannot be performed without user's agreement.
-	\item Health status parameters acquirable are all the ones supported by a standard smartwatch as: Heart Rate, Blood Pressure, Pedometer, Calories Calculation.
-	\item Geographic location can be retrieved either by smartwatch or smartphone.
+	\item Health status parameters that can be acquired are all the ones supported by a standard smartwatch as: Heart Rate, Blood Pressure, Pedometer, Calories Calculation.
 	\end{enumerate}
 	
 \item[•] {\Large AutomatedSOS}
 	\begin{enumerate}
-	\item For this service individuals subscribe to a single Third Party and not the other way around.
-    \item Third parties interested in this type of service are only non-profit organizations that want to rescue individuals in a faster way.
-    \item Different third parties cannot receive information from the same user (Otherwise both send the same SOS request).
-    \item This service can be used only by elderly people (70+) or by who really need it, to avoid useless waste of resources. 
+	\item AutomatedSOS exploit only smartwatches devices to retrieve all the information needed.
+	\item AutomatedSOS is an application that needs to be installed into the user's device.
+	\item All data retrieved by AutomatedSOS are sent to Data4Help.
+	\item In order to keep under systematic review the user's health status all the historical information about the user are received by Data4Help's Database.
+    \item This service can be used only by elderly people (70+) or by who really need it, in order to avoid useless waste of resources.
+    \item Users can see all his personal information that are sent to the Data4Help service. 
 	\end{enumerate}
 	
 \item[•] {\Large Track4Run}
 	\begin{enumerate}
+	\item When the user register to the application he's asked to accept or deny the treatment of his data by the Data4Help service.
+	\item The application has three functions: 
+	\begin{enumerate}
+	\item Promoter: allow the user to manage a run.  
+	\item Athlete: allow the user to participate to a run. In order to be an athlete the request of data treatment by the Data4Help service need to be accepted.
+	\item Spectator: Allow the user to watch in real time the positions of all the athletes in a given run.
+	\end{enumerate}
 	\item Any user can organize an event.
-    \item An event can be public or private.
-    \item If the event is private then, the organizer need to know the security number or the fiscal code of the athletes to invite.
-    \item If the event is public then the only restriction is in the number of athletes admitted.
-    \item All the events can be followed by everyone as spectator.
-    \item All users invited to an event can accept or discard the request.
+    \item All the events can be spectated by users.
+    \item All users invited to a run can accept or discard the request.
     \item Race path are always composed by citizen routes (never in private circuits or stadiums)
     \end{enumerate}
 \end{enumerate}
@@ -82,37 +89,31 @@ In the specification document certain parts were not specific and were ambiguous
 
 \item[•] {\Large Data4Help}
 	\begin{enumerate}
-	\item [D.1.1] Users' information collected are coming from installed app on users' smartphone/smartwatch, that are partner of TrackMe.
-	\item [D.1.2] Whenever an individual download a partner application and through registration accepts its policy, he has to agree to TrackMe's policy too.
-	
-	
-	
-	\item [D.1.3] The identification (fiscal code) and the secondary data (attributes) given by the individual during the registration are correct.
-    \item [D.1.4] Individuals must always dress a smartwatch that retrieve health parameters and user's positions.
-    \item [D.1.5] Devices used to monitor individuals always work and report the correct values.
-    \item [D.1.6] Partner application always report correct values as well.
-	\item [D.1.7] In order to perform single mode acquisition, third parties has to insert fiscal code of tracked user (aka: nor security number neither fiscal code are visible on the application).
-	\item [D.1.8] In order to perform group mode acquisition, third parties have to select attributes of individuals in which they are inserted.
-	\item [D.1.9] Real-time requests last 24 hours in order to avoid waste of resources.
+	\item [D.1] Users' information are collected from partner applications or from the other two TrackMe applications installed on users' devices.
+	\item [D.2] The identification (fiscal code, social security number) and the secondary data (attributes) given by the individual during the registration are correct.
+    \item [D.3] Devices used to monitor individuals always report correct values.
+    \item [D.4] Partner application always report correct values to Data4Help.
+	\item [D.5] In order to perform an individual request, third parties has to know the user's fiscal code or security number.
+	\item [D.6] Security number and fiscal code are not information given to third parties by Data4Help.
 	\end{enumerate}
 	
 \item[•] {\Large AutomatedSOS}
 	\begin{enumerate}
-	\item [D.2.1] All devices used to monitor the health of the individual always work and report the correct values.
-    \item [D.2.2] The ambulance successfully reach the location of the individual.
-    \item [D.2.3] The ambulance always get to the location in the minimum amount of time.
-    \item [D.2.4] As soon as the parameters get below the threshold, the ambulance gets notified
-    \item [D.2.5] Third parties that want to exploit this service need to enable the individual registration function.
-    \item [D.2.6] Users' interested must equip with smartwatch that supports health status acquisition and install AutomatedSOS application on it.
+	\item [D.3] Devices used to monitor individuals always report correct values.
+	\item [D.9] The user always dresses a smartwatch on which AutomatedSOS is installed.    
+	\item [D.10] The ambulance system is always up and ready to receive messages from AutomatedSOS.
+    \item [D.11] The ambulance successfully reach the location of the individual.
+    \item [D.12] The ambulance always get to the location in the minimum amount of time.
+    
 	\end{enumerate}
 	
 \item[•] {\Large Track4Run}
 	\begin{enumerate}
-	\item [D.3.1] The path defined by the organizer actually exist
-    \item [D.3.2] If an athlete enroll to a run then he also participates to the run.
-    \item [D.3.3] All athletes have their tracking devices with them for the entire duration of the run.
-    \item [D.3.4] Athletes never go out of the defined path defined.
-    \item [D.3.5] Users' interested must equip with smartphone that supports location acquisition and install Track4Run application on it.
+	\item [D.3] Devices used to monitor individuals always report correct values.
+	\item [D.13] During a run athletes always dress a smartwatch on which Track4Run is installed.
+	\item [D.14] The path defined by the organizer actually exist.
+    \item [D.16] If an athlete enroll to a run then he also participates to the run.
+    \item [D.17] All athletes have their tracking devices with them for the entire duration of the run.
+    \item [D.18] Athletes never go out of the defined path.
 	\end{enumerate}
-	
 \end{enumerate}

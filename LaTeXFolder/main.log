@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  5 NOV 2018 00:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  5 NOV 2018 13:41
 entering extended mode
 **./main.tex
 (main.tex
@@ -988,22 +988,22 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 [6
 
 ]) [7] (Files/overview.tex
-<Images/Class_Data4Help.png, id=266, 978.65625pt x 717.68124pt>
+<Images/Class_Data4Help.png, id=271, 978.65625pt x 737.75626pt>
 File: Images/Class_Data4Help.png Graphic file (type png)
 <use Images/Class_Data4Help.png>
 Package pdftex.def Info: Images/Class_Data4Help.png  used on input line 6.
-(pdftex.def)             Requested size: 489.32693pt x 358.83974pt.
+(pdftex.def)             Requested size: 489.32693pt x 368.87723pt.
 
 Overfull \hbox (34.08282pt too wide) in paragraph at lines 5--7
  [] 
  []
 
-<Images/Class_AutoSOS.png, id=267, 673.01437pt x 438.13687pt>
+<Images/Class_AutoSOS.png, id=272, 673.01437pt x 438.13687pt>
 File: Images/Class_AutoSOS.png Graphic file (type png)
 <use Images/Class_AutoSOS.png>
 Package pdftex.def Info: Images/Class_AutoSOS.png  used on input line 11.
 (pdftex.def)             Requested size: 336.50636pt x 219.06789pt.
-<Images/Class_Track4Run.png, id=268, 718.93594pt x 555.57562pt>
+<Images/Class_Track4Run.png, id=273, 718.93594pt x 555.57562pt>
 File: Images/Class_Track4Run.png Graphic file (type png)
 <use Images/Class_Track4Run.png>
 Package pdftex.def Info: Images/Class_Track4Run.png  used on input line 16.
@@ -1011,13 +1011,7 @@ Package pdftex.def Info: Images/Class_Track4Run.png  used on input line 16.
 [8
 
  <./Images/Class_Data4Help.png (PNG copy)> <./Images/Class_AutoSOS.png>]
-[9 <./Images/Class_Track4Run.png>]
-Overfull \hbox (1.60669pt too wide) in paragraph at lines 85--86
-[]\T1/ptm/m/n/10.95 Users' in-for-ma-tion col-lected are com-ing from in-stalle
-d app on users' smart-phone/smartwatch,
- []
-
-[10]) [11] (Files/requirements.tex
+[9 <./Images/Class_Track4Run.png>] [10]) [11] (Files/requirements.tex
 Overfull \hbox (22.08318pt too wide) in paragraph at lines 15--16
 []\T1/ptm/m/n/10.95 Users' in-for-ma-tion col-lected are com-ing from in-stalle
 d app on users' smart-phone/smartwatch,
@@ -1042,26 +1036,45 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3FD18084E263B224C21B35F812AA8DDA;3020.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: DA564DE7F219BCF9BD7A3457E1A79F8E;3112
+(rerunfilecheck)             After:  3FD18084E263B224C21B35F812AA8DDA;3020.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 19977 strings out of 492970
- 376200 string characters out of 3127037
- 448312 words of memory out of 3000000
- 23329 multiletter control sequences out of 15000+200000
+ 19983 strings out of 492970
+ 376282 string characters out of 3127037
+ 448314 words of memory out of 3000000
+ 23330 multiletter control sequences out of 15000+200000
  34526 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,21n,65p,432b,592s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
-<C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
-/times/utmr8a.pfb>
-Output written on main.pdf (16 pages, 284475 bytes).
+pdfTeX warning (dest): name{subsubsection.2.5.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.2.5.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C
+:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/time
+s/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmr8a.pfb>
+Output written on main.pdf (16 pages, 286360 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 377 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
+ 385 words of extra memory for PDF output out of 10000 (max. 10000000)
 
