@@ -160,7 +160,165 @@ Organize this section according to the rules defined in the project description.
 
 \end{enumerate}
 
+\subsubsection{Use Case Diagram}
 
+
+\subsubsection{AutomatedSOS Use Cases}
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Sign up \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User has AutomatedSOS application installed on his/her smartwatch.    \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Sing Up" button.
+            \item The user accepts the treatment of data policy.
+            \item The user fills all the attribute fields and clicks on "Register Now" button.
+            \item The system creates the user's account saving his/her attributes.
+        \end{enumerate}}\\ \hline
+Exit Condition   & The user's account has been created and the user is now registered.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If the user does not accept the treatment of data policy a warning is generated saying that in order to register the policy must be accepted.
+\item If the system notices that the social security number or fiscal code used in a registration are already linked to an existing account then a warning is generated saying that there is already an account registered with the given credentials.
+\end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Sign in \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User has AutomatedSOS application installed on his/her smartwatch.    \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Sing In" button.
+            \item The user inserts his/her social security number or fiscal code and his/her password, then clicks the "Enter" button.
+            \item The system accept the login in request.
+        \end{enumerate}}\\ \hline
+Exit Condition   & The user's account has been loaded by the app and the user is now logged in.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If user inserts invalid log in credentials a warning is generated, saying the credentials are invalid.
+\end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Monitor data \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User is logged in. \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Monitor Data" button.
+            \item The system gets all the information that have been retrieved by the application to the user.
+\end{enumerate}}\\ \hline
+Exit Condition   & All the information retrieved by the application are shown on the app.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If the system do not find information about the user then a warning message is shown to the user saying that until now no user data has been recorded by the application.
+\end{itemize}}  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Monitor current health status \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User is logged in. \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks the "Monitor health status" button.
+            \item The system shows all the health values that are being retrieved in real time.
+        \end{enumerate}}\\ \hline
+Exit Condition   & All the health parameters retrieved by the application are shown on the app in real time.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If no health parameters are retrieved a warning message is displayed saying to the user he must wear the smartwatch in order to see parameters in real time. \end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Track4Run Use Cases}
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Sign up \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User has AutomatedSOS application installed on his/her smartwatch.    \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Sing Up" button.
+            \item The user accepts the treatment of data policy.
+            \item The user fills all the attribute fields and clicks on "Register Now" button.
+            \item The system creates the user's account saving his/her attributes.
+        \end{enumerate}}\\ \hline
+Exit Condition   & The user's account has been created and the user is now registered.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If the user does not accept the treatment of data policy a warning is generated saying that in order to register the policy must be accepted.
+\item If the system notices that the social security number or fiscal code used in a registration are already linked to an existing account then a warning is generated saying that there is already an account registered with the given credentials.
+\end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Sign in \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User has Track4Run application installed on his/her smartwatch or smartphone.    \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Sing In" button.
+            \item The user inserts his/her social security number or fiscal code and his/her password, then clicks the "Enter" button.
+            \item The system accept the login in request.
+        \end{enumerate}}\\ \hline
+Exit Condition   & The user's account has been loaded by the app and the user is now logged in.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If user inserts invalid log in credentials a warning is generated, saying the credentials are invalid.
+\end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Sign in \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User has Track4Help application installed on his/her smartwatch or smartphone.    \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Sing In" button.
+            \item The user inserts his/her social security number or fiscal code and his/her password, then clicks the "Enter" button.
+            \item The system accept the login in request.
+        \end{enumerate}}\\ \hline
+Exit Condition   & The user's account has been loaded by the app and the user is now logged in.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item If user inserts invalid log in credentials a warning is generated, saying the credentials are invalid.
+\end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+Name             & Create a run \\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The User is logged in.    \\ \hline
+Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
+            \item The user clicks on the "Promote a Run" button.
+            \item The system show a new tab where the user can define the path, name, date and athletes (other users).
+            \item The system create the event and automatically send notifications to all athletes specified by the promoter asking them if they want to participate to the run.
+        \end{enumerate}}\\ \hline
+Exit Condition   & The run event has been created and is visible in the list of promoted events.\\ \hline
+Exceptions       & \parbox{.45\textwidth}  
+{\begin{itemize}
+\item During the creation of the run the user can cancel the operation and go back to the main menu at any point clicking the "Cancel" button.
+\item If the user do not insert critical information like the path, the name and the date a warning message is shown saying that critical parameters are missing in order to create the run. The user can close the warning message and fill the remaining parameters or cancel the operation, going back to the main menu.
+\item The system needs to do something if the defined path cannot be a real path for the run??
+\end{itemize}}\\ \hline
+\end{tabular}
+\end{table}
 
 
 \subsection{Performance Requirements}
