@@ -33,7 +33,6 @@ The main function of Track4Run is to define the path for the run and
 		\item Promoter: Track4Run's user that is the promoter of one or more race.
 		\item Spectator:Track4Run's user that want follow athletes in one or more race.
 	\end{enumerate}
-\item Partner Application: Application installed on users' device, not necessarily developed by TrackMe, that is in charge with retrieve location and health status.
 \end{enumerate}
 
 \subsection{Assumptions, dependencies and constraints}
@@ -90,16 +89,18 @@ In the specification document certain parts were not specific and were ambiguous
 \item[•] {\Large Data4Help}
 	\begin{enumerate}
 	\item [D.1] Users' information are collected from partner applications or from the other two TrackMe applications installed on users' devices.
-	\item [D.2] The identification (fiscal code, social security number) and the secondary data (attributes) given by the individual during the registration are correct.
-    \item [D.3] Devices used to monitor individuals always report correct values.
-    \item [D.4] Partner application always report correct values to Data4Help.
-	\item [D.5] In order to perform an individual request, third parties has to know the user's fiscal code or security number.
-	\item [D.6] Security number and fiscal code are not information given to third parties by Data4Help.
+	\item [D.2] All the partner applications require to submit user credentials.
+	\item [D.3] The identification (fiscal code, social security number) and the secondary data (attributes) given by the individual during the registration are correct.
+    \item [D.4] Devices used to monitor individuals always report correct values.
+    \item [D.5] Partner application always report correct values to Data4Help.
+	\item [D.6] In order to perform an individual request, third parties has to know the user's fiscal code or security number.
+	\item [D.7] Security number and fiscal code are not information given to third parties by Data4Help.
+	\item [D.8] Live acquisition lasts 24 hours to reduce waste of resources.
 	\end{enumerate}
 	
 \item[•] {\Large AutomatedSOS}
 	\begin{enumerate}
-	\item [D.3] Devices used to monitor individuals always report correct values.
+	\item [D.4] Devices used to monitor individuals always report correct values.
 	\item [D.9] The user always dresses a smartwatch on which AutomatedSOS is installed.    
 	\item [D.10] The ambulance system is always up and ready to receive messages from AutomatedSOS.
     \item [D.11] The ambulance successfully reach the location of the individual.
@@ -109,7 +110,7 @@ In the specification document certain parts were not specific and were ambiguous
 	
 \item[•] {\Large Track4Run}
 	\begin{enumerate}
-	\item [D.3] Devices used to monitor individuals always report correct values.
+	\item [D.4] Devices used to monitor individuals always report correct values.
 	\item [D.13] During a run athletes always dress a smartwatch on which Track4Run is installed.
 	\item [D.14] The path defined by the organizer actually exist.
     \item [D.16] If an athlete enroll to a run then he also participates to the run.
