@@ -240,6 +240,25 @@ Exceptions       & \parbox{.45\textwidth}
 \end{tabular}
 \end{table}
 
+\begin{table}[h]
+\begin{tabular}{|l|l p{3cm}|}
+\hline
+Name             & Send Ambulance Request \\ \hline
+Actors           & AutomatedSOS, Croce Rossa  \\ \hline
+Entry Conditions & A critical health parameter value is below the threshold. \\ \hline
+Event Flow       & \parbox{\textwidth}{\begin{enumerate}
+            \item AutomatedSOS send to "Croce Rossa" a form that contains all important information about the user, like his current location, his gender, his age, her health profile, and the list of parameters below the threshold.
+            \item Croce Rossa send an acknowledge message to AutomatedSOS and send immediately an ambulance to the user location.
+            \item AutomatedSOS displays on the app a warning message saying that an ambulance is currently heading to the user's location. 
+        \end{enumerate}}\\ \hline
+Exit Condition   & \parbox{\textwidth}{A warning message is shown saying that an ambulance is currently heading to the user's location. OR . The ambulance reaches the user's location. OR . The ambulance is traveling to the user's location.} \\ \hline
+Exceptions       & \parbox{\textwidth}  
+{\begin{itemize}
+\item If no acknowledge message is received by AutomatedSOS after the form has been sent, as soon as a certain time out expires AutomatedSOS resend the form with updated information. \end{itemize}}\\ \hline
+Special Requirements   & The form need to be sent to "Croce Rossa" with a reaction time of less than 5 seconds from the time the parameters are below the threshold. \\ \hline
+\end{tabular}
+\end{table}
+
 \subsubsection{Track4Run Use Cases}
 \begin{table}[h]
 \begin{tabular}{|l|l|}
@@ -286,7 +305,7 @@ Exceptions       & \parbox{.45\textwidth}
 \hline
 Name             & Sign in \\ \hline
 Actors           & User  \\ \hline
-Entry Conditions & The User has Track4Help application installed on his/her smartwatch or smartphone.    \\ \hline
+Entry Conditions & The User has Track4Run application installed on his/her smartwatch or smartphone.    \\ \hline
 Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
             \item The user clicks on the "Sing In" button.
             \item The user inserts his/her social security number or fiscal code and his/her password, then clicks the "Enter" button.
