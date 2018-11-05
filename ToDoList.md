@@ -10,10 +10,10 @@
 	- [ ] Reference documents
 	- [ ] Document Structure
 - Overall Description
-	- [ ] Product perspective
+	- [X] Product perspective
 		- [X] Class diagram
-		- [ ] StateChart
-	- [ ] Product Functions
+		- [X] StateChart
+	- [X] Product Functions
 	- [X] User Characterisitcs
 	- [X] Assumptions
 		- [X] Text Assumptions
