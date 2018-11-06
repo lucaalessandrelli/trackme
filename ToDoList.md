@@ -26,6 +26,7 @@
 		- [ ] Communication Interfaces
 	- [ ] Functional Requirements
 		- [X] Functional Requirements
+		- [ ] Use Case Diagram 
 		- [X] Use cases
 		- [X] Sequence Diagram
 		- [ ] Activity Diagram
