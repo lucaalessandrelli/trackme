@@ -5,7 +5,6 @@ Organize this section according to the rules defined in the project description.
 \subsubsection{Software Interfaces}
 \subsubsection{Communication Interfaces}
 
-
 \subsection{Functional Requirements}
 \begin{enumerate}
 \item[•]{\Large Data4Help}
@@ -32,7 +31,7 @@ Organize this section according to the rules defined in the project description.
 		\begin{enumerate} 
 		\item [G.2.1] \textbf{Provide data on-demand to non-subscribed third parties.}
 		\begin{enumerate} 
-		\item [R.7] For each user registered ,the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes.	
+		\item [R.7] For each user registered ,the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.	
 		\item [R.8] The system has to collect inside his database all the useful information that match the request.
 		\item [R.9] The system has to send to applicant all the data already collected.
     	\end{enumerate}	
@@ -163,7 +162,10 @@ Organize this section according to the rules defined in the project description.
 
 \subsubsection{Use Case Diagram}
 
-\subsubsection{Data4Help Use Cases}
+\begin{enumerate}
+
+\FloatBarrier
+\item[•]{\Large Data4Help Use Cases}
 
 \begin{table}[h]
 \begin{tabular}{|l|l|}
@@ -183,7 +185,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -202,7 +206,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -223,8 +229,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
-
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -239,12 +246,13 @@ Event Flow       & \parbox{.45\textwidth}{\begin{enumerate}
 Exit Condition   & The request's outcome is shown.\\ \hline
 Exceptions       & \parbox{.45\textwidth}  
 {\begin{itemize}
-\item If the group is made by more than 1000 individuals the request is accepted and all data collected until now is shown to the third party.
 \item If the group is made by less than 1000 individuals the request is rejected and a the outcome is shown in a form of a warning saying that the request got rejected.
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -260,9 +268,11 @@ Exit Condition   & The third party is subscribed to the selected group.\\ \hline
 Exceptions       & None \\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
 
-\subsubsection{AutomatedSOS Use Cases}
+\item[•]{\Large AutomatedSOS Use Cases}
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -283,7 +293,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -302,7 +314,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -320,7 +334,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}  \\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -337,7 +353,9 @@ Exceptions       & \parbox{.45\textwidth}
 \item If no health parameters are retrieved a warning message is displayed saying to the user he must wear the smartwatch in order to see parameters in real time. \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l p{3cm}|}
 \hline
@@ -356,8 +374,10 @@ Exceptions       & \parbox{\textwidth}
 Special Requirements   & The form need to be sent to "Croce Rossa" with a reaction time of less than 5 seconds from the time the parameters are below the threshold. \\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
-\subsubsection{Track4Run Use Cases}
+\FloatBarrier
+\item[•]{\Large Track4Run Use Cases}
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -378,7 +398,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -397,7 +419,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -418,8 +442,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
-
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -441,7 +466,9 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
 
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
@@ -462,6 +489,67 @@ Exceptions       & \parbox{.45\textwidth}
 \end{itemize}}\\ \hline
 \end{tabular}
 \end{table}
+\FloatBarrier
+
+\end{enumerate}
+
+\subsection{Sequence Diagram}
+\begin{enumerate}
+\item[•]{\Large Data4Help}
+
+
+
+\begin{minipage}{\textwidth}
+\FloatBarrier
+Individual request with on-demand acquisition performance.
+\begin{center}
+\includegraphics[scale=0.8]{Images/Seq_Data4Help_onDem.png}
+\end{center}
+\FloatBarrier
+
+\FloatBarrier
+Automatic data update inside Data4Help.
+\begin{center}
+\includegraphics[scale=0.8]{Images/Seq_Data4Help_autoUp.png}
+\end{center}
+\FloatBarrier
+
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+\FloatBarrier
+Group request with live acqusition performance
+\begin{center}
+\includegraphics[scale=0.75]{Images/Seq_Data4Help_live.png}
+\end{center}
+\FloatBarrier
+\end{minipage}
+
+
+%Two images side by side
+%\begin{figure}[htbp]
+%  \begin{minipage}[b]{0.5\linewidth}
+%    \centering
+%    \includegraphics[width=\linewidth]{Images/Seq_Data4Help_onDem.png}
+%    \caption{The caption for figure 1}
+%    \label{fig:chapter001_dist_001}
+%  \end{minipage}
+%  \hspace{0.5cm}
+%  \begin{minipage}[b]{0.5\linewidth}
+%    \centering
+%    \includegraphics[width=\linewidth]{Images/Seq_Data4Help_autoUp.png}
+%    \caption{The caption for figure 2.}
+%    \label{fig:chapter001_reward_001}
+%  \end{minipage}
+%\end{figure}
+
+
+
+
+
+\end{enumerate}
+
+
 
 \subsection{Performance Requirements}
 

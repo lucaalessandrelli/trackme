@@ -28,23 +28,21 @@
 \BOOKMARK [3][-]{subsubsection.3.1.4}{Communication Interfaces}{subsection.3.1}% 28
 \BOOKMARK [2][-]{subsection.3.2}{Functional Requirements}{section.3}% 29
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Use Case Diagram}{subsection.3.2}% 30
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Data4Help Use Cases}{subsection.3.2}% 31
-\BOOKMARK [3][-]{subsubsection.3.2.3}{AutomatedSOS Use Cases}{subsection.3.2}% 32
-\BOOKMARK [3][-]{subsubsection.3.2.4}{Track4Run Use Cases}{subsection.3.2}% 33
-\BOOKMARK [2][-]{subsection.3.3}{Performance Requirements}{section.3}% 34
-\BOOKMARK [2][-]{subsection.3.4}{Design Constraints}{section.3}% 35
-\BOOKMARK [3][-]{subsubsection.3.4.1}{Standards compliance}{subsection.3.4}% 36
-\BOOKMARK [3][-]{subsubsection.3.4.2}{Hardware limitations}{subsection.3.4}% 37
-\BOOKMARK [3][-]{subsubsection.3.4.3}{Any other constraint}{subsection.3.4}% 38
-\BOOKMARK [2][-]{subsection.3.5}{Software System Attributes}{section.3}% 39
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Reliability}{subsection.3.5}% 40
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Availability}{subsection.3.5}% 41
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Security}{subsection.3.5}% 42
-\BOOKMARK [3][-]{subsubsection.3.5.4}{Maintainability}{subsection.3.5}% 43
-\BOOKMARK [3][-]{subsubsection.3.5.5}{Portability}{subsection.3.5}% 44
-\BOOKMARK [1][-]{section.4}{Formal Analysis Using Alloy}{}% 45
-\BOOKMARK [1][-]{section.5}{Effort Spent}{}% 46
-\BOOKMARK [2][-]{subsubsection.5.0.1}{Luca Alessandrelli}{section.5}% 47
-\BOOKMARK [3][-]{subsubsection.5.0.2}{Andrea Caraffa}{subsubsection.5.0.1}% 48
-\BOOKMARK [3][-]{subsubsection.5.0.3}{Andrea Bionda}{subsubsection.5.0.1}% 49
-\BOOKMARK [1][-]{section.6}{References}{}% 50
+\BOOKMARK [2][-]{subsection.3.3}{Sequence Diagram}{section.3}% 31
+\BOOKMARK [2][-]{subsection.3.4}{Performance Requirements}{section.3}% 32
+\BOOKMARK [2][-]{subsection.3.5}{Design Constraints}{section.3}% 33
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Standards compliance}{subsection.3.5}% 34
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Hardware limitations}{subsection.3.5}% 35
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Any other constraint}{subsection.3.5}% 36
+\BOOKMARK [2][-]{subsection.3.6}{Software System Attributes}{section.3}% 37
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Reliability}{subsection.3.6}% 38
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Availability}{subsection.3.6}% 39
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Security}{subsection.3.6}% 40
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Maintainability}{subsection.3.6}% 41
+\BOOKMARK [3][-]{subsubsection.3.6.5}{Portability}{subsection.3.6}% 42
+\BOOKMARK [1][-]{section.4}{Formal Analysis Using Alloy}{}% 43
+\BOOKMARK [1][-]{section.5}{Effort Spent}{}% 44
+\BOOKMARK [2][-]{subsubsection.5.0.1}{Luca Alessandrelli}{section.5}% 45
+\BOOKMARK [3][-]{subsubsection.5.0.2}{Andrea Caraffa}{subsubsection.5.0.1}% 46
+\BOOKMARK [3][-]{subsubsection.5.0.3}{Andrea Bionda}{subsubsection.5.0.1}% 47
+\BOOKMARK [1][-]{section.6}{References}{}% 48
