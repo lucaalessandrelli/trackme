@@ -161,9 +161,38 @@ Organize this section according to the rules defined in the project description.
 \end{enumerate}
 
 \subsubsection{Use Case Diagram}
+\begin{enumerate}
+\begin{minipage}{\textwidth}
+\FloatBarrier
+\item[•]{\Large Data4Help}
+
+\begin{center}
+\includegraphics[scale=0.5]{Images/Data4HelpUseCaseDiagram.png}
+\end{center}
+\FloatBarrier
+\end{minipage}
+
+
+\begin{minipage}{\textwidth}
+\item[•]{\Large AutomatedSOS}
+\FloatBarrier
+\begin{center}
+\includegraphics[scale=0.5]{Images/AutomatedSOSCaseDiagram.png}
+\end{center}
+\FloatBarrier
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+\item[•]{\Large Track4Run}
+\FloatBarrier
+\begin{center}
+\includegraphics[scale=0.5]{Images/Track4RunCaseDiagram.png}
+\end{center}
+\FloatBarrier
+\end{minipage}
+\end{enumerate}
 
 \begin{enumerate}
-
 \FloatBarrier
 \item[•]{\Large Data4Help Use Cases}
 
@@ -242,7 +271,7 @@ Event Flow       & \begin{enumerate}
         \end{enumerate}\\ \hline
 Exit Condition   & The request's outcome is shown.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the group is made by less than 1000 individuals the request is rejected and a the outcome is shown in a form of a warning saying that the request got rejected.
+\item If the group is made by less than 1000 individuals the request is rejected and a warning message is displayed saying that the request got rejected.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -455,8 +484,7 @@ Event Flow       & \begin{enumerate}
         \end{enumerate}\\ \hline
 Exit Condition   & The user is inside the list of athletes.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the number of athletes has already capped the max amount in a specific run then the user cannot click on the "Enroll" button associated to that run.
-\item How to see if the athlete actually has a smartwatch??
+\item If the number of athletes has already capped the max amount in a specific run then a warning message is displayed saying that no more athletes are allowed to participate to the run.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -483,6 +511,7 @@ Exceptions       & None.\\ \hline
 \FloatBarrier
 
 \end{enumerate}
+
 
 
 \subsection{Sequence Diagram}
