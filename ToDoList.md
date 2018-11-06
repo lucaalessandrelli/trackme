@@ -25,11 +25,11 @@
 		- [ ] Software Interfaces
 		- [ ] Communication Interfaces
 	- [ ] Functional Requirements
-		- [ ] Functional Requirements
-		- [ ] Use cases
-		- [ ] Sequence Diagram
+		- [X] Functional Requirements
+		- [X] Use cases
+		- [X] Sequence Diagram
 		- [ ] Activity Diagram
-	- [ ] Performance Reuirements
+	- [ ] Performance Recuirements
 	- [ ] Design Constraints
 	- [ ] Software System Attributes
 - Alloy
