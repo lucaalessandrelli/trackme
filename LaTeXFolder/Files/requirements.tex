@@ -169,7 +169,7 @@ Organize this section according to the rules defined in the project description.
 \item[•]{\Large Data4Help}
 
 \begin{center}
-\includegraphics[scale=0.5]{Images/Data4HelpUseCaseDiagram.png}
+\includegraphics[scale=0.65]{Images/Data4HelpUseCaseDiagram.png}
 \end{center}
 \FloatBarrier
 \end{minipage}
@@ -179,7 +179,7 @@ Organize this section according to the rules defined in the project description.
 \item[•]{\Large AutomatedSOS}
 \FloatBarrier
 \begin{center}
-\includegraphics[scale=0.5]{Images/AutomatedSOSCaseDiagram.png}
+\includegraphics[scale=0.65]{Images/AutomatedSOSCaseDiagram.png}
 \end{center}
 \FloatBarrier
 \end{minipage}
@@ -188,7 +188,7 @@ Organize this section according to the rules defined in the project description.
 \item[•]{\Large Track4Run}
 \FloatBarrier
 \begin{center}
-\includegraphics[scale=0.5]{Images/Track4RunCaseDiagram.png}
+\includegraphics[scale=0.70]{Images/Track4RunCaseDiagram.png}
 \end{center}
 \FloatBarrier
 \end{minipage}
@@ -197,17 +197,18 @@ Organize this section according to the rules defined in the project description.
 \begin{enumerate}
 \FloatBarrier
 \item[•]{\Large Data4Help Use Cases}
-
+\FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign up \\ \hline
-Actors           & Third Party  \\ \hline
+Name             & Sign Up \\ \hline
+Actors           & Third Party \\ \hline
 Entry Conditions & The third party has the registration website page opened.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The third party clicks on the "Sing Up" button.
-            \item The third party fills all the attribute fields and clicks on "Register Now" button.
-            \item The system creates the third party's account saving its attributes.
+            \item The Third Party clicks on the "Sign Up" button.
+            \item The Third Party fills all the attribute fields
+            \item The Third Party clicks on "Register Now" button.
+            \item The system creates and saves the third party's account.
         \end{enumerate}\\ \hline
 Exit Condition   & The third party's account has been created and the third party is now registered.\\ \hline
 Exceptions       & \begin{itemize}
@@ -221,17 +222,18 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign in \\ \hline
+Name             & Sign In \\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party has the registration website page opened.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The third party clicks on the "Sing In" button.
-            \item The third party fills all credentials fields and clicks on "Log in" button.
-            \item The system accept the login request.
+            \item The Third Party clicks on the "Sign In" button.
+            \item The Third Party fills all credentials fields. 
+            \item The Third Party clicks on "Log in" button.
+            \item The system accept the log in request.
         \end{enumerate}\\ \hline
-Exit Condition   & The third party's account has been loaded by the website and the user is now logged in.\\ \hline
+Exit Condition   & The third party is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
-\item If user inserts invalid log in credentials a warning is generated, saying the credentials are invalid.
+\item If the third party inserts invalid log in credentials a warning is generated saying the credentials are invalid.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -245,15 +247,14 @@ Name             & Request Individual Monitoring \\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The third party clicks on the "Individual Request" button.
-            \item The third party inserts the fiscal code or the social security number of the individual to track .
-            \item The system shows the outcome of the request. 
+            \item The Third Party clicks on the "Individual Request" button.
+            \item The Third Party inserts the fiscal code or the social security number of the individual to track .
+            \item The system shows all the individual's information that have been tracked until the request. 
         \end{enumerate}\\ \hline
-Exit Condition   & The request's outcome is shown.\\ \hline
+Exit Condition   & The request's outcome is shown to the user.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the inserted fiscal code or social security number are not linked to any Account then a warning message is displayed, saying that the individual is not registered.
-\item If the individual with the fiscal code or social security number inserted didn't accept the individual treatment of data policy then a warning message is displayed. This message says that the request is rejected.
-\item If the individual with the fiscal code or social security number inserted did accept the individual treatment of data policy then a message is displayed saying that the individual have accepted the request and all his data collected until the moment of the request are shown to the third party.
+\item If the inserted fiscal code or social security number are not linked to any account then a warning message is displayed saying that the individual is not registered.
+\item If the individual with the fiscal code or social security number inserted didn't accept the individual treatment of data policy then a warning message is displayed saying that the request is rejected.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -267,14 +268,17 @@ Name             & Request Group Monitoring \\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The third party clicks on the "Group Request" button.
-            \item The third party inserts the all the attributes that will define the group of interest.
-            \item The system shows the outcome of the request. 
+            \item The Third Party clicks on the "Group Request" button.
+            \item The Third Party inserts the all the attributes that will define the group of interest.
+            \item The system accepts the request.
+            \item The system shows all the group's information that have been collected until the request. 
         \end{enumerate}\\ \hline
 Exit Condition   & The request's outcome is shown.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the group is made by less than 1000 individuals the request is rejected and a warning message is displayed saying that the request got rejected.
+\item If the group request get rejected by the system a warning message will be displayed saying the request is rejected.
 \end{itemize}\\ \hline
+Special Requirements & Reject a group monitoring request the group's information can hurt users' privacy, for this purpose request of groups composed by less than 1000 users get rejected.
+\\ \hline
 \end{tabular}
 \end{table}
 \FloatBarrier
@@ -285,37 +289,76 @@ Exceptions       & \begin{itemize}
 \hline
 Name             & Subscribe To A Group\\ \hline
 Actors           & Third Party  \\ \hline
-Entry Conditions & The third has just sent an accepted monitoring request to a group. \\ \hline
+Entry Conditions & The third party has just sent an accepted monitoring request to a group. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The third party clicks on the "Subscribe to this Group" button.
+            \item Third Party party clicks on the "Subscribe to this Group" button.
             \item The system from now on will always send to the third party new data about this group.
             \item 
         \end{enumerate}\\ \hline
-Exit Condition   & The third party is subscribed to the selected group.\\ \hline
+Exit Condition   & The Third Party is subscribed to the selected group.\\ \hline
 Exceptions       & None \\ \hline
 \end{tabular}
 \end{table}
 \FloatBarrier
 
+\FloatBarrier
+\begin{table}[h]
+\begin{tabular}{|l|p{.75\textwidth}|}
+\hline
+Name             & Sign Up To Partner\\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The user accepted the treatment of data policy.  \\ \hline
+Event Flow       & \begin{enumerate}
+            \item The User fills all the attribute fields the partner application offers, including the social security number or fiscal code.
+            \item The system receives by the partner application all the information inserted by the user.
+            \item The system creates the user account and saves the received data.
+        \end{enumerate}\\ \hline
+Exit Condition   & The system registered the user.\\ \hline
+Exceptions       & \begin{itemize}
+\item If the system notices that the social security number or fiscal code used in the registration are already linked to an existing account then a message is sent back to the partner application in order to let the user know what happened.
+\end{itemize}\\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+
+\FloatBarrier
+\begin{table}[h]
+\begin{tabular}{|l|p{.75\textwidth}|}
+\hline
+Name             & Send User's Data\\ \hline
+Actors           & User  \\ \hline
+Entry Conditions & The user accepted the treatment of data policy.  \\ \hline
+Event Flow       & \begin{enumerate}
+            \item The User uses the partner application.
+            \item The system receives the user data sent by the partner application.
+            \item The system saves the received data.
+        \end{enumerate}\\ \hline
+Exit Condition   & The system received the user data.\\ \hline
+Exceptions       & None \\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
 
 \item[•]{\Large AutomatedSOS Use Cases}
 \FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign up \\ \hline
+Name             & Sign Up \\ \hline
 Actors           & User  \\ \hline
-Entry Conditions & The User has AutomatedSOS application installed on his/her smartwatch.    \\ \hline
+Entry Conditions & The User launched AutomatedSOS on his smartwatch.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Sing Up" button.
-            \item The user accepts the treatment of data policy.
-            \item The user fills all the attribute fields and clicks on "Register Now" button.
-            \item The system creates the user's account saving his/her attributes.
+            \item The User clicks on the "Sign Up" button.
+            \item The User accepts the treatment of data policy.
+            \item The User fills all the attribute fields.
+            \item The User clicks on "Register Now" button.
+            \item The system creates and saves the user's account.
         \end{enumerate}\\ \hline
 Exit Condition   & The user's account has been created and the user is now registered.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the user does not accept the treatment of data policy a warning is generated saying that in order to register the policy must be accepted.
-\item If the system notices that the social security number or fiscal code used in a registration are already linked to an existing account then a warning is generated saying that there is already an account registered with the given credentials.
+\item If the User does not accept the treatment of data policy then a warning is generated saying that ,in order to register, the policy must be accepted.
+\item If the system notices that the social security number or fiscal code used in the registration are already linked to an existing account then a warning is generated saying that an account with the given credentials is already registered.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -325,17 +368,18 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign in \\ \hline
+Name             & Sign In \\ \hline
 Actors           & User  \\ \hline
-Entry Conditions & The User has AutomatedSOS application installed on his/her smartwatch.    \\ \hline
+Entry Conditions & The User has AutomatedSOS application installed on his smartwatch.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Sing In" button.
-            \item The user inserts his/her social security number or fiscal code and his/her password, then clicks the "Enter" button.
-            \item The system accept the login in request.
+            \item The User clicks on the "Sign In" button.
+            \item The User inserts his social security number or fiscal code and his password.
+            \item The User clicks the "Enter" button.
+            \item The system accept the log in in request and redirect the user to the menu.
         \end{enumerate}\\ \hline
-Exit Condition   & The user's account has been loaded by the app and the user is now logged in.\\ \hline
+Exit Condition   & The User user is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
-\item If user inserts invalid log in credentials a warning is generated, saying the credentials are invalid.
+\item If user inserts invalid log in credentials a warning is generated saying the credentials are invalid.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -345,16 +389,17 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Monitor data \\ \hline
+Name             & See Acquired Data \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Monitor Data" button.
-            \item The system gets all the information that have been retrieved by the application to the user.
+            \item The User clicks on the "Acquired Info" button.
+            \item The system gets all the user information that have been retrieved by the application until that moment.
+            \item The system display the user information.
 \end{enumerate}\\ \hline
-Exit Condition   & All the information retrieved by the application are shown on the app.\\ \hline
+Exit Condition   & All the information retrieved by the system are shown on the app.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the system do not find information about the user then a warning message is shown to the user saying that until now no user data has been recorded by the application.
+\item If the system do not find information about the user then a warning message is shown to the user saying that until now the application did not record any information.
 \end{itemize}  \\ \hline
 \end{tabular}
 \end{table}
@@ -364,17 +409,17 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Monitor current health status \\ \hline
+Name             & Monitor Current Health \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks the "Monitor health status" button.
-            \item The system shows all the health values that are being retrieved in real time.
+            \item The User clicks the "Monitor Health" button.
+            \item The system shows in real time all the health values that are being retrieved.
         \end{enumerate}\\ \hline
-Exit Condition   & All the health parameters retrieved by the application are shown on the app in real time.\\ \hline
+Exit Condition   & All the health parameters retrieved by the application are shown in real time on the app.\\ \hline
 Exceptions       & \begin{itemize}
-\item If no health parameters are retrieved a warning message is displayed saying to the user he must wear the smartwatch in order to see parameters in real time. 
-\end{itemize}\\ \hline
+\item If no health parameters are retrieved a warning message is displayed saying to the user he actually must wear the smartwatch in order to see parameters in real time. 
+\end{itemize} \\ \hline
 \end{tabular}
 \end{table}
 \FloatBarrier
@@ -384,22 +429,23 @@ Exceptions       & \begin{itemize}
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
 Name             & Send Ambulance Request \\ \hline
-Actors           & AutomatedSOS, Croce Rossa  \\ \hline
+Actors           & AutomatedSOS, First Aid  \\ \hline
 Entry Conditions & A critical health parameter value is below the threshold.
 \\ \hline
 Event Flow       & \begin{enumerate}
-            \item AutomatedSOS send to "Croce Rossa" a form that contains all important information about the user, like his current location, his gender, his age, her health profile, and the list of parameters below the threshold.
-            \item Croce Rossa send an acknowledge message to AutomatedSOS and send immediately an ambulance to the user location.
+            \item AutomatedSOS sends to First Aid a form that contains all important information about the user, like his current location, his gender, his age, his health profile, and the list of parameters that got below the threshold.
+            \item First Aid sends an acknowledge message to AutomatedSOS 
+            \item First Aid sends immediately an ambulance to the user's location.
             \item AutomatedSOS displays on the app a warning message saying that an ambulance is currently heading to the user's location. 
         \end{enumerate}
 \\ \hline
-Exit Condition   & A warning message is shown saying that an ambulance is currently heading to the user's location. OR . The ambulance reaches the user's location. OR . The ambulance is traveling to the user's location.
+Exit Condition   & A warning message is shown saying that an ambulance is currently heading to the user's location.
 \\ \hline
 Exceptions       & \begin{itemize}
-\item If no acknowledge message is received by AutomatedSOS after the form has been sent, as soon as a certain time out expires AutomatedSOS resend the form with updated information. 
+\item If no acknowledge message is received by AutomatedSOS after the form has been sent, as soon as a certain time out expires AutomatedSOS re-send the form with updated information. 
 \end{itemize}
 \\ \hline
-Special Requirements   & The form need to be sent to "Croce Rossa" with a reaction time of less than 5 seconds from the time the parameters are below the threshold.
+Special Requirements & The form need to be sent to First Aid with a reaction time of less than 5 seconds from the time the parameters are below the threshold.
 \\ \hline 
 \end{tabular}
 \end{table}
@@ -410,19 +456,20 @@ Special Requirements   & The form need to be sent to "Croce Rossa" with a reacti
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign up \\ \hline
+Name             & Sign Up \\ \hline
 Actors           & User  \\ \hline
-Entry Conditions & The User has Track4Run application installed on his/her smartwatch.    \\ \hline
+Entry Conditions & The User has Track4Run application installed on his device.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Sing Up" button.
-            \item The user accepts the treatment of data policy.
-            \item The user fills all the attribute fields and clicks on "Register Now" button.
-            \item The system creates the user's account saving his/her attributes.
+            \item The User clicks on the "Sign Up" button.
+            \item The User accepts the treatment of data policy.
+            \item The User fills all the attribute fields.
+            \item The User clicks on the "Register Now" button.
+            \item The system creates and saves the user's account.
         \end{enumerate}\\ \hline
 Exit Condition   & The user's account has been created and the user is now registered.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the user does not accept the treatment of data policy a warning is generated saying that in order to register the policy must be accepted.
-\item If the system notices that the social security number or fiscal code used in a registration are already linked to an existing account then a warning is generated saying that there is already an account registered with the given credentials.
+\item If the User does not accept the treatment of data policy then a warning is generated saying that ,in order to register, the policy must be accepted.
+\item If the system notices that the social security number or fiscal code used in the registration are already linked to an existing account then a warning is generated saying that an account with the given credentials is already registered.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -432,17 +479,18 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign in \\ \hline
+Name             & Sign In \\ \hline
 Actors           & User  \\ \hline
-Entry Conditions & The User has Track4Run application installed on his/her smartwatch or smartphone.    \\ \hline
+Entry Conditions & The User has Track4Run application installed on his smartwatch.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Sing In" button.
-            \item The user inserts his/her social security number or fiscal code and his/her password, then clicks the "Enter" button.
-            \item The system accept the login in request.
+            \item The User clicks on the "Sign In" button.
+            \item The User inserts his social security number or fiscal code and his password.
+            \item The User clicks the "Enter" button.
+            \item The system accept the log in in request and redirect the user to the menu.
         \end{enumerate}\\ \hline
-Exit Condition   & The user's account has been loaded by the app and the user is now logged in.\\ \hline
+Exit Condition   & The User user is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
-\item If user inserts invalid log in credentials a warning is generated, saying the credentials are invalid.
+\item If user inserts invalid log in credentials a warning is generated saying the credentials are invalid.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -452,19 +500,18 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Promote a run \\ \hline
+Name             & Promote A Run \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Promote a Run" button.
-            \item The system show a new tab where the user can define the path, name, date and athletes (other users).
-            \item The system create the event and automatically send notifications to all athletes specified by the promoter asking them if they want to participate to the run.
+            \item The User clicks on the "Promote a Run" button.
+            \item The system show a new tab where the user can define the path, name, date and athletes.
+            \item The system create the event and adds it to the event list visible in the "Enroll to A Run" section.
+            \item The system automatically sends notifications to all athletes specified by the promoter asking them if they want to participate to the run.
         \end{enumerate}\\ \hline
 Exit Condition   & The run event has been created and is visible in the list of promoted events.\\ \hline
 Exceptions       & \begin{itemize}
-\item During the creation of the run the user can cancel the operation and go back to the main menu at any point clicking the "Cancel" button.
-\item If the user do not insert critical information like the path, the name and the date a warning message is shown saying that critical parameters are missing in order to create the run. The user can close the warning message and fill the remaining parameters or cancel the operation, going back to the main menu.
-\item The system needs to do something if the defined path cannot be a real path for the run??
+\item If the user do not insert critical information (like the path, the name or the date) a warning message is shown saying that critical parameters are missing. The user can close the warning message and fill the remaining parameters or cancel the operation, going back to the main menu.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -474,19 +521,20 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Enroll to a run \\ \hline
+Name             & Enroll To A Run \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Enroll to a Run" button.
+            \item The User clicks on the "Enroll to a Run" button.
             \item The system shows a new tab where the list of all runs created is visible.
-            \item The user can filter the runs with attributes like the name, the date and the location.
-            \item The user clicks the "Enroll" button associated to the specific run.
-            \item The system add the user to the list of athletes enrolled to the run.
+            \item The User can filter the runs with attributes like the name, the date and the location.
+            \item The User clicks on the specific run he wants to participate to.
+            \item The system adds the user to the list of athletes enrolled to the run.
         \end{enumerate}\\ \hline
-Exit Condition   & The user is inside the list of athletes.\\ \hline
+Exit Condition   & The user is inside the list of athletes of the run.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the number of athletes has already capped the max amount in a specific run then a warning message is displayed saying that no more athletes are allowed to participate to the run.
+\item If the number of athletes has already capped the max amount in the run clicked by the user then a warning message is displayed saying that no more athletes are allowed to participate to the run.
+\item If the user didn't accept the treatment of data policy, a warning message is displayed, asking the user to accept it in order to enroll to the run.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -496,15 +544,15 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Spectate a run \\ \hline
+Name             & Spectate A Run \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The user clicks on the "Spectate a Run" button.
+            \item The User clicks on the "Spectate a Run" button.
             \item The system shows a new tab where the list of all live runs is visible.
-            \item The user can filter the runs with attributes like the name, and the location.
-            \item The user clicks the "Spectate" button associated to the specific run.
-            \item The system opens a tab which contains the path of the run and also the position of all athletes in real time.
+            \item The User can filter the runs with attributes like the name, and the location.
+            \item The User clicks on the specific run he wants to spectate.
+            \item The system opens a tab which contains the map of the run and also the position of all athletes in real time.
         \end{enumerate}\\ \hline
 Exit Condition   & The spectator tab on the application is open.\\ \hline
 Exceptions       & None.\\ \hline
@@ -512,8 +560,24 @@ Exceptions       & None.\\ \hline
 \end{table}
 \FloatBarrier
 
-\end{enumerate}
+\FloatBarrier
+\begin{table}[h]
+\begin{tabular}{|l|p{.75\textwidth}|}
+\hline
+Name             & View Map \\ \hline
+Actors           & AutomatedSOS  \\ \hline
+Entry Conditions & The User is spectating a run.    \\ \hline
+Event Flow       & \begin{enumerate}
+            \item AutomatedSOS uses Google Map's API in order to retrieve the map of he run.
+            \item AutomatedSOS adds athletes on the map in their current position.
+        \end{enumerate}\\ \hline
+Exit Condition   & The user no more spectating a run.\\ \hline
+Exceptions       & None.\\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
 
+\end{enumerate}
 
 
 \subsection{Sequence Diagram}
