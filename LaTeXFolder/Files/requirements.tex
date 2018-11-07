@@ -40,7 +40,7 @@ Organize this section according to the rules defined in the project description.
 		\begin{enumerate}
 		\item [D.8] Live acquisition lasts 24 hours to reduce waste of resources.
     	\item [R.10] Allow third parties subscription to interested group in order to receive live data.
-    	\item [R.11] When a real time request is performed the system has to collect and store specific users' data with a resolution of 1 minute.
+    	\item [R.11] When a real time request is performed the system has to collect and store specific users' data with a resolution of 2 minutes.
     	\item [R.12] Provide to subscribed third parties data as soon as they are available by the system.
     	\end{enumerate}
     	\end{enumerate}
@@ -96,14 +96,15 @@ Organize this section according to the rules defined in the project description.
 	\item [G.7] \textbf{Monitor user's health parameters.}
 		\begin{enumerate}
 		\item [R.20] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve location and health status.
+		\item [R.24] The application has to retrieve users' health status every 2 seconds in order to guarantee reaction time of 5 seconds.
 		\end{enumerate}
 		
 	\item [G.8] \textbf{Send an ambulance to users' location whenever certain parameters are below the threshold.}
 		\begin{enumerate}
-		\item [R.24] The application has to control health status with data retrieved in local to realize immediately if certain parameters are critical.
-		\item [R.25] The application has to call an ambulance, if parameters are critical.
+		\item [R.25] The application has to control health status with data retrieved in local to realize immediately if certain parameters are critical.
+		\item [R.26] The application has to call an ambulance, if parameters are critical.
 		\item [D.10] The ambulance system is always up and ready to receive messages from AutomatedSOS.
-		\item [R.26] Supply to hospital user's location and all the useful information to provide efficient first aid.
+		\item [R.27] Supply to hospital user's location and all the useful information to provide efficient first aid.
 		\item [D.11] The ambulance successfully reach the location of the individual.
 		\end{enumerate}
 		
@@ -115,45 +116,46 @@ Organize this section according to the rules defined in the project description.
 	\begin{enumerate}
 	\item [G.5] \textbf{Retrieve user's position and health status.}
 		\begin{enumerate}
-		\item [R.27] Allow users to be tracked from Track4Run filling up the registration and agreeing to both parts of privacy policy.
+		\item [R.28] Allow users to be tracked from Track4Run filling up the registration and agreeing to both parts of privacy policy.
 		\item [D.4] Devices used to monitor individuals always report correct values.
 		\item [R.20] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve location and health status.
 		\item [R.21] The application is able to send to Data4Help service all the informations already retrieved in live acquisition.
+		\item [R.28] The application is able to send to Data4Help service updated daata with a resolution of 5 seconds.
 		\end{enumerate}
 		
 	\item [G.9] \textbf{Allow promoters to manage a run.}
 		\begin{enumerate}
-		\item [R.22] Allow users to create a run providing all the general information about the competition.
-		\item [R.23] Allow users to specify if the race is public or private.
+		\item [R.29] Allow users to create a run providing all the general information about the competition.
+		\item [R.30] Allow users to specify if the race is public or private.
 		\item [D.4] Devices used to monitor individuals always report correct values.
 		\item [D.13] During a run athletes always dress a smartwatch on which Track4Run is installed.
 			
 		\item [G.9.1] \textbf{Allow promoters to define a path for the run.}
 			\begin{enumerate}
-			\item [R.24] Allow promoters to define a path for the race by selecting the routes inside a map.
+			\item [R.31] Allow promoters to define a path for the race by selecting the routes inside a map.
 			\item [D.14] The path defined by the organizer actually exist.
 			\end{enumerate}
 			
 		\item [G.9.2] \textbf{Allow promoters to invite athletes to the run.}
 			\begin{enumerate}
-			\item [R.25] Allow promoters to invite athlete to be runner of their private race.
-			\item [R.26] Allow promoters to specify maximum number of athletes that can take part to their public race.
+			\item [R.32] Allow promoters to invite athlete to be runner of their private race.
+			\item [R.33] Allow promoters to specify maximum number of athletes that can take part to their public race.
 			\end{enumerate}
 	\end{enumerate}
 	
 	\item [G.10] \textbf{Allow athletes to enroll on a specific run.}
 		\begin{enumerate}
-		\item [R.27] Allow users to see all the public races and private races in which he is invited.
-		\item [R.28] Allow user to select a race and add him to the athletes involved.
+		\item [R.34] Allow users to see all the public races and private races in which he is invited.
+		\item [R.35] Allow user to select a race and add him to the athletes involved.
 		\item [D.16] If an athlete enroll to a run then he also participates to the run.
 		\end{enumerate}
 	
 	\item [G.11] \textbf{Allow spectators to watch in real time the position of every athletes in a specific run.}
 		\begin{enumerate}
 		\item [D.17] All athletes have their tracking devices with them and the application enabled for the entire duration of the run.	
-		\item [R.29] Allow user to select a race to be viewed.
-		\item [R.30] The application must be able to request to Data4Help the positions of all the other athletes involved.
-		\item [R.31] The application must be able to receive and display the positions of all the other athletes involved.
+		\item [R.36] Allow user to select a race to be viewed.
+		\item [R.37] The application must be able to request to Data4Help the positions of all the other athletes involved.
+		\item [R.38] The application must be able to receive and display the positions of all the other athletes involved.
 		\item [D.18] Athletes never go out of the defined path.
 		\end{enumerate}
 	\end{enumerate}
@@ -572,39 +574,36 @@ Track4Run automated retrieve athletes' position and update spectators' live map.
 \FloatBarrier
 \end{minipage}
 
-
-%Two images side by side
-%\begin{figure}[htbp]
-%  \begin{minipage}[b]{0.5\linewidth}
-%    \centering
-%    \includegraphics[width=\linewidth]{Images/Seq_Data4Help_onDem.png}
-%    \caption{The caption for figure 1}
-%    \label{fig:chapter001_dist_001}
-%  \end{minipage}
-%  \hspace{0.5cm}
-%  \begin{minipage}[b]{0.5\linewidth}
-%    \centering
-%    \includegraphics[width=\linewidth]{Images/Seq_Data4Help_autoUp.png}
-%    \caption{The caption for figure 2.}
-%    \label{fig:chapter001_reward_001}
-%  \end{minipage}
-%\end{figure}
-
-
-
-
-
 \end{enumerate}
 
 
-
-
 \subsection{Performance Requirements}
+\begin{enumerate} 
+\item[•] Data4Help service is build to perform trend research from users that download specific partner applications, in order to perform this type of monitoring there is a high use of resources (specially in live acquisition when data must be exchanged within 2 minutes) therefore ,initially, this application is developed to track 10.000 users simultaneously (included users from AutomateSOS and Track4Run). To serve third parties is required less performance because they are very few in comparison to users.
+
+\item[•] AutomatedSOS is a very expensive application in terms of performance because it must monitor the individual all the day and guarantee a data collection with an interval of 2 seconds.
+
+\item[•] Track4Run is a variable expensive application because it has to monitor individual constantly during the race, but not all day, all the athletes have a run.
+\end{enumerate}
 
 \subsection{Design Constraints}
 \subsubsection{Standards compliance}
+\begin{enumerate} 
+\item[•] Partner applications request the permission to retrieve location and health status to the device, same for AutomateSOS and Track4Run.
+\item[•] Data4Help requires that partner applications can use internet connection and users' mobile data to exchange information.
+\item[•] AutomatedSOS requires all day internet connection in order to call an ambulance every time is needed.
+\item[•] AutomatedSOS requires internet connection during all the duration of the race to the athletes and to the spectator.
+\end{enumerate}
+
 \subsubsection{Hardware limitations}
-\subsubsection{Any other constraint}
+\begin{enumerate} 
+\item[•] AutomatedSOS application requires that is installed on a smartwatch (smartphone is not enough) in order to acquire location and health status.
+\item[•] Track4Run application requires that is installed on a smartphone (or a smartwatch) in order to acquire location.
+\item[•] Smartphone and smartwatch must be iOS or Android platform.
+\item[•] The devices must have internet connection (mobile data are mandatory).
+\item[•] The devices must have GPS locator.
+\item[•] Smartwatch must have Heart Rate monitor, Blood Pressure monitor, Pedometer, Calories Calculator.
+\end{enumerate}
 
 \subsection{Software System Attributes}
 \subsubsection{Reliability}
