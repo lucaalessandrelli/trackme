@@ -29,9 +29,8 @@
 		- [ ] Use Case Diagram 
 		- [X] Use cases
 		- [X] Sequence Diagram
-		- [ ] Activity Diagram
-	- [ ] Performance Recuirements
-	- [ ] Design Constraints
+	- [X] Performance Recuirements
+	- [X] Design Constraints
 	- [ ] Software System Attributes
 - Alloy
 		
