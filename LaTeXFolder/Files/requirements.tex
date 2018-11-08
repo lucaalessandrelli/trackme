@@ -277,7 +277,7 @@ Exit Condition   & The request's outcome is shown.\\ \hline
 Exceptions       & \begin{itemize}
 \item If the group request get rejected by the system a warning message will be displayed saying the request is rejected.
 \end{itemize}\\ \hline
-Special Requirements & Reject a group monitoring request the group's information can hurt users' privacy, for this purpose request of groups composed by less than 1000 users get rejected.
+Special Requirements & The system rejects group monitoring requests when the group's information can compromise users' privacy. For this purpose requests of groups composed by less than 1000 users get rejected.
 \\ \hline
 \end{tabular}
 \end{table}
@@ -291,12 +291,14 @@ Name             & Subscribe To A Group\\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party has just sent an accepted monitoring request to a group. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item Third Party party clicks on the "Subscribe to this Group" button.
-            \item The system from now on will always send to the third party new data about this group.
-            \item 
+            \item Third Party clicks on the "Subscribe to this Group" button.
+			\item The system links the third party to the group.            
+            \item The system sends new data to the third party.
         \end{enumerate}\\ \hline
 Exit Condition   & The Third Party is subscribed to the selected group.\\ \hline
-Exceptions       & None \\ \hline
+Exceptions       & \begin{enumerate}
+            \item If the third party is already subscribed a warning message is shown saying the subscription have been already done.
+        \end{enumerate}\\ \hline
 \end{tabular}
 \end{table}
 \FloatBarrier
@@ -305,12 +307,15 @@ Exceptions       & None \\ \hline
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Sign Up To Partner\\ \hline
-Actors           & User  \\ \hline
-Entry Conditions & The user accepted the treatment of data policy.  \\ \hline
+Name             & Sign Up From Partner App\\ \hline
+Actors           & User, Partner Application  \\ \hline
+Entry Conditions & The user accepted the treatment of data policy and wants to create an account.  \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The User fills all the attribute fields the partner application offers, including the social security number or fiscal code.
-            \item The system receives by the partner application all the information inserted by the user.
+			\item The user start the sign up function on the partner app.
+			\item The Partner Application shows to the user all the attributes needed for the registration.
+            \item The User fills all the attribute fields.
+            \item The Partner Application sends to the system the attributes inserted by the user.
+            \item The system receives by the partner application all the attributes inserted by the user.
             \item The system creates the user account and saves the received data.
         \end{enumerate}\\ \hline
 Exit Condition   & The system registered the user.\\ \hline
@@ -321,20 +326,41 @@ Exceptions       & \begin{itemize}
 \end{table}
 \FloatBarrier
 
+\FloatBarrier
+\begin{table}[h]
+\begin{tabular}{|l|p{.75\textwidth}|}
+\hline
+Name             & Link Account To The Partner App\\ \hline
+Actors           & User, Partner Application  \\ \hline
+Entry Conditions & The user accepted the treatment of data policy and wants to link his already existing account to the partner application.  \\ \hline
+Event Flow       & \begin{enumerate}
+			\item The user start the account linking function on the partner app.
+			\item The Partner Application shows to the user all the attributes needed for the linking process.
+            \item The User fills all the attribute fields.
+            \item The Partner Application sends to the system the attributes inserted by the user.
+            \item The system receives by the partner application all the attributes inserted by the user.
+            \item The system send back to the partner application the outcome of the operation. 
+        \end{enumerate}\\ \hline
+Exit Condition   & The system registered the user.\\ \hline
+Exceptions       & None.\\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+
 
 \FloatBarrier
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
 Name             & Send User's Data\\ \hline
-Actors           & User  \\ \hline
+Actors           & User, Partner Application  \\ \hline
 Entry Conditions & The user accepted the treatment of data policy.  \\ \hline
 Event Flow       & \begin{enumerate}
             \item The User uses the partner application.
-            \item The system receives the user data sent by the partner application.
-            \item The system saves the received data.
+            \item The Partner Application sends the user's information to the the system.
+            \item The system receives and saves the user data sent by the partner application.
         \end{enumerate}\\ \hline
-Exit Condition   & The system received the user data.\\ \hline
+Exit Condition   & The system saved the user data.\\ \hline
 Exceptions       & None \\ \hline
 \end{tabular}
 \end{table}
@@ -566,12 +592,12 @@ Exceptions       & None.\\ \hline
 \hline
 Name             & View Map \\ \hline
 Actors           & AutomatedSOS  \\ \hline
-Entry Conditions & The User is spectating a run.    \\ \hline
+Entry Conditions & The user has just started spectating a run. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item AutomatedSOS uses Google Map's API in order to retrieve the map of he run.
-            \item AutomatedSOS adds athletes on the map in their current position.
+            \item AutomatedSOS uses Google Maps API in order to retrieve the map of the run.
+            \item AutomatedSOS represents athletes on the map in their current position.
         \end{enumerate}\\ \hline
-Exit Condition   & The user no more spectating a run.\\ \hline
+Exit Condition   & The current position of athletes is present on the map of the run.\\ \hline
 Exceptions       & None.\\ \hline
 \end{tabular}
 \end{table}
