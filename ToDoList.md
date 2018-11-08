@@ -24,15 +24,19 @@
 		- [ ] Hardware Interfaces
 		- [ ] Software Interfaces
 		- [ ] Communication Interfaces
-	- [ ] Functional Requirements
+	- [ ] Scenarios
+	- [X] Functional Requirements
 		- [X] Functional Requirements
-		- [ ] Use Case Diagram 
+		- [X] Use Case Diagram 
 		- [X] Use cases
 		- [X] Sequence Diagram
 	- [X] Performance Recuirements
 	- [X] Design Constraints
-	- [ ] Software System Attributes
+	- [X] Software System Attributes
 - Alloy
+	- [ ] Data4Help
+	- [ ] AutomatedSOS
+	- [ ] Track4Run
 		
 		
 		
