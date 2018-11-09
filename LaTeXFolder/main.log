@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 NOV 2018 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 NOV 2018 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,8 +954,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 File: Images/Logo/logo.jpg Graphic file (type jpg)
 <use Images/Logo/logo.jpg>
 Package pdftex.def Info: Images/Logo/logo.jpg  used on input line 26.
-(pdftex.def)             Requested size: 240.89572pt x 191.91359pt.
-LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <40> not available
+(pdftex.def)             Requested size: 180.67639pt x 143.93884pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <35> not available
 (Font)              Font shape `T1/ptm/b/sc' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <25> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 31.
@@ -1441,7 +1441,7 @@ Here is how much of TeX's memory you used:
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (42 pages, 3028730 bytes).
+Output written on main.pdf (42 pages, 3028736 bytes).
 PDF statistics:
  726 PDF objects out of 1000 (max. 8388607)
  628 compressed objects within 7 object streams
