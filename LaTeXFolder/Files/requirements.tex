@@ -160,16 +160,14 @@ None of the three services-to-be offer any hardware or software interfaces to ex
 \begin{enumerate}
 \item[•]{\Large Scenario 1} \\
 The company StatisticsDispenser is interested into weekly providing public statistics about people living in London. For this reason the company, which is already registered to Data4Help, need to send a group monitoring request. After logging into the Data4Help website, StatisticsDispenser open the group request section. The website loads a new page where the company can filter groups through some attributes regarding his members like the age, the gender, the city and many more. For the specific purpose StatisticsDispenser chooses only to filter people who live in London and people who's age is between 20 and 60. Then, due to the fact that the company need future data, StatisticsDispenser subscribes to the group. From now on every time new data is available the system sends a notification to StatisticsDispencer. 
-\item[•]{\Large Scenario 2}
-L'utente si registra in una partner application
-\item[•]{\Large Scenario 3}
-L'utente collega l'account in una partner application
-\item[•]{\Large Scenario 4}
-Ambulanza viene mandata (ricordati che il diagramma è sbagliato)
-\item[•]{\Large Scenario 5}
-Promote a run
-\item[•]{\Large Scenario 6}
-spectate a run
+\item[•]{\Large Scenario 2} \\
+Mark often goes for a run so he decides to download an app to track his progress. The app he installed on his smartphone is a Partner Application with Data4Help. After he registers to this app he's asked if he wants to give his information to the company TrackMe and also if he wants his data to be treated also as individual data. Right after he accepts the policy he's asked to create a Data4Help account or to link an existing one to the application. Mark never created a Data4Help account so he decides to go through the registration process. He fills all the attributes fields required for the sign up and confirm the registration. Data4Help creates the account and saves all the attributes that Mark filled in. Data4Help is now ready to receive Mark's data from the partner application.
+\item[•]{\Large Scenario 3} \\
+Bob is 77 years old and lately he's having heart problems. Under his son's advice he decided to use the AutomatedSOS application to receive immediate aid in case of need. One month later Bob doesn't feel okay and his heartbeat value goes below the threshold. AutomatedSOS recognizes that Bob is in a critical health state and quickly sends a report to First Aid system containing useful information like his current location and the reason he's in danger. After the First Aid system received the report, it immediately sends an ambulance to Bob's location and then sends an acknowledge message to AutomatedSOS. The application shows a message on Bob's device to let him know that an ambulance is coming for aid.
+\item[•]{\Large Scenario 4} \\
+Mario promotes run events for a living so in order to simplify the process he goes through everyday he decides to download Track4Run on his smartphone. The famous company AdiDas designate Mario to promote a run that takes place once a year in Milan. Mario log into the app and enter the "Promote a Run" section, inserts and confirms all the information needed. Track4Run creates the run and makes it available to athletes to enroll in.
+\item[•]{\Large Scenario 5} \\
+Lately Eddie and his friends are bored of what they usually do so they decided to participate to a different activity. More precisely they want to create a run event using Track4Run App and see who's the fastest at running. Unfortunately Eddie got ill the day before the event but he's just too curios of seeing who of his friends is going to win. For this reason as soon as the run starts he logs into Track4Run and enters the "Spectate a Run" section and select the run created with his friends. A few moments later the map appears on the app with all the athletes positions on it letting Eddie see how the run is proceeding in real time.
 
 \end{enumerate}
 
@@ -385,7 +383,7 @@ Event Flow       & \begin{enumerate}
         \end{enumerate}\\ \hline
 Exit Condition   & The third party's account has been created and the third party is now registered.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the system notices that attributes used in the registration are already linked to an existing account then a warning is generated saying that there is already a third party registered with the given credentials.
+\item If the system notices that the attributes used in the registration are already linked to an existing account then a warning is generated saying that there is already a third party registered with the given attributes.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -397,12 +395,12 @@ Exceptions       & \begin{itemize}
 \hline
 Name             & Sign In \\ \hline
 Actors           & Third Party  \\ \hline
-Entry Conditions & TRUE.    \\ \hline
+Entry Conditions & TRUE   \\ \hline
 Event Flow       & \begin{enumerate}
             \item The Third Party enters the sign in section.
             \item The system shows to the third party all the credentials fields needed for the log in.
             \item The Third Party fills all credentials fields and confirms he wants to log in.
-            \item The system accept the log in request.
+            \item The system accepts the log in request.
         \end{enumerate}\\ \hline
 Exit Condition   & The third party is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
@@ -466,7 +464,7 @@ Name             & Subscribe To A Group\\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party has just sent an accepted monitoring request to a group. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The Third Party send the request to follow the selected group.
+            \item The Third Party requests to follow the selected group.
 			\item The system links the third party to the group.
             \item The system sends new data to the third party.
         \end{enumerate}\\ \hline
@@ -486,12 +484,12 @@ Name             & Sign Up From Partner App\\ \hline
 Actors           & User, Partner Application  \\ \hline
 Entry Conditions & The user accepted the treatment of data policy.  \\ \hline
 Event Flow       & \begin{enumerate}
-			\item The user start the sign up function on the partner app.
+			\item The user starts the sign up function on the partner app.
 			\item The Partner Application shows to the user all the attributes fields needed for the registration.
             \item The User fills all the attribute fields.
             \item The Partner Application sends to the system the attributes inserted by the user.
             \item The system receives by the partner application all the attributes inserted by the user.
-            \item The system creates the user account and saves the received data.
+            \item The system creates the user's account and saves the received data.
         \end{enumerate}\\ \hline
 Exit Condition   & The system registered the user.\\ \hline
 Exceptions       & \begin{itemize}
@@ -509,7 +507,7 @@ Name             & Link Account To The Partner App\\ \hline
 Actors           & User, Partner Application  \\ \hline
 Entry Conditions & The user accepted the treatment of data policy and already has an existing account to link to the partner application.  \\ \hline
 Event Flow       & \begin{enumerate}
-			\item The user start the account linking function on the partner app.
+			\item The user starts the account linking function on the partner app.
 			\item The Partner Application shows to the user all the credential fields needed for the linking process.
             \item The User fills all the credential fields.
             \item The Partner Application sends to the system the credentials inserted by the user.
@@ -580,7 +578,7 @@ Event Flow       & \begin{enumerate}
             \item The system shows to the user all the credentials fields needed for the log in.
             \item The User fills all credentials fields and confirms he wants to log in.
             \item The User clicks the "Enter" button.
-            \item The system accept the log in in request.
+            \item The system accept the log in request.
         \end{enumerate}\\ \hline
 Exit Condition   & The User user is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
@@ -618,7 +616,7 @@ Name             & Set Preferences \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in. \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The User enters the preferences section of the application.
+            \item The User enters the Preferences section of the application.
             \item The User can add or remove certain health parameters in order to personalize the monitoring profile.
             \item The User can also change certain parameters threshold.
             \item The User confirms all the changes done.
@@ -642,8 +640,8 @@ Entry Conditions & A critical health parameter value is below the threshold.
 \\ \hline
 Event Flow       & \begin{enumerate}
             \item AutomatedSOS sends to First Aid a report that contains all important information about the user like his current location, his gender, his age, his health profile, and the list of parameters that got below the threshold.
-            \item First Aid sends an acknowledge message to AutomatedSOS.
-            \item First Aid sends immediately an ambulance to the user's location.
+            \item First Aid immediately sends an ambulance to the user's location.
+			\item First Aid sends an acknowledge message to AutomatedSOS.            
             \item AutomatedSOS displays on the app a warning message saying that an ambulance is currently heading to the user's location. 
         \end{enumerate}
 \\ \hline
@@ -696,11 +694,11 @@ Event Flow       & \begin{enumerate}
             \item The system shows to the user all the credentials fields needed for the log in.
             \item The User fills all credentials fields and confirms he wants to log in.
             \item The User clicks the "Enter" button.
-            \item The system accept the log in in request.
+            \item The system accepts the log in in request.
         \end{enumerate}\\ \hline
 Exit Condition   & The User user is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
-\item If user inserts invalid log in credentials a warning is generated saying the credentials are invalid.
+\item If the user inserts invalid log in credentials a warning is generated saying the credentials are invalid.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -721,7 +719,7 @@ Event Flow       & \begin{enumerate}
         \end{enumerate}\\ \hline
 Exit Condition   & The run event has been created and added to the list of promoted runs.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the user do not insert critical information (like the path, the name or the date) a warning message is shown saying that critical parameters are missing.
+\item If the user does not insert critical information (like the path, the name or the date) a warning message is shown saying that critical parameters are missing.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
@@ -735,10 +733,10 @@ Name             & Enroll To A Run \\ \hline
 Actors           & User  \\ \hline
 Entry Conditions & The User is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
-            \item The User enters to the Enroll to a Run section of the app.
+            \item The User enters to the "Enroll to a Run" section of the app.
             \item The system shows to the user the list of all the created runs that will take place in the future.
             \item The User can filter the runs with some attributes.
-            \item The User choose the run he wants to participate to.
+            \item The User chooses the run he wants to participate to.
             \item The system adds the user to the list of athletes enrolled to the run.
         \end{enumerate}\\ \hline
 Exit Condition   & The user is now enrolled to the run.\\ \hline
@@ -761,7 +759,7 @@ Event Flow       & \begin{enumerate}
             \item The User enters the Spectate a Run section of the app.
             \item The system shows a new tab where the list of all live runs is visible.
             \item The User can filter the runs with some attributes.
-            \item The User choose the run he wants to spectate.
+            \item The User chooses the run he wants to spectate.
             \item The system shows to the user the map of the run and also the position of all athletes in real time.
         \end{enumerate}\\ \hline
 Exit Condition   & The system is showing to the user the map and the athletes positions.\\ \hline
