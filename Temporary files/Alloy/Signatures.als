@@ -58,5 +58,36 @@ sig User
 	FiscalCode: one String, --Fiscal code
 	Policy: one PrivacyPolicy, --Status of policy acceptnace
 	Credentials: one UserAttributes, --User's credentials
-	RetrievedLocation: set AcquisitionSetData
+	RetrievedData: set AcquisitionSetData --User's set of acquisition acquired
 }
+
+sig ThirdParty
+{
+	IdCode: one Int --Identification code of companies inside the system
+	--The other credentials are useless here
+}
+
+sig AcquisitionType 
+{
+	Type: one Bool, --0 on-demand, 1 live
+	StartTime: one Time, --Initial time monitor
+	StartDate: one Date, -- Initial date monitor
+	EndTime: lone Time -- End time monitor (lone beacuse live don't have end time)
+	EndDate: lone Date -- End date monitor (lone beacuse live don't have end dates)
+}
+
+sig AcquisitionMode
+{
+	Type: one Bool, --0 group mode, 1 single mode
+	GroupAttributes: lone UserAttributes, --Users' attributes on group search (lone beacuse individual mode don't have it)
+	UsercCode: lone String --Tracked User's fiscal code  (lone beacuse group mode don't have it)
+}
+
+sig InformationRequest
+{
+	PartyApplicant: one ThirdParty, --Third party applicant
+	AcquisitionType: one AcquisitionType, --Live or on-demand acquisition
+	AcquiistionMode: one AcquisitionMode --Group mode or individual mode
+}
+
+
