@@ -28,6 +28,7 @@
 \contentsline {subsection}{\numberline {3.2}Scenarios}{19}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Functional Requirements}{19}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Use Case Diagram}{23}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Use Cases}{24}{subsubsection.3.3.2}
 \contentsline {subsection}{\numberline {3.4}Sequence Diagram}{35}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Performance Requirements}{38}{subsection.3.5}
 \contentsline {subsection}{\numberline {3.6}Design Constraints}{38}{subsection.3.6}
