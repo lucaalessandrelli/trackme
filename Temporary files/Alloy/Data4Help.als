@@ -25,112 +25,117 @@ sig Location
 
 sig HealthStatus
 {
-	HearthRate: one Int, --Number of hearth beat per minute
-	BloodPressure: one Int, --Blood pressure
-	CaloriesConsumation: one Int, --Colories consumed per minute
-	Pedometer: one Int --Step counted per minute
+	hearthRate: one Int, --Number of hearth beat per minute
+	bloodPressure: one Int, --Blood pressure
+	caloriesConsumation: one Int, --Colories consumed per minute
+	pedometer: one Int --Step counted per minute
 }
 
 sig AcquisitionSetData
 {
-	User: one User,
-	LocationAcquisition: set Location,
-	HealthStatusAcquisition: set HealthStatus
+	userAcq: one User,
+	locationAcquisition: set Location,
+	healthStatusAcquisition: set HealthStatus
 }
 
 sig PrivacyPolicy
 {
-	Standard: one Bool, --Standard privacy policy is accepted (group tracking)
-	Full: one Bool --Full privacy policy is accepted (individual tracking)
+	standard: one Bool, --Standard privacy policy is accepted (group tracking)
+	full: one Bool --Full privacy policy is accepted (individual tracking)
 }
 
 sig UserAtttributes
 {	
-	Age: one Int, --Age of the user
-	Address: one Location, --Location where user lives
-	Job: one Int , --User's id job (i.e. 1=student, 2=worker, 3=enterpreneur,..)
+	age: one Int, --Age of the user
+	address: one Location, --Location where user lives
+	job: one Int , --User's id job (i.e. 1=student, 2=worker, 3=enterpreneur,..)
 	--The other credentials are useless here
 }
 
-sig GroupAtttributes
+sig GroupAttributes
 {	
-	Age: one Int, --Age of users
-	Area: set Location, --Area where users live
-	Job: one Int , --User's id job (i.e. 1=student, 2=worker, 3=enterpreneur,..)
+	age: one Int, --Age of users
+	area: set Location, --Area where users live
+	job: one Int , --User's id job (i.e. 1=student, 2=worker, 3=enterpreneur,..)
 }
 
 sig User
 {
-	FiscalCode: one String, --Fiscal code
-	Policy: one PrivacyPolicy, --Status of policy acceptnace
-	Credentials: one GroupAttributes, --User's credentials
-	RetrievedData: set AcquisitionSetData --User's set of acquisition acquired
+	fiscalCode: one String, --Fiscal code
+	policy: one PrivacyPolicy, --Status of policy acceptnace
+	credentials: one GroupAttributes, --User's credentials
+	retrievedData: set AcquisitionSetData --User's set of acquisition acquired
 }
 
 sig ThirdParty
 {
-	IdCode: one Int --Identification code of companies inside the system
+	idCode: one Int --Identification code of companies inside the system
 	--The other credentials are useless here
 }
 
 sig AcquisitionMode
 {
-	Type: one Bool, --0 group mode, 1 single mode
-	GroupAttributes: lone GroupAttributes, --Users' attributes on group search (lone beacuse individual mode don't have it)
-	UsercCode: lone String --Tracked User's fiscal code  (lone beacuse group mode don't have it)
+	type: one Bool, --0 group mode, 1 single mode
+	groupAttributes: lone GroupAttributes, --Users' attributes on group search (lone beacuse individual mode don't have it)
+	usercCode: lone String --Tracked User's fiscal code  (lone beacuse group mode don't have it)
 }
 
 sig InformationRequest
 {
-	PartyApplicant: one ThirdParty, --Third party applicant
-	AcquiistionMode: one AcquisitionMode, --Group mode or individual mode
+	partyApplicant: one ThirdParty, --Third party applicant
+	acquistionMode: one AcquisitionMode, --Group mode or individual mode
 }
 
 sig InformationAnswer 
 {
-	Request: one InformationRequest,
-	AcquisitionData: set AcquisitionSetData
+	request: one InformationRequest,
+	acquisitionData: set AcquisitionSetData
 }
 
 --All user has accepted policy
-fact UserAccqptFirstPolicyPart
+fact UserAcceptFirstPolicyPart
 {
-	all u: User | u.PrivacyPolicy.Standard = 1
+	all u: User | u.policy.standard = True
 }
 
 --User and retrieved data are linked
 fact UserAreLinkedToRetrievedData
 {
-	all u: User | all d: RetrievedData |  (d in u.RetrievedData implies d.User = u) and (d.User = u implies d in u.RetrievedData) 
+	all u: User | all d: AcquisitionSetData |  (d in u.retrievedData implies d.userAcq = u) and (d.userAcq = u implies d in u.retrievedData) 
 }
 
 
 --Group mode acquisition answer respect attributes requested
 fact GroupModeAttributesRespected 
 {
-	all a: InformationAnswer |  a.Request.AcquisitionMode.Type = 0 implies 
-		a.AcquisitionData.User.UserAttributes.Age = a.Request.AcquisitionMode.GroupAttributes.Age and
-		a.AcquisitionData.User.UserAttributes.Job = a.Request.AcquisitionMode.GroupAttributes.Job and
-		a.AcquisitionData.User.UserAttributes.Address in a.Request.AcquisitionMode.GroupAttributes.Area
+	all a: InformationAnswer |  a.request.acquistionMode.type = False implies 
+		a.acquisitionData.userAcq.credentials.age = a.request.acquistionMode.groupAttributes.age and
+		a.acquisitionData.userAcq.credentials.job = a.request.acquistionMode.groupAttributes.job
 }
 
 --Group mode acquisition answer respect location requested
 fact GroupModeDataLocationRespected
 {
-	all a: InformationAnswer |  a.Request.AcquisitionMode.Type = 0 implies 
-		all d: a.AcquisitonData.LocationAcquisition | d in a.Request.AcquisitionMode.GroupAttributes.Area
+	all a: InformationAnswer | a.request.acquistionMode.type = False implies 
+		all d: a.acquisitionData.locationAcquisition | d in a.request.acquistionMode.groupAttributes.area
 }
 
 --Group answer only if involve users are >= 1000
 fact GroupModePrivacy
 {
-	all a: InformationAnswer |  a.Request.AcquisitionMode.Type = 0 implies 
-		sum x: a.AcquisitonData | x >= 1000
+	all a: InformationAnswer |  a.request.acquistionMode.type = False implies 
+		#a.acquisitionData >= 1000
 }
 
 --Single answer only if user accept policy
 fact IndividualModePrivacy
 {
-	all a: InformationAnswer |  a.Request.AcquisitionMode.Type = 1 implies 
-		 a.AcquisitionData.User.PrivacyPolicy.Full = 1
+	all a: InformationAnswer | a.request.acquistionMode.type = True implies 
+		  a.acquisitionData.userAcq.policy.full = True
 }
+
+
+pred show () {}
+
+run show for 2
+
