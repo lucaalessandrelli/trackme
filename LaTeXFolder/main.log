@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  9 NOV 2018 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  10 NOV 2018 10:58
 entering extended mode
 **./main.tex
 (main.tex
@@ -1487,12 +1487,9 @@ Overfull \vbox (20.34969pt too high) has occurred while \output is active []
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
+[41
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [41
-
-] [42] [43
+]) [42] [43
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
@@ -1507,7 +1504,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
 Here is how much of TeX's memory you used:
  22492 strings out of 492970
  416735 string characters out of 3126593
- 486637 words of memory out of 3000000
+ 487637 words of memory out of 3000000
  25611 multiletter control sequences out of 15000+200000
  51069 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1517,7 +1514,7 @@ Here is how much of TeX's memory you used:
 cm/cmsy10.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 /times/utmb8a.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /urw/times/utmr8a.pfb>
-Output written on main.pdf (43 pages, 3093556 bytes).
+Output written on main.pdf (43 pages, 3093674 bytes).
 PDF statistics:
  723 PDF objects out of 1000 (max. 8388607)
  252 named destinations out of 1000 (max. 500000)
