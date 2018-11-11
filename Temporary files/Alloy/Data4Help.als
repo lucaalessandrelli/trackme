@@ -134,6 +134,20 @@ fact IndividualModePrivacy
 		  a.acquisitionData.userAcq.policy.full = True
 }
 
+--Check for User's privacy validation
+assert NoGroupAnswerWithFewUsers
+{
+	no a: InformationAnswer |  a.request.acquistionMode.type = False and #a.acquisitionData < 1000
+}
+
+assert NoSingleAnswerWithUserNotAgree
+{
+	no a: InformationAnswer |  a.request.acquistionMode.type = True and  a.acquisitionData.userAcq.policy.full = False
+}
+
+
+check NoGroupAnswerWithFewUsers
+check NoSingleAnswerWithUserNotAgree
 
 pred show () {}
 
