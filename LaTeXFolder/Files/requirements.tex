@@ -582,11 +582,13 @@ Event Flow       & \begin{enumerate}
             \item The system shows to the user all the credentials fields needed for the log in.
             \item The User fills all credentials fields and confirms he wants to log in.
             \item The User clicks the "Enter" button.
-            \item The system accept the log in request.
+			\item The system checks if the user accepted the individual treatment of data policy.            
+            \item The system accepts the log in request.
         \end{enumerate}\\ \hline
 Exit Condition   & The User user is now logged in.\\ \hline
 Exceptions       & \begin{itemize}
-\item If user inserts invalid log in credentials a warning is generated saying the credentials are invalid.
+\item If the user inserts invalid log in credentials a warning is generated saying the credentials are invalid.
+\item If the user logs in with an already existing account for which he didn't accept the individual treatment of data policy then a warning is displayed stating that the policy must be accepted in order to use the application. For this reason the user is asked again to accept the policy. 
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}
