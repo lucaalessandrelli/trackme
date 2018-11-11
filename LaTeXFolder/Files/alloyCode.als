@@ -1,22 +1,6 @@
 open util/integer
 open util/boolean
 
---sig Date
---{
-	--day: one Int,
-	--month: one Int,
-	--year: one Int
---}
---{day >= 1 and day <= 31 and month>=1 and month<=12 and year>=2000}
-
---sig Time
---{
-	--hour: one Int,
-	--minute: one Int,
-	--second: one Int
---}
---{hour >= 1 and hour <= 24 and minute>=0 and minute<=59 second>=0 and secoond<=59}
-
 sig Location
 {
 	coordX: one Int, --Latitude position
