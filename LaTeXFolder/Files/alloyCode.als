@@ -1,139 +1,240 @@
 open util/integer
-open util/boolean
 
+sig Bool {}
+one sig True extends Bool {}
+one sig False extends Bool {}
+
+------- DATA4HELP SIGNATURES -------
+
+sig FiscalCode {}
+ 
 sig Location
 {
-	coordX: one Int, --Latitude position
-	coordY: one Int --Longitude position
+	time: one Time
 }
+
+sig Time {}
 
 sig HealthStatus
 {
-	hearthRate: one Int, --Number of hearth beat per minute
-	bloodPressure: one Int, --Blood pressure
-	caloriesConsumation: one Int, --Colories consumed per minute
-	pedometer: one Int --Step counted per minute
+	time: one Time,
+	parameter: some Parameter
 }
 
 sig AcquisitionSetData
 {
-	userAcq: one User,
-	locationAcquisition: set Location,
-	healthStatusAcquisition: set HealthStatus
+	locationAcquisition: some Location,
+	healthStatusAcquisition: some HealthStatus
 }
 
-sig PrivacyPolicy
+sig IndividualPrivacyPolicy
 {
-	standard: one Bool, --Standard privacy policy is accepted (group tracking)
-	full: one Bool --Full privacy policy is accepted (individual tracking)
+	IndividualMonitoring: one Bool --Full privacy policy is accepted (individual monitoring)
 }
 
-sig UserAtttributes
+sig UserAttributes
 {	
-	age: one Int, --Age of the user
 	address: one Location, --Location where user lives
-	job: one Int , --User's id job (i.e. 1=student, 2=worker, 3=enterpreneur,..)
-	--The other credentials are useless here
 }
 
 sig GroupAttributes
 {	
-	age: one Int, --Age of users
-	area: set Location, --Area where users live
-	job: one Int , --User's id job (i.e. 1=student, 2=worker, 3=enterpreneur,..)
+	area: some Location, --Area where users live
 }
 
 sig User
 {
-	fiscalCode: one String, --Fiscal code
-	policy: one PrivacyPolicy, --Status of policy acceptnace
-	credentials: one GroupAttributes, --User's credentials
-	retrievedData: set AcquisitionSetData --User's set of acquisition acquired
+	fiscalCode : one FiscalCode,
+	policy: one IndividualPrivacyPolicy, --Status of policy acceptance
+	credentials: one UserAttributes, --User's credentials
+	retrievedData: some AcquisitionSetData --User's set of acquisition acquired
 }
 
-sig ThirdParty
+
+sig ThirdParty{}
+
+abstract sig InformationRequest
 {
-	idCode: one Int --Identification code of companies inside the system
-	--The other credentials are useless here
+	partyApplicant: one ThirdParty, --Third party applicant}			
 }
 
-sig AcquisitionMode
+sig IndividualRequest extends InformationRequest
 {
-	type: one Bool, --0 group mode, 1 single mode
-	groupAttributes: lone GroupAttributes, --Users' attributes on group search (lone beacuse individual mode don't have it)
-	usercCode: lone String --Tracked User's fiscal code  (lone beacuse group mode don't have it)
+	fiscalCode: one FiscalCode --Tracked User's fiscal code  (lone beacuse group mode don't have it)
 }
 
-sig InformationRequest
+sig GroupRequest extends InformationRequest
 {
-	partyApplicant: one ThirdParty, --Third party applicant
-	acquistionMode: one AcquisitionMode, --Group mode or individual mode
+	groupAttributes: one GroupAttributes, --Users' attributes on group search (lone beacuse individual mode don't have it)
 }
 
-sig InformationAnswer 
+abstract sig InformationAnswer{}
+
+sig IndividualInformationAnswer extends InformationAnswer
 {
-	request: one InformationRequest,
-	acquisitionData: set AcquisitionSetData
-}
+	individualRequest: one IndividualRequest,
+	user: one User,
+	acquisitionData: one AcquisitionSetData
+} {user.policy.IndividualMonitoring = True}
 
---All user has accepted policy
-fact UserAcceptFirstPolicyPart
+sig GroupInformationAnswer extends InformationAnswer 
 {
-	all u: User | u.policy.standard = True
-}
+	groupRequest: one GroupRequest,
+	acquisitionData: some AcquisitionSetData
+} {#acquisitionData > 3}	--  3 stands for 1000 
 
---User and retrieved data are linked
-fact UserAreLinkedToRetrievedData
+
+------- AUTOMATEDSOS SIGNATURES -------
+
+sig Parameter
 {
-	all u: User | all d: AcquisitionSetData |  (d in u.retrievedData implies d.userAcq = u) and (d.userAcq = u implies d in u.retrievedData) 
+	value : one Int,
+	threshold : one Int
 }
 
+sig FirstAid {}
+	
+sig Report {
+	user: one User,
+	receiver: one FirstAid
+}
 
---Group mode acquisition answer respect attributes requested
-fact GroupModeAttributesRespected 
+sig AmbulanceRequest
 {
-	all a: InformationAnswer |  a.request.acquistionMode.type = False implies 
-		a.acquisitionData.userAcq.credentials.age = a.request.acquistionMode.groupAttributes.age and
-		a.acquisitionData.userAcq.credentials.job = a.request.acquistionMode.groupAttributes.job
+	time: one Time,
+	report : one Report
 }
 
---Group mode acquisition answer respect location requested
-fact GroupModeDataLocationRespected
+------- TRACK4RUN SIGNATURES -------
+
+sig Map 
 {
-	all a: InformationAnswer | a.request.acquistionMode.type = False implies 
-		all d: a.acquisitionData.locationAcquisition | d in a.request.acquistionMode.groupAttributes.area
+	athletesLocation: some Location,
+	runEvent : one Run
 }
-
---Group answer only if involve users are >= 1000
-fact GroupModePrivacy
+sig Run
 {
-	all a: InformationAnswer |  a.request.acquistionMode.type = False implies 
-		#a.acquisitionData >= 1000
+	athletes: some Track4RunUser,
+	map: lone Map
+} 
+
+sig Track4RunUser extends User {
+	watchingRun: lone Run
 }
 
---Single answer only if user accept policy
-fact IndividualModePrivacy
+
+------------ DATA4HELP FATCTS ------------
+
+fact HealthStatusInAcquisitionSetData
 {
-	all a: InformationAnswer | a.request.acquistionMode.type = True implies 
-		  a.acquisitionData.userAcq.policy.full = True
+	all h: HealthStatus | some a: AcquisitionSetData | h in a.healthStatusAcquisition
 }
-
---Check for User's privacy validation
-assert NoGroupAnswerWithFewUsers
+fact PrivacyPolicyInUser
 {
-	no a: InformationAnswer |  a.request.acquistionMode.type = False and #a.acquisitionData < 1000
+	all p: IndividualPrivacyPolicy | one u: User | p in u.policy
 }
-
-assert NoSingleAnswerWithUserNotAgree
+fact UserAttInUser
 {
-	no a: InformationAnswer |  a.request.acquistionMode.type = True and  a.acquisitionData.userAcq.policy.full = False
+	all ua: UserAttributes | one u: User | ua in u.credentials
+}
+fact GroupAttributesInGroupRequest
+{
+	all g: GroupAttributes | one ga: GroupRequest | g in ga.groupAttributes
+}
+fact ThirdPartyInRequest
+{
+	all t: ThirdParty | some r:InformationRequest | t in r.partyApplicant
+}
+fact AcquisitionDataInUser
+{
+	all a: AcquisitionSetData | one u: User | a in u.retrievedData
+}
+fact NoTwoAnswerForSameIndividualRequest
+{
+ all disj i1, i2: IndividualInformationAnswer | i1.individualRequest != i2.individualRequest 
+}
+fact NoTwoAnswerForSameGroupRequest
+{
+ all disj i1, i2: GroupInformationAnswer | i1.groupRequest != i2.groupRequest 
+}
+fact NoTwoEqualFisalCode
+{
+	all disj u1,u2 : User | u1.fiscalCode != u2.fiscalCode
+}
+fact AnswerToRequestWithRightFiscalCode
+{
+	all i: IndividualInformationAnswer | i.user.fiscalCode = i.individualRequest.fiscalCode
+}
+fact RightAcquisitionDataAnswerToRequest
+{
+	all i: IndividualInformationAnswer | one u: User | (i.user = u) and (u.retrievedData = i.acquisitionData)
+}
+
+fact RunnerNotSpectator
+{
+	all disj t1, t2 :Track4RunUser | all r: Run |  (r in t1.watchingRun and t2 in r.athletes) implies ( t1 != t2)
+}
+
+fact TwoRunnersNotSameLocation
+{
+ all m:Map | all l1,l2: Location | ((l1 in m.athletesLocation) and (l2 in m.athletesLocation)) implies l1 != l2
+}
+
+------------ DATA4HELP PREDICATES ------------
+
+pred IndividualAnswerRegardOnlyPolicyAgreedUsers
+{
+	all i: IndividualInformationAnswer | i.user.policy.IndividualMonitoring = True
+}
+
+pred MinimumGroupMembers
+{
+	all g: GroupInformationAnswer | #g.acquisitionData > 3	--  3 stands for 1000 
 }
 
 
-check NoGroupAnswerWithFewUsers
-check NoSingleAnswerWithUserNotAgree
+------------ AUTOMATEDSOS PREDICATES ------------
 
-pred show () {}
+pred AmbulanceRequestSent
+{
+	all h: HealthStatus | all p: Parameter | one a: AmbulanceRequest | one u: User |
+	((h.parameter = p) and (p.value < p.threshold)) implies 
+ 	((a.time = h.time) and (h in u.retrievedData.healthStatusAcquisition and a.report.user = u))
+}
 
-run show for 2
+------------- TRACK4RUN PREDICATES -------------
+
+pred SameNumberLocationsAndRunners
+{
+ all m:Map | all r: Run | ((m in r.map) implies (#m.athletesLocation = #r.athletes ) and r.athletes.retrievedData.locationAcquisition in m.athletesLocation)
+}
+
+------------- DATA4HELP ASSERTIONS -------------
+
+assert UserPrivacy
+{
+	IndividualAnswerRegardOnlyPolicyAgreedUsers and MinimumGroupMembers
+}
+
+------------- AUTOMATEDSOS ASSERTIONS -------------
+
+assert AmbulanceEmergency
+{
+	IndividualAnswerRegardOnlyPolicyAgreedUsers
+}
+
+------------- TRACK4RUN ASSERTIONS -------------
+
+assert WatchingAthletesPosition
+{
+	SameNumberLocationsAndRunners
+}
+
+------------------------------
+
+pred show{}
+check WatchingAthletesPosition for 20
+check AmbulanceEmergency for 20
+check UserPrivacy for 20
+run show for 2 but exactly 2 GroupInformationAnswer
 
