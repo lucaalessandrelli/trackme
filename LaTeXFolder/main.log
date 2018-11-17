@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  16 NOV 2018 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  17 NOV 2018 18:17
 entering extended mode
 **./main.tex
 (main.tex
@@ -1269,6 +1269,12 @@ e 149.
 g>] [18 <./Images/Mockups/Track4RunMockup5.jpg> <./Images/Mockups/Track4RunMock
 up6.jpg> <./Images/Mockups/Track4RunMockup7.jpg> <./Images/Mockups/Track4RunMoc
 kup8.jpg>] [19]
+Overfull \hbox (1.8154pt too wide) in paragraph at lines 180--181
+[]\T1/ptm/m/n/10.95 User's in-for-ma-tion are col-lected from part-ner ap-pli-c
+a-tions or from the other two TrackMe
+ []
+
+
 Overfull \hbox (1.67278pt too wide) in paragraph at lines 182--183
 []\T1/ptm/m/n/10.95 The iden-ti-fi-ca-tion (fis-cal code, so-cial se-cu-rity nu
 m-ber) and the sec-ondary data (at-tributes)
@@ -1305,7 +1311,7 @@ $[]$
  []
 
 
-Underfull \vbox (badness 4217) has occurred while \output is active []
+Underfull \vbox (badness 7116) has occurred while \output is active []
 
  [22]
 [23 <./Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png>]
@@ -1548,9 +1554,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/lucaa/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Users/luca
 a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/
 lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (48 pages, 3645853 bytes).
+Output written on main.pdf (48 pages, 3646235 bytes).
 PDF statistics:
- 1039 PDF objects out of 1200 (max. 8388607)
+ 1040 PDF objects out of 1200 (max. 8388607)
  492 named destinations out of 1000 (max. 500000)
  567 words of extra memory for PDF output out of 10000 (max. 10000000)
 
