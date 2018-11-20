@@ -1,0 +1,124 @@
+\input{commandsFile}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}
+\usepackage{placeins}
+\usepackage{graphicx,color,listings}
+\usepackage{float}
+\usepackage[export]{adjustbox}
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{%
+  colorlinks = true,
+  linkcolor  = black
+}
+\usepackage{sectsty}
+
+
+\sectionfont{\huge}
+\subsectionfont{\LARGE}
+\subsubsectionfont{\Large}
+
+
+
+\begin{document}
+
+
+
+%TITLE PAGE
+
+\begin{titlepage}
+
+%LOGO
+\centering
+{\textcolor{Blue}{\LARGE  {POLITECNICO DI MILANO}}}\\[0.5CM]
+\Large {School of Industrial and Information Engineering}\\[0.3CM]
+\textbf{\Large Computer Science and Engineering}\\
+[1cm]
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.3]{Images/Logo/logo.jpg}\\
+[1cm]
+\end{figure}
+{\fontsize{35}{35} \selectfont{\textcolor{Blue}{\textsc{\bfseries  TrackMe DD}}}}\\[0.5cm]
+{\fontsize{25}{70} \selectfont{\textcolor{Blue}{\textbf{{Design Document}}}}}\\[0.5cm]     
+{\textcolor{Black}{\LARGE{Software Engineering 2 Project}}}\\ [2cm]     
+\centering
+The project was made by\\[0.5cm]
+\textbf {\LARGE Luca Alessandrelli 846260}\\[0.2cm]
+\textbf {\LARGE Andrea Caraffa 919970}\\[0.2cm]
+\textbf {\LARGE Andrea Bionda 921082}\\[0.5cm]
+Version 1.0  -  2018/2019
+\end{titlepage}
+
+%Define deliverable specific info
+%Replace cell contents where needed
+\begin{table}[h!]
+\begin{tabu} to \textwidth { X[0.3,r,p] X[0.7,l,p] }
+\hline
+
+\textbf{Deliverable:} & DD\\
+\textbf{Title:} & Design Document \\
+\textbf{Authors:} & Luca Alessandrelli, Andrea Caraffa, Andrea Bionda \\
+\textbf{Version:} & 2.0 \\ 
+\textbf{Date:} & 19-October-2018 \\
+\textbf{Download page:} & https://github.com/lucaalessandrelli/AlessandrelliCaraffaBionda.git \\
+\textbf{Copyright:} & Copyright © 2017, Luca Alessandrelli, Andrea Caraffa, Andrea Bionda – All rights reserved \\
+\hline
+\end{tabu}
+\end{table}
+
+
+
+
+\setcounter{page}{2}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Introduction}}}
+\label{sect:introduction}
+\input{Files/introduction}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Architectural Design}}}
+\label{sect:architecturaldesign}
+\input{Files/architecturaldesign}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{User Interface Design}}}
+\label{sect:uidesign}
+\input{Files/uidesign}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Requirements Traceability}}}
+\label{sect:requirements}
+\input{Files/requirements}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Implementation, Integration and Test Plan}}}
+\label{sect:imp}
+\input{Files/imp}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Effort Spent}}}
+\label{sect:effort}
+\input{Files/effort}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\color{Blue}{\section{Reference Documents}}}
+\label{sect:reference}
+\input{Files/reference}
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\end{document}
