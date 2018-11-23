@@ -415,7 +415,7 @@ Event Flow       & \begin{enumerate}
             \item The Third Party enters the Individual Request section.         
             \item The system shows to the third party all the information fields needed for the identification of the individual.
             \item The Third Party fills all the attribute fields and confirms he wants to track that specific individual.
-            \item The system shows all the individual's information that have been collected until the moment of the request. 
+            \item The system shows all the individual's data that have been collected until the moment of the request along with some statistics. 
         \end{enumerate}\\ \hline
 Exit Condition   & The request's outcome is shown to the third party.\\ \hline
 Exceptions       & \begin{itemize}
@@ -439,7 +439,7 @@ Event Flow       & \begin{enumerate}
             \item The Third Party insert the search area.
             \item The Third Party inserts all the attributes.
             \item The system accepts the request.
-            \item The system shows all the group's information that have been collected until the moment of the request. 
+            \item The system shows all the group's data that have been collected until the moment of the request along with some statistics. 
         \end{enumerate}\\ \hline
 Exit Condition   & The request's outcome is shown.\\ \hline
 Exceptions       & \begin{itemize}
@@ -729,14 +729,14 @@ Actors           & User  \\ \hline
 Entry Conditions & The User is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
             \item The User enters to the "Enroll to a Run" section of the app.
-            \item The system shows to the user the list of all the created runs that will take place in the future.
+            \item The system shows to the user a list containing all invites received and also a second list containing all created runs taking place in the future.
             \item The User can filter the runs with some attributes.
             \item The User chooses the run he wants to participate to.
-            \item The system adds the user to the list of athletes enrolled to the run.
+            \item The system enrolls the user to the run.
         \end{enumerate}\\ \hline
-Exit Condition   & The user is now enrolled to the run.\\ \hline
+Exit Condition   & The user is now enrolled to the chosen run.\\ \hline
 Exceptions       & \begin{itemize}
-\item If the number of athletes has already capped the max amount in the run chosen by the user then a warning message is displayed saying that no more athletes are allowed to participate to the run.
+\item If the chosen run has already capped the maximum amount of athletes then a warning message is displayed saying that no more athletes are allowed to participate to the run.
 \end{itemize}\\ \hline
 \end{tabular}
 \end{table}

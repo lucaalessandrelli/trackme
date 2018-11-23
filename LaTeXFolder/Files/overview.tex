@@ -26,7 +26,6 @@ The following State Chart represents the behaviour of a Data Request Object.
 \end{center}
 \end{minipage}
 
-
 \subsection{Product functions}
 The systems-to-be under analysis have to offer several functions. Below, the main functions provided by each system are more precisely specified, considering all the aspects emerged from the previous list of goals.
 \subsubsection{Data4Help - Providing data to third parties }
@@ -63,7 +62,7 @@ In the specification document certain parts are not specified and a bit ambiguou
 \item[•] {\Large Data4Help}
 	\begin{enumerate}
 	\item User's data are collected from partner applications or from the other two TrackMe applications installed on user's devices.
-	\item Partner applications can be all the sport assistant apps, gps assistant apps or all the other applications that can retrieve location and health status of individual for such reason.
+	\item Partner applications can be all the sport assistant apps, GPS assistant apps or all the other applications that can retrieve location and health status of individual for such reason.
 	\item All the partner applications require to submit user credentials. 
 	\item When the partner application is installed and credentials are submitted,
 	the user is required to accept privacy policy, composed in two parts:
@@ -76,6 +75,7 @@ In the specification document certain parts are not specified and a bit ambiguou
 	\item Only third parties that are registered to Data4Help can request the monitoring service.
 	\item Groups are characterized by its members' attributes (age, gender, city, …).
 	\item Health status parameters that can be acquired are all the ones supported by a standard smartwatch as: Heart Rate, Blood Pressure, Pedometer, Calories Calculation.
+	\item The answers to both Individual Requests and Group Requests contain also some statistics other than raw data.
 	\end{enumerate}
 	
 \item[•] {\Large AutomatedSOS}
@@ -83,7 +83,8 @@ In the specification document certain parts are not specified and a bit ambiguou
 	\item AutomatedSOS exploit only smartwatches devices to retrieve all the information needed.
 	\item AutomatedSOS is an application that needs to be installed into the user's device.
 	\item All data retrieved by AutomatedSOS are sent to Data4Help.
-	\item In order to keep under systematic review the user's health status, all the historical information about the user are received by Data4Help's Database.
+	\item In any case, data retrieved by AutomatedSOS won't be sent to third parties if they perform an individual request. Thus TrackMe doesn't offer additional services for third parties through AutomatedSOS.
+	\item In order to keep under systematic review the user's health status and have a broad view of it, some historical information about the user are received by Data4Help's Database.
     \item This service can be used only by elderly people (70+) or by who really need it, in order to avoid useless waste of resources.
     \item User can see all personal information that have been sent to the Data4Help service. 
 	\end{enumerate}
@@ -97,7 +98,8 @@ In the specification document certain parts are not specified and a bit ambiguou
 	\item Athlete: allow the user to participate to a run. In order to be an athlete the request of data treatment by the Data4Help service need to be accepted.
 	\item Spectator: Allow the user to watch in real time the positions of all the athletes in a given run.
 	\end{enumerate}
-	\item Any user can organize an event.
+	\item All run events are seen as public runs, so every user can enroll to future runs.
+	\item Any user can organize an event and also invite other users to enroll to the run.
     \item All the events can be spectated by users.
     \item All users invited to a run can accept or discard the request.
     \item Race path are always composed by citizen routes (never in private circuits or stadiums)
