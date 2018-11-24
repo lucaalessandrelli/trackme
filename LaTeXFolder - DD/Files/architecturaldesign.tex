@@ -21,9 +21,11 @@ More specifically Data4Help manage the data and core logic sections while Automa
 The following Deployment Diagram captures the topology of the system's hardware.
 The SmartphoneApp and SmartWatchApp (Presentation Tier) communicate to the Application Server through RMI, while the WebBrowser communicates to the WebServer through HTTP protocol. The Application Server (Application Tier) communicates to the Database Server (Data Tier) through JDBC.
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.35]{Images/DeploymentDiagram.png}
-\end{center}
+\caption{Deployment Diagram.}
+\end{figure}
 
 \subsection{Runtime View}
 \subsection{Component Interfaces}
