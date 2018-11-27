@@ -24,10 +24,12 @@ More specifically Data4Help manage the data and core logic sections while Automa
 \begin{enumerate}
 \item [1] \textbf{Main Server} 
 This huge component is in charge of manage Data4Help services so store and provide, for interested companies, users’ data (such as GPS location and daily Health Status). Moreover it manages race information of Track4Run application.
+
 	\begin{enumerate}
 	\item [1.1] \textbf{Web Server:} In order to accept and supply information to who need them, this component offer a friendly web interface to simplify these operations\\Offered interfaces:
 		\begin{enumerate}
-		\item [1.1.1] \textbf{Web Interface:} Human interface for third parties and for Track4Run users.
+		\item [1.1.1] \textbf{Web Interface:} Human interface for third parties and Track4Run users. Software interface for AutomatedSOS.
+		\item [1.1.2] \textbf{Web Interface:} Human interface for logging third parties.
 		\end{enumerate}
 		
 	\item [1.2] \textbf{Request Manager:} In order to support web server in its job, this component manage all the incoming request: it sorts them per urgency, it wrap the request in a smart data structure and send it to Data Collector, it unwrap the answer from Data Collector and it continuously generates data exchange if a live acquisition is active\\Offered interfaces:
@@ -45,20 +47,40 @@ This huge component is in charge of manage Data4Help services so store and provi
 	\item [1.4] \textbf{Statistic Generator:} This component is in charge of generates statistic on data provided by data collector such as arithmetic mean, variance from average, standard deviation and median.\\Offered interfaces:
 		\begin{enumerate}
 		\item [1.4.1] \textbf{Provide Statistics:} Software interface that provides statistic values to data collector.
-		\item [1.4.2] \textbf{Provide Statistics:} (The Software interface to receive data is trivial and not explicitly specified).
+		\item [1.4.2] \textbf{Provide Statistics:} (The Software interface to receive data from Data collector to be managed is trivial and not explicitly specified).
 		\end{enumerate}	
+	
+	\item [1.5] \textbf{Users' Manager:} This component is in charge to communicate with users' device in order to log (or sign up) user and retrieve data collected.\\Offered interfaces:
+		\begin{enumerate}
+		\item [1.5.1] \textbf{Acquire Data:} Software interface that allows partner application to send data to Data4Help.
+		\item [1.5.2] \textbf{Enroll user:} Software interface that allows user to become user of Data4Help service.
+		\end{enumerate}	
+	
+	\item [1.6] \textbf{Track4Run Manager:} This component is in charge to communicate with Track4Run applications in order to allow promoter to manage races.\\Offered interfaces:
+		\begin{enumerate}
+		\item [1.6.1] \textbf{Acquire Data:} Software interface that allows promoter, through Track4Run, to promote a run, invite athletes and specify all the useful information about the race.
+		\end{enumerate}	
+	
 	\end{enumerate}
 	
 \item [2] \textbf{Database} 
 This component is in charge of store physically data and organize them in a smart way according to DBMS rule, moreover it allows the access to those data.
+
 	\begin{enumerate}
-	\item [2.1]\textbf{Users’ data DB:}
-	This component is in charge of store all the users’ acquired data and quickly provide them to Data collector whenever it is required
-Offered interfaces. \\Offered Interfaces:
+	\item [2.1]\textbf{Users’ data DBMS:}
+	This component is in charge of store all the users’ acquired data and quickly provide them to Data collector whenever it is required.\\Offered Interfaces:
 		\begin{enumerate}
-		\item [2.1.1] \textbf{Store Data:} Software interface that allows to Users’ data Acquirer to store data with queries.
+		\item [2.1.1] \textbf{Store users' Data:} Software interface that allows to Users’ data Acquirer to store data with queries.
 		\item [2.1.2] \textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
 		\end{enumerate}	
+	
+	\item [2.2]\textbf{Track4Run DBMS:}
+	This component is in charge of store all the races' informations provided by promoters.\\Offered Interfaces:
+		\begin{enumerate}
+		\item [2.2.1] \textbf{Store races' Data:} Software interface that allows to Track4Run Manager to store data with queries.
+		\item [2.2.2] \textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
+		\end{enumerate}	
+	
 	\end{enumerate}
 
 \end{enumerate}
