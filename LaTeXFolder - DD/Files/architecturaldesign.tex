@@ -82,7 +82,7 @@ This component should extend all that is specified in partner application compon
 	\end{enumerate}
 	
 
-\item [5]\textbf{Track4Run: }
+\item [5]\textbf{Track4RunApp: }
 This component should extend all that is specified in partner application component to exploit all its features. Track4Run component,also, should provide to spectator the possibilities to select and spectate to a run,also allows promoter to create and manage a race providing all the useful information.
 	
 		\begin{enumerate}
@@ -116,44 +116,77 @@ In this section several Sequence Diagrams are shown in order to point up the int
 
 \subsection{Component Interfaces}
 
-\textbf{Web Interface:} Human interface for third parties and Track4Run users. Software interface for AutomatedSOS.
+\begin{enumerate}
 
-\textbf{Accept Information request:} Software interface for Web server to allow receiving request to be evaluated.
-\textbf{Offer Information:} Software interface for Web server to provide information answer.
+\item[1.1] \textbf{WebServer: }
+	\begin{enumerate}
+		\item[1.1.1] \textbf{Web Interface:} Human interface for third parties that want to log in or retrieve information from Data4Help service. Software interface for Track4Run and for AutomatedSOS in order to provide requested information.
+	\end{enumerate}
+	
+\item[1.2] \textbf{RequestManager: }
+	\begin{enumerate}
+		\item[1.2.1] \textbf{AcceptInformationRequest:} Software interface that allows WebServer to submit requests to be evaluated.
+		\item[1.2.1] \textbf{ProvideInformation:} Software interface that provides to web server information answers that match previous requests.
+	\end{enumerate}
 
-\textbf{Accept request:} Software interface that accept request from Request manager formatted in the proper way.
-\textbf{Provide managed data:} Software interface that provide to Request Manager information answer formatted in the proper way.
+\item[1.3] \textbf{DataCollector: }
+	\begin{enumerate}
+		\item[1.3.1] \textbf{AcceptdataRequest:} Software interface offered by DataCollector that accept requests from RequestManager formatted in the proper way.
+		\item[1.3.1] \textbf{ProvideInformation:} Software interface offered by DataCollector that provide to Request Manager information answer formatted in the proper way.
+	\end{enumerate}
+	
+\item[1.4] \textbf{StatisticGenerator: }
+	\begin{enumerate}
+		\item[1.4.1] \textbf{ProvideStatistics:} Software interface that provides statistic values to data collector. (The Software interface to receive data from Data collector to be managed is trivial and not explicitly specified).
+	\end{enumerate}
+	
+\item[1.5] \textbf{UserManager: }
+	\begin{enumerate}
+		\item[1.5.1] \textbf{AcquireData:} Software interface that allows partner application to send data acquired to Data4Help.
+		\item[1.5.1] \textbf{Enroll user:} Software interface that allows partner application's users to become registered users into TrackMe's system.
+	\end{enumerate}
 
-\textbf{Provide Statistics:} Software interface that provides statistic values to data collector.
-\textbf{Provide Statistics:} (The Software interface to receive data from Data collector to be managed is trivial and not explicitly specified).	
+\item[1.6] \textbf{Track4RunManager: }
+	\begin{enumerate}
+		\item[1.6.1] \textbf{EditRaceSettings:} Software interface that allows Track4Run application to create or modify races information.
+	\end{enumerate}
+
+\item[2.1] \textbf{UserDBMS: }
+	\begin{enumerate}
+		\item[2.1.1] \textbf{StoreUserData:} Software interface that allows to store users' data into the database.
+		\item[2.1.2] \textbf{ProvideStoredData:} Software interface that allows to retrieve users' data already collected in the database.
+	\end{enumerate}
+	
+\item[2.2] \textbf{Track4RunDBMS: }
+	\begin{enumerate}
+		\item[2.2.1] \textbf{StoreRaceData:} Software interface that allows to to store races' data with queries.
+		\item[2.2.2] \textbf{ProvideStoredData:} Software interface that allows to retrieve users' data already collected in the database.
+	\end{enumerate}
+	
+\item[3.3] \textbf{UserLogger: }
+	\begin{enumerate}
+		\item[3.3.1] \textbf{Enrollment:} Software interface that permits to inform Users' Manager that a new user is successfully enrolled and with which credentials.
+	\end{enumerate}
+	
+\item[4.1] \textbf{HealthAnalyser: }
+	\begin{enumerate}
+		\item[4.1.1] \textbf{CallAmbulance:} Software interface that allows AutomatedSOS to call, through the internet or in the worst case through telephone call, First Aid whenever is necessary in order to provide help to user. Moreover it provides to FirstAid a special report on which parameters are critical.
+	\end{enumerate}
+	
+\item[5.1] \textbf{RaceDisplayer: }
+	\begin{enumerate}
+		\item[5.1.1] \textbf{SelectRace:} Human interface that allows user to specify the race to be displayed.
+		\item[5.1.1] \textbf{ShowLiveRace:}  Human interface that allows to provide to the end user a map in which all the athletes involved in the selected race are displayed.
+	\end{enumerate}	
+
+\item[5.2] \textbf{RaceDisplayer: }
+	\begin{enumerate}
+		\item[5.2.1] \textbf{ManageRace: } Human interface that allows user to create and manage a run providing all the useful information.
+	\end{enumerate}		
+
+\end{enumerate}
 
 
-\textbf{Acquire Data:} Software interface that allows partner application to send data to Data4Help.
-\textbf{Enroll user:} Software interface that allows user to become user of Data4Help service.
-
-\textbf{Acquire Data:} Software interface that allows promoter, through Track4Run, to promote a run, invite athletes and specify all the useful information about the race.
-
-\textbf{Store users' Data:} Software interface that allows to Users’ data Acquirer to store data with queries.
-\textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
-
-\textbf{Store races' Data:} Software interface that allows to Track4Run Manager to store data with queries.
-\textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
-
-
-
-UserLogger
-EnrollMent: Software interface that permits to User Logger component to inform Users' Manager that a new user is succesfully enrolled and whith which credentials. Sign Up: Human interface that allow users to sign up to Data4Help service entering all the useful information and accepting privacy policy.
-
-HealthAnalyser:
-CallAmbulance: This software interface allows AutomatedSOS to call, thorugh the internet or in the worst case through telephone call, FirstAid whenever is necessary in order to provide help to user. Moreover it provides to FirstAid a special report on which parameters are critical.
-
-RaceDisplayer:
-SelectRace: Human interface that allows user to specify the race to be displayed.
-
-ShowLiveRace: Human interface is in charge to provide to the end user a map in which all the athles involved in the selected race are displayed.
-
-RaceManager:
-ManageRace: Human interface that allows user to create and manage a run providing all the useful information.
 
 
 \subsection{Selected Architectural Styles and Patterns}
