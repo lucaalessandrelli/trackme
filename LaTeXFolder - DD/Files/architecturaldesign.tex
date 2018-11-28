@@ -22,44 +22,21 @@ More specifically Data4Help manage the data and core logic sections while Automa
 
 {\large \textbf{Component diagram description}}
 \begin{enumerate}
-\item [1] \textbf{Main Server} 
+\item [1] \textbf{ApplicationServer} 
 This huge component is in charge of manage Data4Help services so store and provide, for interested companies, users’ data (such as GPS location and daily Health Status). Moreover it manages race information of Track4Run application.
 
 	\begin{enumerate}
-	\item [1.1] \textbf{Web Server:} In order to accept and supply information to who need them, this component offer a friendly web interface to simplify these operations\\Offered interfaces:
-		\begin{enumerate}
-		\item [1.1.1] \textbf{Web Interface:} Human interface for third parties and Track4Run users. Software interface for AutomatedSOS.
-		\item [1.1.2] \textbf{Web Interface:} Human interface for logging third parties.
-		\end{enumerate}
+	\item [1.1] \textbf{WebServer:} In order to accept and supply information to who need them, this component offer a friendly web interface to simplify these operations
 		
-	\item [1.2] \textbf{Request Manager:} In order to support web server in its job, this component manage all the incoming request: it sorts them per urgency, it wrap the request in a smart data structure and send it to Data Collector, it unwrap the answer from Data Collector and it continuously generates data exchange if a live acquisition is active\\Offered interfaces:
-		\begin{enumerate}
-		\item [1.2.1] \textbf{Accept Information request:} Software interface for Web server to allow receiving request to be evaluated.
-		\item [1.2.2] \textbf{Offer Information:} Software interface for Web server to provide information answer.
-		\end{enumerate}	
+	\item [1.2] \textbf{RequestManager:} In order to support web server in its job, this component manage all the incoming request: it sorts them per urgency, it wrap the request in a smart data structure and send it to Data Collector, it unwrap the answer from Data Collector and it continuously generates data exchange if a live acquisition is active
 		
-	\item [1.3] \textbf{Data Collector:} This component is in charge to communicate with Database in order to retrieve information and supply them to Request Manager. To perform these operations the component should receive request from Request Manger, unwrap it, creates a query to database that cover the question and send it to database; once the database has responded it should wrap the answer and provide it to Request Manager. Moreover if a statistic on data is required it requires it to Statistic Generator.\\Offered interfaces:
-		\begin{enumerate}
-		\item [1.3.1] \textbf{Accept request:} Software interface that accept request from Request manager formatted in the proper way.
-		\item [1.3.2] \textbf{Provide managed data:} Software interface that provide to Request Manager information answer formatted in the proper way.
-		\end{enumerate}	
+	\item [1.3] \textbf{DataCollector: } This component is in charge to communicate with Database in order to retrieve information and supply them to Request Manager. To perform these operations the component should receive request from Request Manger, unwrap it, creates a query to database that cover the question and send it to database; once the database has responded it should wrap the answer and provide it to Request Manager. Moreover if a statistic on data is required it requires it to Statistic Generator.
 		
-	\item [1.4] \textbf{Statistic Generator:} This component is in charge of generates statistic on data provided by data collector such as arithmetic mean, variance from average, standard deviation and median.\\Offered interfaces:
-		\begin{enumerate}
-		\item [1.4.1] \textbf{Provide Statistics:} Software interface that provides statistic values to data collector.
-		\item [1.4.2] \textbf{Provide Statistics:} (The Software interface to receive data from Data collector to be managed is trivial and not explicitly specified).
-		\end{enumerate}	
-	
-	\item [1.5] \textbf{Users' Manager:} This component is in charge to communicate with users' device in order to log (or sign up) user and retrieve data collected.\\Offered interfaces:
-		\begin{enumerate}
-		\item [1.5.1] \textbf{Acquire Data:} Software interface that allows partner application to send data to Data4Help.
-		\item [1.5.2] \textbf{Enroll user:} Software interface that allows user to become user of Data4Help service.
-		\end{enumerate}	
-	
-	\item [1.6] \textbf{Track4Run Manager:} This component is in charge to communicate with Track4Run applications in order to allow promoter to manage races.\\Offered interfaces:
-		\begin{enumerate}
-		\item [1.6.1] \textbf{Acquire Data:} Software interface that allows promoter, through Track4Run, to promote a run, invite athletes and specify all the useful information about the race.
-		\end{enumerate}	
+	\item [1.4] \textbf{StatisticGenerator: } This component is in charge of generates statistic on data provided by data collector such as arithmetic mean, variance from average, standard deviation and median.
+
+	\item [1.5] \textbf{UserManager: } This component is in charge to communicate with users' device in order to log (or sign up) user and retrieve data collected.
+
+	\item [1.6] \textbf{Track4RunManager: } This component is in charge to communicate with Track4Run applications in order to allow promoter to manage races.
 	
 	\end{enumerate}
 	
@@ -67,24 +44,56 @@ This huge component is in charge of manage Data4Help services so store and provi
 This component is in charge of store physically data and organize them in a smart way according to DBMS rule, moreover it allows the access to those data.
 
 	\begin{enumerate}
-	\item [2.1]\textbf{Users’ data DBMS:}
-	This component is in charge of store all the users’ acquired data and quickly provide them to Data collector whenever it is required.\\Offered Interfaces:
-		\begin{enumerate}
-		\item [2.1.1] \textbf{Store users' Data:} Software interface that allows to Users’ data Acquirer to store data with queries.
-		\item [2.1.2] \textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
-		\end{enumerate}	
+	\item [2.1]\textbf{UserDBMS: }
+	This component is in charge of store all the users’ acquired data and quickly provide them to Data collector whenever it is required.
 	
-	\item [2.2]\textbf{Track4Run DBMS:}
-	This component is in charge of store all the races' informations provided by promoters.\\Offered Interfaces:
-		\begin{enumerate}
-		\item [2.2.1] \textbf{Store races' Data:} Software interface that allows to Track4Run Manager to store data with queries.
-		\item [2.2.2] \textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
-		\end{enumerate}	
+	\item [2.2]\textbf{Track4RunDBMS: }
+	This component is in charge of store all the races' informations provided by promoters.
+
 	
+	\end{enumerate}
+	
+\item [3]\textbf{PartnerApp: }
+This component implements how the application partner of TrackMe is basically structured, from the components in charge of retrieve raw data from device's API to who is in charge to communicate with the Main Server. This component is extended by all the partner applications that want to exploit Data4Halp service, so even by AutomatedSOS and Track4Run.
+
+	\begin{enumerate}
+	\item [3.1]\textbf{GPSAcquirer:}
+	This component is developed in order to acquire GPS location from user's device at constant time period.
+	
+	\item [3.2]\textbf{HSAcquirer:}
+	This component is developed in order to acquire Hearth rate, Blood pressure and Calories consumed from user's device at constant time period. (Obviously if device support it). 
+	
+	\item [3.3]\textbf{UserLogger:}
+	 This component offers to client the possibility to become Data4Help user, so it is in charge to show to client the policy to accept and acquire all the credentials inserted during registration. Moreover has to communicate to Main Server the registration of a new user.
+	 
+	\item [3.3]\textbf{DataSender:}
+	This component, exploiting GPSAcquirer and HSAcquirer features, is in charge to provide to UserManager component inside main server all the retrieved data whenever are ready to be sent.
+	\end{enumerate}
+
+\item [4]\textbf{AutomatedSOSApp: }
+This component should extend all that is specified in partner application component to exploit all its features. AutomatedSOS component,also, has to use (as Data Sender) the HSAcquirer in order to check health status parameter and call the first aid whenever is required.
+
+	\begin{enumerate}
+	\item [4.1]\textbf{HealthAnalyser: }
+	This component exploiting HSAcquirer features is in charge to analyse continuously health parameters, compare last acquired data with historical data in order to improve the reaction time, check data in order to prevent user's diseases and call an ambulance whenever such parameters are below a certain threshold, compiling and providing also a special report.
+	
+	\item [4.2]\textbf{HSAcquirer:}
+	This component is developed in order to acquire Hearth rate, Blood pressure and Calories consumed from user's device at constant time period. (Obviously if device support it). 
+	\end{enumerate}
+	
+
+\item [5]\textbf{Track4Run: }
+This component should extend all that is specified in partner application component to exploit all its features. Track4Run component,also, should provide to spectator the possibilities to select and spectate to a run,also allows promoter to create and manage a race providing all the useful information.
+	
+		\begin{enumerate}
+	\item [5.1]\textbf{RaceDisplayer: }
+	 This internal component is in charge to provide a human interface to the user that allows him to specify the race that he want to spectate and then show the position of all the athletes in the race, exploiting Google Maps API.
+	
+	\item [5.2]\textbf{RaceManager: }
+	This internal component is in charge to provide to user the possibility to promote a run inside the system, date,path,name,maximum number of partecipants and description. Moreover a promoter can invite specific users providing their fiscal code. 
 	\end{enumerate}
 
 \end{enumerate}
-
 
 \subsection{Deployment View}
 The following Deployment Diagram captures the topology of the system's hardware.
@@ -106,5 +115,46 @@ In this section several Sequence Diagrams are shown in order to point up the int
 
 
 \subsection{Component Interfaces}
+
+\textbf{Web Interface:} Human interface for third parties and Track4Run users. Software interface for AutomatedSOS.
+
+\textbf{Accept Information request:} Software interface for Web server to allow receiving request to be evaluated.
+\textbf{Offer Information:} Software interface for Web server to provide information answer.
+
+\textbf{Accept request:} Software interface that accept request from Request manager formatted in the proper way.
+\textbf{Provide managed data:} Software interface that provide to Request Manager information answer formatted in the proper way.
+
+\textbf{Provide Statistics:} Software interface that provides statistic values to data collector.
+\textbf{Provide Statistics:} (The Software interface to receive data from Data collector to be managed is trivial and not explicitly specified).	
+
+
+\textbf{Acquire Data:} Software interface that allows partner application to send data to Data4Help.
+\textbf{Enroll user:} Software interface that allows user to become user of Data4Help service.
+
+\textbf{Acquire Data:} Software interface that allows promoter, through Track4Run, to promote a run, invite athletes and specify all the useful information about the race.
+
+\textbf{Store users' Data:} Software interface that allows to Users’ data Acquirer to store data with queries.
+\textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
+
+\textbf{Store races' Data:} Software interface that allows to Track4Run Manager to store data with queries.
+\textbf{Retrieve Data:} Software interface that allows to Data Collector to collect data with queries.
+
+
+
+UserLogger
+EnrollMent: Software interface that permits to User Logger component to inform Users' Manager that a new user is succesfully enrolled and whith which credentials. Sign Up: Human interface that allow users to sign up to Data4Help service entering all the useful information and accepting privacy policy.
+
+HealthAnalyser:
+CallAmbulance: This software interface allows AutomatedSOS to call, thorugh the internet or in the worst case through telephone call, FirstAid whenever is necessary in order to provide help to user. Moreover it provides to FirstAid a special report on which parameters are critical.
+
+RaceDisplayer:
+SelectRace: Human interface that allows user to specify the race to be displayed.
+
+ShowLiveRace: Human interface is in charge to provide to the end user a map in which all the athles involved in the selected race are displayed.
+
+RaceManager:
+ManageRace: Human interface that allows user to create and manage a run providing all the useful information.
+
+
 \subsection{Selected Architectural Styles and Patterns}
 \subsection{Other Design Decisions}
