@@ -197,4 +197,21 @@ In this section several Sequence Diagrams are shown in order to point up the int
 
 
 \subsection{Selected Architectural Styles and Patterns}
+
+This system is designed to be a Client-Server application with three tier that well separate the different components as shown in Overview description in order to implement MVC software design pattern.
+
+\begin{enumerate}
+
+\item[•] \textbf{Communication Pattern: }\\
+Client-Server design pattern is chosen because it is the most used and easily implemented communication pattern in fact, in our application, is the best one to supply on third parties information requests and to acquire data from users via internet. 
+Regarding the acquisition of users’ data, is the smartphone that decides, when data are successfully collected from the device, to call Data4Help server in order to provide and store data, furthermore even third parties call Data4Help server first and then the exchange of the information can be proceed; these two operations are the main core of the service then is logic that client-server architecture will be the right choice.
+
+\item[•] \textbf{Architectural Pattern: }\\
+Three tier architecture should be implement to assure reuse and maintainability of the system, in fact this division can permit to change some parts of the system without reconfigure the entire solution; furthermore this pattern, with the component implementation shown above, allows a better scalability in terms of  
+
+\end{enumerate}
+
+
+
+
 \subsection{Other Design Decisions}
