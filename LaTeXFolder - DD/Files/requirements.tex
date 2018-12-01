@@ -1,0 +1,24 @@
+This section shows how the requirements can be supplied by the designed components
+
+\begin{enumerate}
+
+\item [R.1] Retrieve user credentials inserted into partner application as group attributes.
+	\begin{enumerate}
+	\item[•] UserLogger: Receive from SignAccount user credentials and communicate them to Web Application using WebInterface.
+	\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
+	\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+	\item[•] DBMS: Store data incoming from DBInterface.
+	\end{enumerate}
+
+\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
+	\begin{enumerate}
+	\item[•] UserLogger: Whenever a user start the application automaticcaly this component inform the WebServer.
+	\item[•] WebServer: Receive from WebInterface users' log request and send those to CredentialManager.
+	\item[•] CredentialManager: Check the users' availability and communicate it in reverse order.
+	\end{enumerate}
+	
+\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
+		
+		
+
+\end{enumerate}

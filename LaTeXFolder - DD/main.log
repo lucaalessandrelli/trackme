@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  1 DEC 2018 20:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  1 DEC 2018 23:40
 entering extended mode
 **./main.tex
 (main.tex
@@ -1090,8 +1090,43 @@ File: Images/ComponentDiagram.png Graphic file (type png)
 Package pdftex.def Info: Images/ComponentDiagram.png  used on input line 26.
 (pdftex.def)             Requested size: 514.9225pt x 541.01993pt.
 
-Overfull \hbox (59.67839pt too wide) in paragraph at lines 26--27
+Overfull \hbox (59.67839pt too wide) in paragraph at lines 26--30
 [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
+
  []
 
 [5
@@ -1107,7 +1142,12 @@ g GP-SAc-quirer and HSAc-quirer fea-tures, is in charge
 File: Images/ERDiagram.png Graphic file (type png)
 <use Images/ERDiagram.png>
 Package pdftex.def Info: Images/ERDiagram.png  used on input line 105.
-(pdftex.def)             Requested size: 376.40532pt x 376.40532pt.
+(pdftex.def)             Requested size: 489.32233pt x 489.32233pt.
+
+Overfull \hbox (34.07822pt too wide) in paragraph at lines 105--106
+[] 
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1138,7 +1178,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--208
 [12]) [13] (Files/uidesign.tex [14
 
 ]
-<Images/Mockups/AutomatedSOSMockup1.png, id=223, 611.28375pt x 914.41624pt>
+<Images/Mockups/AutomatedSOSMockup1.png, id=222, 611.28375pt x 914.41624pt>
 File: Images/Mockups/AutomatedSOSMockup1.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup1.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup1.png  used on input 
@@ -1149,7 +1189,7 @@ Overfull \hbox (46.14726pt too wide) in paragraph at lines 16--17
  [][] 
  []
 
-<Images/Mockups/AutomatedSOSMockup6.png, id=224, 605.26125pt x 916.42375pt>
+<Images/Mockups/AutomatedSOSMockup6.png, id=223, 605.26125pt x 916.42375pt>
 File: Images/Mockups/AutomatedSOSMockup6.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup6.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup6.png  used on input 
@@ -1162,7 +1202,7 @@ Overfull \hbox (43.40909pt too wide) in paragraph at lines 22--23
 
 [15 <./Images/Mockups/AutomatedSOSMockup1.png> <./Images/Mockups/AutomatedSOSMo
 ckup6.png>]
-<Images/Mockups/AutomatedSOSMockup2.png, id=232, 622.325pt x 913.4125pt>
+<Images/Mockups/AutomatedSOSMockup2.png, id=231, 622.325pt x 913.4125pt>
 File: Images/Mockups/AutomatedSOSMockup2.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup2.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup2.png  used on input 
@@ -1173,7 +1213,7 @@ Overfull \hbox (50.52626pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
-<Images/Mockups/AutomatedSOSMockup4.png, id=233, 609.27625pt x 913.4125pt>
+<Images/Mockups/AutomatedSOSMockup4.png, id=232, 609.27625pt x 913.4125pt>
 File: Images/Mockups/AutomatedSOSMockup4.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup4.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup4.png  used on input 
@@ -1188,7 +1228,7 @@ Overfull \hbox (45.64871pt too wide) in paragraph at lines 39--40
 
  <./Images/Mockups/AutomatedSOSMockup2.png> <./Images/Mockups/AutomatedSOSMocku
 p4.png>]
-<Images/Mockups/AutomatedSOSMockup5.png, id=241, 611.28375pt x 912.40875pt>
+<Images/Mockups/AutomatedSOSMockup5.png, id=240, 611.28375pt x 912.40875pt>
 File: Images/Mockups/AutomatedSOSMockup5.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup5.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup5.png  used on input 
@@ -1199,7 +1239,7 @@ Overfull \hbox (46.65096pt too wide) in paragraph at lines 51--52
  [][] 
  []
 
-<Images/Mockups/AutomatedSOSMockup7.png, id=242, 612.2875pt x 914.41624pt>
+<Images/Mockups/AutomatedSOSMockup7.png, id=241, 612.2875pt x 914.41624pt>
 File: Images/Mockups/AutomatedSOSMockup7.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup7.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup7.png  used on input 
@@ -1214,7 +1254,7 @@ Overfull \hbox (46.52205pt too wide) in paragraph at lines 57--58
 
  <./Images/Mockups/AutomatedSOSMockup5.png> <./Images/Mockups/AutomatedSOSMocku
 p7.png>]
-<Images/Mockups/Track4RunMockup1.jpg, id=250, 792.9625pt x 1368.11125pt>
+<Images/Mockups/Track4RunMockup1.jpg, id=249, 792.9625pt x 1368.11125pt>
 File: Images/Mockups/Track4RunMockup1.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup1.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup1.jpg  used on input lin
@@ -1225,7 +1265,7 @@ Overfull \hbox (48.77794pt too wide) in paragraph at lines 74--75
  [][] 
  []
 
-<Images/Mockups/Track4RunMockup4.jpg, id=251, 784.9325pt x 1369.115pt>
+<Images/Mockups/Track4RunMockup4.jpg, id=250, 784.9325pt x 1369.115pt>
 File: Images/Mockups/Track4RunMockup4.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup4.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup4.jpg  used on input lin
@@ -1245,7 +1285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--84
 
  <./Images/Mockups/Track4RunMockup1.jpg> <./Images/Mockups/Track4RunMockup4.jpg
 >]
-<Images/Mockups/Track4RunMockup2.jpg, id=257, 792.9625pt x 1368.11125pt>
+<Images/Mockups/Track4RunMockup2.jpg, id=256, 792.9625pt x 1368.11125pt>
 File: Images/Mockups/Track4RunMockup2.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup2.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup2.jpg  used on input lin
@@ -1256,7 +1296,7 @@ Overfull \hbox (48.77794pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-<Images/Mockups/Track4RunMockup3.jpg, id=258, 792.9625pt x 1368.11125pt>
+<Images/Mockups/Track4RunMockup3.jpg, id=257, 792.9625pt x 1368.11125pt>
 File: Images/Mockups/Track4RunMockup3.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup3.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup3.jpg  used on input lin
@@ -1271,7 +1311,7 @@ Overfull \hbox (48.77794pt too wide) in paragraph at lines 97--98
 
  <./Images/Mockups/Track4RunMockup2.jpg> <./Images/Mockups/Track4RunMockup3.jpg
 >]
-<Images/Mockups/Track4RunMockup5.jpg, id=265, 784.9325pt x 1371.1225pt>
+<Images/Mockups/Track4RunMockup5.jpg, id=264, 784.9325pt x 1371.1225pt>
 File: Images/Mockups/Track4RunMockup5.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup5.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup5.jpg  used on input lin
@@ -1282,7 +1322,7 @@ Overfull \hbox (45.93695pt too wide) in paragraph at lines 108--109
  [][] 
  []
 
-<Images/Mockups/Track4RunMockup6.jpg, id=266, 783.92876pt x 1365.1pt>
+<Images/Mockups/Track4RunMockup6.jpg, id=265, 783.92876pt x 1365.1pt>
 File: Images/Mockups/Track4RunMockup6.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup6.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup6.jpg  used on input lin
@@ -1297,7 +1337,7 @@ Overfull \hbox (46.65015pt too wide) in paragraph at lines 114--115
 
  <./Images/Mockups/Track4RunMockup5.jpg> <./Images/Mockups/Track4RunMockup6.jpg
 >]
-<Images/Mockups/Track4RunMockup7.jpg, id=272, 783.92876pt x 1365.1pt>
+<Images/Mockups/Track4RunMockup7.jpg, id=271, 783.92876pt x 1365.1pt>
 File: Images/Mockups/Track4RunMockup7.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup7.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup7.jpg  used on input lin
@@ -1308,7 +1348,7 @@ Overfull \hbox (46.65015pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
-<Images/Mockups/Track4RunMockup8.jpg, id=273, 789.95125pt x 1367.1075pt>
+<Images/Mockups/Track4RunMockup8.jpg, id=272, 789.95125pt x 1367.1075pt>
 File: Images/Mockups/Track4RunMockup8.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup8.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup8.jpg  used on input lin
@@ -1352,39 +1392,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: DB21472F3D09FA9ABA6CC3016C7FE692;1879
-(rerunfilecheck)             After:  C7D91759375D19C48DA73923CB39A0EB;1887.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C7D91759375D19C48DA73923CB39A0EB;1887.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 22366 strings out of 492970
- 414670 string characters out of 3127037
+ 22365 strings out of 492970
+ 414672 string characters out of 3127037
  486582 words of memory out of 3000000
  25668 multiletter control sequences out of 15000+200000
  57039 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,21n,77p,1693b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Item.1} has been referenced but does not exist, r
-eplaced by a fixed one
-
-{C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{
-C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:
-/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
-/lmtt10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
-/times/utmr8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on main.pdf (27 pages, 2964541 bytes).
+ 59i,21n,77p,1693b,616s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
+}{C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
+C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmtt10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
+times/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/times/utmr8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on main.pdf (27 pages, 2965224 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
  332 words of extra memory for PDF output out of 10000 (max. 10000000)
 
