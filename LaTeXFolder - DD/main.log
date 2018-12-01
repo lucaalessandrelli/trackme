@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  1 DEC 2018 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  1 DEC 2018 19:01
 entering extended mode
 **./main.tex
 (main.tex
@@ -1086,13 +1086,13 @@ Overfull \hbox (45.35408pt too wide) in paragraph at lines 5--6
 [][] 
  []
 
-<Images/ComponentDiagram.png, id=161, 1039.885pt x 1079.03125pt>
+<Images/ComponentDiagram.png, id=161, 1029.8475pt x 1082.0425pt>
 File: Images/ComponentDiagram.png Graphic file (type png)
 <use Images/ComponentDiagram.png>
 Package pdftex.def Info: Images/ComponentDiagram.png  used on input line 24.
-(pdftex.def)             Requested size: 519.94122pt x 539.51431pt.
+(pdftex.def)             Requested size: 514.9225pt x 541.01993pt.
 
-Overfull \hbox (64.69711pt too wide) in paragraph at lines 24--25
+Overfull \hbox (59.67839pt too wide) in paragraph at lines 24--25
 [] 
  []
 
@@ -1120,12 +1120,16 @@ Overfull \hbox (73.15096pt too wide) in paragraph at lines 107--108
  [][] 
  []
 
-[8 <./Images/DeploymentDiagram.png>] [9]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9 <./Images/DeploymentDiagram.png>] [10]
 Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[10] [11]) [12] (Files/uidesign.tex [13
+[11]) [12] (Files/uidesign.tex [13
 
 ]
 <Images/Mockups/AutomatedSOSMockup1.png, id=206, 611.28375pt x 914.41624pt>
@@ -1353,7 +1357,7 @@ Here is how much of TeX's memory you used:
  25662 multiletter control sequences out of 15000+200000
  57039 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,21n,77p,1715b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 59i,21n,77p,1693b,617s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
 c}{C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
@@ -1362,7 +1366,7 @@ lic/lm/lmtt10.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /urw/times/utmb8a.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (26 pages, 2929982 bytes).
+Output written on main.pdf (26 pages, 2924263 bytes).
 PDF statistics:
  328 PDF objects out of 1000 (max. 8388607)
  66 named destinations out of 1000 (max. 500000)
