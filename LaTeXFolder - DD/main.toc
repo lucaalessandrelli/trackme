@@ -8,7 +8,9 @@
 \contentsline {section}{\numberline {2}Architectural Design}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Overview}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Component View}{6}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Deployment View}{8}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.2.1}Component Diagram}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Entity Relationship Diagram}{8}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Deployment View}{9}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Runtime View}{9}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Individual Request}{9}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}}{9}{subsubsection.2.4.2}
