@@ -104,7 +104,7 @@ The SmartphoneApp and SmartWatchApp (Presentation Tier) communicate to the Appli
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.35]{Images/DeploymentDiagram.png}
+\includegraphics[scale=0.13]{Images/DeploymentDiagram.png}
 \caption{Deployment Diagram.}
 \end{figure}
 
@@ -201,13 +201,31 @@ In this section several Sequence Diagrams are shown in order to point up the int
 This system is designed to be a Client-Server application with three tier that well separate the different components as shown in Overview description in order to implement MVC software design pattern.
 
 \begin{enumerate}
+\item[•] \textbf{Architectural Design: }\\
 
-\item[•] \textbf{Communication Pattern: }\\
-Client-Server design pattern is chosen because it is the most used and easily implemented communication pattern in fact, in our application, is the best one to supply on third parties information requests and to acquire data from users via internet. 
-Regarding the acquisition of users’ data, is the smartphone that decides, when data are successfully collected from the device, to call Data4Help server in order to provide and store data, furthermore even third parties call Data4Help server first and then the exchange of the information can be proceed; these two operations are the main core of the service then is logic that client-server architecture will be the right choice.
+	\begin{enumerate}
+	\item[-] Client-Server architectural pattern is chosen because it is the most used and easily implemented communication pattern in fact, in our application, is the best one to supply on third parties information requests and to acquire data from users via internet. 
+Regarding the acquisition of users’ data, is the smartphone that decides, when data are successfully collected from the device, to call Data4Help server in order to provide and store data, furthermore even third parties call Data4Help server first and then the exchange of the information can be proceed; these two operations are the main core of the service then is logic that client-server architecture will be the right choice. 
 
-\item[•] \textbf{Architectural Pattern: }\\
-Three tier architecture should be implement to assure reuse and maintainability of the system, in fact this division can permit to change some parts of the system without reconfigure the entire solution; furthermore this pattern, with the component implementation shown above, allows a better scalability in terms of  
+	\item[-]Three tier architecture should be implement to assure reuse and maintainability of the system, in fact this division can permit to change some parts of the system without reconfigure the entire solution.
+	
+		\begin{enumerate}
+		\item[*] Presentation Tier, as described above, is in charge of display on final users screen a human interface that allows the interaction with our system. This tier is present only on users' device: regarding third parties the software that is in charge to display human interface will be his own browser so the exchanged information will be an HTML page on Http connection; instead, regarding users, the software will be the application that runs on the device that works on HTML pages as well; so for both the type of users the interface to the Application Tier is the WebServer that allocate the right page to the right target. In order to supply on this aspect the partner application (AutomatedSOS and Track4Run as well) will be developed in HTML (with the support of JS and CSS) that are web languages, this aspect make also the application multi platform so they can be launched on either iOS or Android devices. Http communication protocol will be used for both connection.
+		\item[*] Application Tier, as described above, is in charge to acquire all the data incoming from users, to store them on Data Tier and to handle the request on viewing data. This Tier is present on the largest part on Application server but even AutomatedSOS has inside his software an application service. All the component inside this tier will be developed in Java, in particular the Web Server runs tomcat Java servlet that generates the html pages for Presentation Tier, acquire data that users submit and communicate through RMI with the business application that runs on the Application Server. The business application is the main core of Data4Help service, and is composed by all the other components inside ApplicationServer (as Request Manager,Data Collector,Statistic Generator..); is required that it can interface with Web server, in order to acquire the external requests, and then using the components described above supply the information required; furthermore is in charge to manage all the information of users, as login or registration,or manages Track4Run races. Another very important aspect is that this application has to  retrieve data from users implementing a daemon on a specific port and listening for a TCP/IP connection incoming from partner application in order to acquire users' data. As mentioned before even AutomatedSOS implements a small part of application tier inside his software that is in charge to continuously monitor health status acquired, compare it with old data and call an ambulance via web if there is a necessity filling out a form which are indicated all the critical parameters detected.
+		
+	\item[*] Data Tier, as described above, is in charge to store and provide informations. This tier is present only on Database Server that is an Oracle machine using SQL schemas. The database is divided in two parts, one regarding Data4Help service that stores and manages users' data: historical users' location and health parameters; the other one regarding Track4Run that stores races' information. This Tier offers an SQL interface that can be exploit by Business application using JDBC libraries that supports SQL functions. 
+		\end{enumerate}
+	
+	\end{enumerate}
+
+\item[•] \textbf{Software Pattern: }
+
+	\begin{enumerate}
+	\item[-] The MVC (Model-View-Controller) is the obvious software pattern that can be applied on three tier architecture because can split the entire software solution in the three main region: the Model implements all that is described in data tier, the controller all that is described on Presentation tier and View all that is described in Presentation tier. All these 3 groups communicates each others through the so called Adapter Pattern.
+	\item[-] The Adapter design pattern is developed to create an interface that permits to the MVC groups to easily communicate each others using different languages or different operating system that is mandatory in our system. This pattern is the representation of what is described on Component Interface section.
+	\item[-] Strategy design pattern can be so much useful in the implementation of RequestManager component because it can dynamically change how to handle request queue in order to supply efficiently on heavy request load.
+	\item[-] Proxy design pattern is an obvious consequence of Web Server, because this component stay in the middle between the two tier and creates a sort mask  that obscure what is behind it and simplify a lot the Presentation Tier software that has only to display what Web server indicates	
+	\end{enumerate}
 
 \end{enumerate}
 

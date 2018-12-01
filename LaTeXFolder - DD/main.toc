@@ -15,12 +15,12 @@
 \contentsline {subsubsection}{\numberline {2.4.3}}{9}{subsubsection.2.4.3}
 \contentsline {subsection}{\numberline {2.5}Component Interfaces}{9}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}Selected Architectural Styles and Patterns}{10}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other Design Decisions}{10}{subsection.2.7}
-\contentsline {section}{\numberline {3}User Interface Design}{11}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{19}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{20}{section.5}
-\contentsline {section}{\numberline {6}Effort Spent}{21}{section.6}
-\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{21}{subsubsection.6.0.1}
-\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{22}{subsubsection.6.0.2}
-\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{23}{subsubsection.6.0.3}
-\contentsline {section}{\numberline {7}Reference Documents}{24}{section.7}
+\contentsline {subsection}{\numberline {2.7}Other Design Decisions}{12}{subsection.2.7}
+\contentsline {section}{\numberline {3}User Interface Design}{13}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{21}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{22}{section.5}
+\contentsline {section}{\numberline {6}Effort Spent}{23}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{23}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{24}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{25}{subsubsection.6.0.3}
+\contentsline {section}{\numberline {7}Reference Documents}{26}{section.7}
