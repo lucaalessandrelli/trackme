@@ -19,12 +19,16 @@ We chose to adopt a 3-tier architecture:
 
 More specifically Data4Help manage the data and core logic sections while AutomatedSOS and Track4Run manage the presentation section. Actually, a small part of application tier is also present in AutomatedSOS, this is due to the fact that the Health Monitoring process requires to be executed as fast as possible.
 
+\clearpage
 \subsection{Component View}
 
 \subsubsection{Component Diagram}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.44]{Images/ComponentDiagram.png}
+\caption{Component Diagram}
+\end{figure}
 
-\includegraphics[scale=0.5]{Images/ComponentDiagram.png}
-\\\\\\\\\\\\\\\\
 {\large \textbf{Component diagram description}}
 \begin{enumerate}
 \item [1] \textbf{ApplicationServer} 
@@ -97,35 +101,65 @@ This component should extend all that is specified in partner application compon
 	\item [5.2]\textbf{RunManager: }
 	This internal component is in charge to provide to user the possibility to promote a run inside the system, date,path,name,maximum number of partecipants and description. Moreover a promoter can invite specific users providing their fiscal code. 
 	\end{enumerate}
-
 \end{enumerate}
+\clearpage
 
 \subsubsection{Entity Relationship Diagram}
-
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.65]{Images/ERDiagram.png}
+\caption{Entity Relationship Diagram Diagram.}
+\end{figure}
 
-
+\newpage
 \subsection{Deployment View}
 The following Deployment Diagram captures the topology of the system's hardware.
 The SmartphoneApp and SmartWatchApp (Presentation Tier) communicate to the Application Server through RMI, while the WebBrowser communicates to the WebServer through HTTP protocol. The Application Server (Application Tier) communicates to the Database Server (Data Tier) through JDBC.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.13]{Images/DeploymentDiagram.png}
+\includegraphics[scale=0.12]{Images/DeploymentDiagram.png}
 \caption{Deployment Diagram.}
 \end{figure}
 
 \subsection{Runtime View}
 In this section several Sequence Diagrams are shown in order to point up the interaction among components and their behavior in particular scenarios.
-
-\subsubsection{Individual Request}
-
-\subsubsection{}
-\subsubsection{}
+\newpage
+\subsubsection{Individual Information Request}
+The following Sequence Diagram shows the interaction between the components when a third party made a request to obtain individual information. Since the individual's security number provided by the third party in the request form cannot be associate to any real user (incorrect security number) or can be associate to a user that has not accept individual request privacy policy, the third party could get three different answers from the system.
+\\[1.0cm]
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8, angle=0,origin=c]{Images/SequenceDiagrams/IndividualRequest.pdf}
+\caption{Sequence Diagram n.1.}
+\clearpage
+\end{figure}
+\newpage
+\subsubsection{Send Ambulance Request}
+In the below diagram is shown the interaction that the components have between each other to send an ambulance request to the first aid. The data retrieved by the GPS Acquirer and HealthStatus Acquirer both sent to Data4Help and sent to the HealthAnalyzer.
+\\[0.5cm]
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.9, angle=90,origin=c]{Images/SequenceDiagrams/SendAmbulance.pdf}
+\caption{Sequence Diagram n.2.}
+\end{figure}
+\newpage
+\subsubsection{Spectate to a Run}
+The next Sequence Diagram represents the interaction that the components have between each other to show the live positions during a run event, the chart starts at the moment when the user, already logged in, select a specific run to spectate.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1, angle=90,origin=c]{Images/SequenceDiagrams/SpectateRun.pdf}
+\caption{Sequence Diagram n.3.}
+\end{figure}
+\clearpage
 
 
 \subsection{Component Interfaces}
-
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8, angle=0,origin=c]{Images/ComponentInterface.pdf}
+\caption{Component Interfaces Diagram}
+\end{figure}
 \begin{enumerate}
 
 \item[1.1] \textbf{WebServer: }
@@ -195,7 +229,7 @@ In this section several Sequence Diagrams are shown in order to point up the int
 	\end{enumerate}		
 
 \end{enumerate}
-
+\clearpage
 
 
 

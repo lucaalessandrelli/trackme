@@ -10,19 +10,19 @@
 \contentsline {subsection}{\numberline {2.2}Component View}{6}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Component Diagram}{6}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Entity Relationship Diagram}{9}{subsubsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Deployment View}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Deployment View}{10}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Runtime View}{10}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Individual Request}{10}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}}{10}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}}{10}{subsubsection.2.4.3}
-\contentsline {subsection}{\numberline {2.5}Component Interfaces}{10}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Selected Architectural Styles and Patterns}{12}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other Design Decisions}{13}{subsection.2.7}
-\contentsline {section}{\numberline {3}User Interface Design}{14}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{22}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{23}{section.5}
-\contentsline {section}{\numberline {6}Effort Spent}{24}{section.6}
-\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{24}{subsubsection.6.0.1}
-\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{25}{subsubsection.6.0.2}
-\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{26}{subsubsection.6.0.3}
-\contentsline {section}{\numberline {7}Reference Documents}{27}{section.7}
+\contentsline {subsubsection}{\numberline {2.4.1}Individual Information Request}{11}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Send Ambulance Request}{12}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Spectate to a Run}{13}{subsubsection.2.4.3}
+\contentsline {subsection}{\numberline {2.5}Component Interfaces}{14}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Selected Architectural Styles and Patterns}{16}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Other Design Decisions}{17}{subsection.2.7}
+\contentsline {section}{\numberline {3}User Interface Design}{18}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{26}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{27}{section.5}
+\contentsline {section}{\numberline {6}Effort Spent}{28}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{28}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{29}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{30}{subsubsection.6.0.3}
+\contentsline {section}{\numberline {7}Reference Documents}{31}{section.7}
