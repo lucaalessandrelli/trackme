@@ -115,8 +115,12 @@ This component extends all that is specified in the PartnerApp component to expl
 
 \newpage
 \subsection{Deployment View}
-The following Deployment Diagram captures the topology of the system's hardware.
-The SmartphoneApp and SmartWatchApp (Presentation Tier) communicate to the Application Server through RMI, while the WebBrowser communicates to the WebServer through HTTP protocol. The Application Server (Application Tier) communicates to the Database Server (Data Tier) through JDBC.
+The following Deployment Diagram captures the topology of the system's hardware and software distribution.
+\bigbreak
+The SmartphoneApp, the SmartwatchApp and WebBrowser communicate to the WebServer through HTTP protocol due to the fact that the applications are based on websites in order to improve portability between different Operative Systems. The two applications also communicate directly to the Application Server in order to exchange automatically retrieved data like the GPS Location and the Health Status.
+\bigbreak
+The WebServer runs on a RedHat system on which Java Servlets and JSPs are deployed, also it communicates to the Application Server through RMI.\bigbreak
+The Application Server runs on an Ubuntu system on which the business logic  of the system is deployed, also it communicates to the DB Server through JDBC.
 
 \begin{figure}[H]
 \centering

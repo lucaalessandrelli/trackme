@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  2 DEC 2018 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  2 DEC 2018 22:43
 entering extended mode
 **./main.tex
 (main.tex
@@ -1110,18 +1110,13 @@ Overfull \hbox (34.07822pt too wide) in paragraph at lines 112--113
 [9
 
  <./Images/ERDiagram.png>]
-Overfull \hbox (3.68774pt too wide) in paragraph at lines 118--120
-\T1/ptm/m/n/10.95 The fol-low-ing De-ploy-ment Di-a-gram cap-tures the topol-og
-y of the sys-tem's hard-ware. The Smart-phoneApp
- []
-
 <Images/DeploymentDiagram.png, id=199, 4064.4347pt x 2628.82124pt>
 File: Images/DeploymentDiagram.png Graphic file (type png)
 <use Images/DeploymentDiagram.png>
-Package pdftex.def Info: Images/DeploymentDiagram.png  used on input line 123.
+Package pdftex.def Info: Images/DeploymentDiagram.png  used on input line 127.
 (pdftex.def)             Requested size: 487.71112pt x 315.44493pt.
 
-Overfull \hbox (32.46701pt too wide) in paragraph at lines 123--124
+Overfull \hbox (32.46701pt too wide) in paragraph at lines 127--128
  [][] 
  []
 
@@ -1131,15 +1126,15 @@ pt>
 File: Images/SequenceDiagrams/IndividualRequest.pdf Graphic file (type pdf)
 <use Images/SequenceDiagrams/IndividualRequest.pdf>
 Package pdftex.def Info: Images/SequenceDiagrams/IndividualRequest.pdf  used on
- input line 135.
+ input line 139.
 (pdftex.def)             Requested size: 473.64227pt x 415.61119pt.
 
-Overfull \hbox (18.39816pt too wide) in paragraph at lines 135--136
+Overfull \hbox (18.39816pt too wide) in paragraph at lines 139--140
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--138
+Underfull \hbox (badness 10000) in paragraph at lines 135--142
 
  []
 
@@ -1150,10 +1145,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--138
 File: Images/SequenceDiagrams/SendAmbulance.pdf Graphic file (type pdf)
 <use Images/SequenceDiagrams/SendAmbulance.pdf>
 Package pdftex.def Info: Images/SequenceDiagrams/SendAmbulance.pdf  used on inp
-ut line 145.
+ut line 149.
 (pdftex.def)             Requested size: 550.18512pt x 405.05096pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--147
+Underfull \hbox (badness 10000) in paragraph at lines 145--151
 
  []
 
@@ -1162,24 +1157,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--147
 File: Images/SequenceDiagrams/SpectateRun.pdf Graphic file (type pdf)
 <use Images/SequenceDiagrams/SpectateRun.pdf>
 Package pdftex.def Info: Images/SequenceDiagrams/SpectateRun.pdf  used on input
- line 153.
+ line 157.
 (pdftex.def)             Requested size: 539.62457pt x 431.62047pt.
  [13 <./Images/SequenceDiagrams/SpectateRun.pdf>]
 <Images/ComponentInterface.pdf, id=351, 604.86107pt x 518.15488pt>
 File: Images/ComponentInterface.pdf Graphic file (type pdf)
 <use Images/ComponentInterface.pdf>
-Package pdftex.def Info: Images/ComponentInterface.pdf  used on input line 162.
+Package pdftex.def Info: Images/ComponentInterface.pdf  used on input line 166.
 
 (pdftex.def)             Requested size: 483.88951pt x 414.52446pt.
 
-Overfull \hbox (28.6454pt too wide) in paragraph at lines 162--163
+Overfull \hbox (28.6454pt too wide) in paragraph at lines 166--167
  [][] 
  []
 
 [14
 
  <./Images/ComponentInterface.pdf>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
@@ -1422,7 +1417,7 @@ lic/lm/lmtt10.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /urw/times/utmb8a.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Users/lucaa/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (31 pages, 3191462 bytes).
+Output written on main.pdf (31 pages, 3191785 bytes).
 PDF statistics:
  592 PDF objects out of 1000 (max. 8388607)
  79 named destinations out of 1000 (max. 500000)
