@@ -11,7 +11,7 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Component Diagram}{6}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Entity Relationship Diagram}{9}{subsubsection.2.2.2}
 \contentsline {subsection}{\numberline {2.3}Deployment View}{10}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime View}{10}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}Runtime View}{11}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Individual Information Request}{11}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Send Ambulance Request}{12}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Spectate to a Run}{13}{subsubsection.2.4.3}
