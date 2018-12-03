@@ -22,8 +22,10 @@
 \contentsline {section}{\numberline {4}Requirements Traceability}{26}{section.4}
 \contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{29}{section.5}
 \contentsline {subsection}{\numberline {5.1}Implementation Plan}{29}{subsection.5.1}
-\contentsline {section}{\numberline {6}Effort Spent}{30}{section.6}
-\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{30}{subsubsection.6.0.1}
-\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{31}{subsubsection.6.0.2}
-\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{32}{subsubsection.6.0.3}
-\contentsline {section}{\numberline {7}Reference Documents}{33}{section.7}
+\contentsline {subsection}{\numberline {5.2}Integration and Test Plan}{30}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}System Testing}{30}{subsection.5.3}
+\contentsline {section}{\numberline {6}Effort Spent}{31}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{31}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{32}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{33}{subsubsection.6.0.3}
+\contentsline {section}{\numberline {7}Reference Documents}{34}{section.7}
