@@ -39,9 +39,9 @@ This large component is in charge of managing Data4Help services like storing an
 		
 	\item [1.2] \textbf{RequestManager:} In order to support the web server in its job, this component manages all the incoming requests: it sorts them per urgency, it wraps the requests in a smart data structure and sends it to the DataCollector. Also it unwraps the answers from the Data Collector and it continuously generates data exchange if a live acquisition is active.
 		
-	\item [1.3] \textbf{DataCollector: } This component communicates with the Database in order to retrieve information and supply them to the RequestManager. In order to perform these operations whenever the DataCollector receives requests from the RequestManger, it unwraps them, creates a query and sends it to the Database; once the Database answered the query, the DataCollector should wrap the answer and provide it to the RequestManager. Moreover if statistics on data are needed the DataCollector also sends data to the StatisticGenerator which will answer with the statistic of interest.
+	\item [1.3] \textbf{DataCollector: } This component communicates with the Database in order to retrieve information and supply them to the RequestManager. In order to perform these operations whenever the DataCollector receives requests from the RequestManger, it unwraps them, creates a query and sends it to the Database; once the Database answered the query, the DataCollector should wrap the answer and provide it to the RequestManager. Moreover if statistics on data are needed the DataCollector also sends data to the StatisticsGenerator which will answer with the statistic of interest.
 		
-	\item [1.4] \textbf{StatisticGenerator: } This component generates statistics on data provided by the DataCollector such as arithmetic mean, variance from average, standard deviation and median.
+	\item [1.4] \textbf{StatisticsGenerator: } This component generates statistics on data provided by the DataCollector such as arithmetic mean, variance from average, standard deviation and median.
 
 	\item [1.5] \textbf{UserManager: } This component communicates with users' device in order to store into the Database data automatically collected by applications.
 
