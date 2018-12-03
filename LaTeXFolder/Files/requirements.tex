@@ -172,34 +172,32 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		\item [R.1] Retrieve user credentials inserted into partner application as group attributes.
 		\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
 		\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
-		\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application.
-		\item [R.5] After the registration, the system provides the password to access the data through provided e-mail. 
+		\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application. 
 		\item [D.4] Devices used to monitor individuals always work and report 			the correct values.	
     	\item [D.5] Partner application always report correct values to Data4Help.
-    	\item [R.6] The system has to correctly receive data from partner applications installed on user's device.
+    	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
     	\end{enumerate}	
     	
     \item [G.2] \textbf{Provide to third parties, the user's position and health status.}
     	\begin{enumerate} 
-    	\item [R.7] Allow third parties to register to Data4Help service specifying all their credentials.
-    	\item [R.8] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
-    	\item [R.5] After registration the system provides, through provided e-mail, the password to access the data.
+    	\item [R.6] Allow third parties to register to Data4Help service specifying all their credentials.
+		\item [R.7] The system should allow third parties to send information requests.
     	\end{enumerate}	
 		
 		\begin{enumerate} 
 		\item [G.2.1] \textbf{Provide data on demand to non-subscribed third parties.}
 		\begin{enumerate} 
 
-		\item [R.9] The system has to collect all the useful data that match the request.
-		\item [R.10] The system has to generate a statistic on data selected 
-		\item [R.11] The system has to send to the third party all the raw data collected until the moment of the request.
-		\item [R.12] The system has to send all the statistics already produced.
+		\item [R.8] The system has to collect all the useful data that match the request.
+		\item [R.9] The system has to generate a statistic on data selected 
+		\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
+		\item [R.11] The system has to send all the statistics already produced.
     	\end{enumerate}	
     	
     	\item [G.2.2] \textbf{Provide data in real-time to subscribed third parties.}
 		\begin{enumerate}
-    	\item [R.13] Allow third parties to subscribe to groups or individuals in order to receive live data.
-    	\item [R.14] Provide to subscribed third parties raw data as soon as they are available by the system.
+    	\item [R.12] Allow third parties to subscribe to groups or individuals in order to receive live data.
+    	\item [R.13] Provide to subscribed third parties raw data as soon as they are available by the system.
     	\end{enumerate}
     	\end{enumerate}
     
@@ -209,25 +207,25 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		\begin{enumerate}
 		\item [D.6] In order to perform an individual request, third parties has to know the user's fiscal code or security number.
 		\item [D.7] Security number and fiscal code are not information given to third parties by Data4Help.
-    	\item [R.15] Allow third parties to insert the fiscal code of the user he wants to track.
-    	\item [R.16] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
-    	\item [R.17] Collect all the useful data retrieved by Data4Help that are produced by the interested users. 
-    	\item [R.18] Send all the collected information to request applicant.
+    	\item [R.14] Allow third parties to insert the fiscal code of the user he wants to track.
+    	\item [R.15] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
+    	\item [R.16] Collect all the useful data retrieved by Data4Help that are produced by the interested users. 
+    	\item [R.17] Send all the collected information to request applicant.
     	\end{enumerate}
     
     	\item [G.3.2] \textbf{Allow third parties to get data of a group of people.}
 		\begin{enumerate}
-    	\item [R.19] Allow third parties to insert search area and attributes in which they are interested to restrict their field of search.
-    	\item [R.20] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
-    	\item [R.17] Collect all the useful data retrieved by Data4Help that are produced by the interested users.
-    	\item [R.18] Send all the collected information to request applicant.
+    	\item [R.18] Allow third parties to insert search area and attributes in which they are interested to restrict their field of search.
+    	\item [R.19] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
+    	\item [R.16] Collect all the useful data retrieved by Data4Help that are produced by the interested users.
+    	\item [R.19] Send all the collected information to request applicant.
     	\end{enumerate}
     	\end{enumerate}
     	
     \item [G.4] \textbf{Provide data in an anonymous way, to protect users' privacy.}
 		\begin{enumerate}
-    	\item [R.16] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
-    	\item [R.20] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
+    	\item [R.17] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
+    	\item [R.21] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
     	\end{enumerate}	
 			
 	\end{enumerate}
@@ -238,30 +236,30 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	\begin{enumerate}
 	\item [G.5] \textbf{Retrieve user's position and health status.}
 		\begin{enumerate}
-		\item [R.21] Allow users to be tracked from AutomatedSOS filling up the registration and agreeing only to first part of privacy policy.
+		\item [R.22] Allow users to be tracked from AutomatedSOS filling up the registration and agreeing only to first part of privacy policy.
 		\item [D.4] Devices used to monitor individuals always report correct values.
 		\item [D.9] The user always dresses a smartwatch on which AutomatedSOS is installed and running.    
-		\item [R.22] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve location and health status.
+		\item [R.23] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve location and health status.
 		\end{enumerate}
 	
 	
 	\item [G.6] \textbf{Monitor user's health parameters.}
 		\begin{enumerate}
-		\item [R.22] The application has to interact with Smartwatch APIs in order to retrieve location and health status.
-		\item [R.23] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
-		\item [R.24] The application sends to Data4Help service all the data retrieved in live acquisition.
-		\item [R.25] The application gets from Data4Help service all the historical data about the user.
-		\item [R.26] Allow the user to set personal threshold values.
+		\item [R.24] The application has to interact with Smartwatch APIs in order to retrieve location and health status.
+		\item [R.25] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
+		\item [R.26] The application sends to Data4Help service all the data retrieved in live acquisition.
+		\item [R.27] The application gets from Data4Help service all the historical data about the user.
+		\item [R.28] Allow the user to set personal threshold values.
 		\end{enumerate}
 		
 	\item [G.7] \textbf{Send an ambulance to user's location whenever certain parameters are below the threshold.}
 		\begin{enumerate}
-		\item [R.27] The application has to control health status with data retrieved in local to immediately realize whether certain parameters are critical.
-		\item [R.28] The application sends an ambulance request to the nearest hospital whenever parameters are critical.
+		\item [R.29] The application has to control health status with data retrieved in local to immediately realize whether certain parameters are critical.
+		\item [R.30] The application sends an ambulance request to the nearest hospital whenever parameters are critical.
 		\item [D.10] The first aid system is always up and ready to receive messages from AutomatedSOS.
-		\item [R.29] Supply to the hospital the user's location and all the useful information to provide efficient first aid.
-		\item [R.30] In the case no answer arrives from the hospital the software must repeat another time the request until an answer in reached.
-		\item [R.31] As soon as the acknowledgement message is received a warning message is displayed on the user's smartwatch.
+		\item [R.31] Supply to the hospital the user's location and all the useful information to provide efficient first aid.
+		\item [R.32] In the case no answer arrives from the hospital the software must repeat another time the request until an answer in reached.
+		\item [R.33] As soon as the acknowledgement message is received a warning message is displayed on the user's smartwatch.
 		\item [D.11] The ambulance successfully reach the location of the individual.
 		\end{enumerate}
 		
@@ -273,43 +271,43 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	\begin{enumerate}
 	\item [G.5] \textbf{Retrieve user's position and health status.}
 		\begin{enumerate}
-		\item [R.32] Allow users to be tracked from Track4Run filling up the registration and agreeing to privacy policy (both can be accepted).
+		\item [R.34] Allow users to be tracked from Track4Run filling up the registration and agreeing to privacy policy (both can be accepted).
 		\item [D.4] Devices used to monitor individuals always report correct values.
 		\item [R.22] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve location and health status.
 		\end{enumerate}
 		
 	\item [G.8] \textbf{Allow user to manage a run.}
 		\begin{enumerate}
-		\item [R.33] Allow users to create a run providing all the general information about the competition.
+		\item [R.35] Allow users to create a run providing all the general information about the competition.
 		\item [D.4] Devices used to monitor individuals always report correct values.
 			
 		\item [G.8.1] \textbf{Allow promoters to define a path for the run.}
 			\begin{enumerate}
-			\item [R.34] Allow promoters to define a path for the run by selecting the routes inside a map.
+			\item [R.36] Allow promoters to define a path for the run by selecting the routes inside a map.
 			\item [D.14] The path defined by the organizer actually exist.
 			\end{enumerate}
 			
 		\item [G.8.2] \textbf{Allow promoters to invite athletes to the run.}
 			\begin{enumerate}
-			\item [R.35] Allow promoters to send a participation request.
-			\item [R.36] Allow promoters to specify maximum number of athletes that can participate.
+			\item [R.37] Allow promoters to send a participation request.
+			\item [R.38] Allow promoters to specify maximum number of athletes that can participate.
 			\end{enumerate}
 	\end{enumerate}
 	
 	\item [G.9] \textbf{Allow athlete to enroll on a specific run.}
 		\begin{enumerate}
-		\item [R.37] Allow the user to see all the runs generated (which he is invited or not).
-		\item [R.38] Allow user to enroll in a run.
-		\item [R.39] Deny user to enroll in a run if maximum number of participants is already reached.
+		\item [R.39] Allow the user to see all the runs generated (which he is invited or not).
+		\item [R.40] Allow user to enroll in a run.
+		\item [R.41] Deny user to enroll in a run if maximum number of participants is already reached.
 		\item [D.16] If an athlete enroll to a run then athlete also participates to the run.
 		\end{enumerate}
 	
 	\item [G.10] \textbf{Allow spectators to watch in real time the position of every athletes in a specific run.}
 		\begin{enumerate}
 		\item [D.17] All athletes have their tracking devices with them and the application is enabled for the entire duration of the run.	
-		\item [R.40] Allow user to select a run to be viewed.
-		\item [R.41] The application requests to Data4Help the position of all the other athletes involved.
-		\item [R.42] The application receives and displays the position of all the other athletes involved.
+		\item [R.42] Allow user to select a run to be viewed.
+		\item [R.43] The application requests to Data4Help the position of all the other athletes involved.
+		\item [R.44] The application receives and displays the position of all the other athletes involved.
 		\item [D.18] Athletes never go out of the defined path.
 		\item [D.13] During a run athletes always wear a smartwatch on which Track4Run is installed.
 		\end{enumerate}

@@ -1,24 +1,116 @@
+%R5 troppo complicata
+%R6 da togliere
+%R.? add in rasd
+
 This section shows how the requirements can be supplied by the designed components
 
 \begin{enumerate}
 
-\item [R.1] Retrieve user credentials inserted into partner application as group attributes.
+\item [G.1] Acquire user’s position and health status.
 	\begin{enumerate}
-	\item[•] UserLogger: Receive from SignAccount user credentials and communicate them to Web Application using WebInterface.
-	\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
-	\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
-	\item[•] DBMS: Store data incoming from DBInterface.
+	\item [R.1] Retrieve user credentials inserted into partner application as group attributes.
+		\begin{enumerate}
+		\item[•] UserLogger: Receive from SignAccount interface user's credentials then it store them locally. After this operation waits for privacy policy appceptance.
+		\end{enumerate}
+
+	\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
+		\begin{enumerate}
+		\item[•] UserLogger: Receive from SignAccount interface that user has accepted the first part of pivacy policy then, if decide finally to create an account pass all these information to WebInterface.
+		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
+		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\end{enumerate}
+	
+	\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application.
+		\begin{enumerate}
+		\item[•] UserLogger: Receive from SignAccount interface that user has accepted the als the second part of pivacy policy then, if decide finally to create an account pass all these information to WebInterface.
+		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
+		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\end{enumerate}
+	
+	\item [R.5] After the registration, the system provides the password to access the data through provided e-mail.
+		\begin{enumerate}
+		\item[•] SAREBBE MEGLIO TOGLIERLA. (casino)
+		\end{enumerate}
+
+	\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
+		\begin{enumerate}
+		\item[•] UserLogger: Whenever a user start the application automaticcaly this component inform the WebServer.
+		\item[•] WebServer: Receive from WebInterface users' log request and send those to CredentialManager.
+		\item[•] CredentialManager: Check the users' availability and communicate it in reverse order allowing UserLogger to decide if user is admissible or not.
+		\end{enumerate}
+	
+	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
+		\begin{enumerate}
+		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to insert all the necessary credentials; then retrieve these informations. Moreover send these data to CredentialManager using CredentialInterface.
+		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\end{enumerate}	
 	\end{enumerate}
 
-\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
+\item [G.2] Provide to third parties, the user’s position and health status.
 	\begin{enumerate}
-	\item[•] UserLogger: Whenever a user start the application automaticcaly this component inform the WebServer.
-	\item[•] WebServer: Receive from WebInterface users' log request and send those to CredentialManager.
-	\item[•] CredentialManager: Check the users' availability and communicate it in reverse order.
+	\item [R.6] Allow third parties to register to Data4Help service specifying all their credentials.
+		\begin{enumerate}
+		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to insert all the necessary credentials; then retrieve these informations. Moreover send these data to CredentialManager using CredentialInterface.
+		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\end{enumerate}
+		
+	\item [R.7] The system should allow third parties to send information requests.
+		\begin{enumerate}
+		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to make a request inserting all the necessary information. Then pass the request using AcceptInformationRequest interface.
+		\item[•] RequestManager: Receive requests from AcceptInformationRequest interface and stack them in a queue sorted by urgence criteria.
+		\end{enumerate}	
+	\end{enumerate}
+
+\item [G.2.1] Provide data on demand to non-subscribed third parties.
+	\begin{enumerate}
+	\item [R.8] The system has to collect all the useful data that match the request.
+		\begin{enumerate}
+		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once an on-demand request is picked up it wraps the request and send it to DataCollector.
+		\item[•] DataCollector: This component once a data request is received builds a DB query that match what third partie wants and send it to DB using DBInterface.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\end{enumerate}	
+			
+	\item [R.9] The system has to generate a statistic on data selected.
+		\begin{enumerate}
+		\item[•] DataCollector: This component once data are arrived from DB, asks through ProvideStatistic interface to compute some kind of statistic on the data.
+		\item[•] StatisticGenerator: This component receive data from ProvideStatistic interface, compute statistics and send back them to DataCollector.
+		\end{enumerate}	
+		
+	\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
+	\item [R.11] The system has to send all the statistics already produced.
+		\begin{enumerate}
+		\item[•] DataCollector: This component once data are arrived from DB and statistics are generated, wrap them and send this package to RequestCollector using ProvideCollectedData interface.
+		\item[•] RequestCollector: This component receive information from DataCollector, unwrap and send them using ProvideInfromation interface to WebServer.
+		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to see statisitics and download retrieved information.
+		\end{enumerate}	
+	\end{enumerate}
+
+\item [G.2.2] Provide data in real-time to subscribed third parties.
+	\begin{enumerate}
+	\item [R.12] Allow third parties to subscribe to groups or individuals in order to receive live data.
+		\begin{enumerate}
+		\item[•] RequestManager: Once a real-time request is acquired this component stores all the attributes selcted in order to make the subscription. Using a parallel thread automatically add into the priority queue data request to supply live acquisition.
+		\item[•] DataCollector: This component once a data request is received builds a DB query in order to retreive only new data that match what third partie wants and send it to DB using DBInterface.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\end{enumerate}	
+			
+	\item [R.13] Provide to subscribed third parties raw data as soon as they are available by the system.
+		\begin{enumerate}
+		\item[•] DataCollector: This component once data are arrived from DB, wrap them and send this package to RequestCollector using ProvideCollectedData interface.
+		\item[•] RequestCollector: This component receive information from DataCollector, unwrap and send them using ProvideInfromation interface to WebServer.
+		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to download retrieved information.
+		\end{enumerate}	
 	\end{enumerate}
 	
-\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
-		
-		
+\item [G.3] Allow third parties two different ways to get users’ data.
+	\begin{enumerate}
+	\item [R.14] Allow third parties to insert the fiscal code of the user he wants to track.
 
+	\end{enumerate}
+	
+	
 \end{enumerate}
