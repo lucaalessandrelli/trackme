@@ -23,9 +23,13 @@
 \contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{31}{section.5}
 \contentsline {subsection}{\numberline {5.1}Implementation Plan}{31}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Integration and Test Plan}{32}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}System Testing}{32}{subsection.5.3}
-\contentsline {section}{\numberline {6}Effort Spent}{33}{section.6}
-\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{33}{subsubsection.6.0.1}
-\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{34}{subsubsection.6.0.2}
-\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{35}{subsubsection.6.0.3}
-\contentsline {section}{\numberline {7}Reference Documents}{36}{section.7}
+\contentsline {subsubsection}{\numberline {5.2.1}Integration Diagrams}{32}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Third Party Request Integration}{35}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Run Event Storing Integration}{36}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}Non so cosa mettere}{37}{subsubsection.5.2.4}
+\contentsline {subsection}{\numberline {5.3}System Testing}{37}{subsection.5.3}
+\contentsline {section}{\numberline {6}Effort Spent}{39}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}Luca Alessandrelli}{39}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}Andrea Caraffa}{40}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}Andrea Bionda}{41}{subsubsection.6.0.3}
+\contentsline {section}{\numberline {7}Reference Documents}{42}{section.7}

@@ -30,8 +30,139 @@ Every component of the system must be subjected to Unit Testing during its devel
 \medbreak
 \noindent
 As said in the previous subsection the Integration Plan will also follow a Top-Down approach. More precisely an "Incremental integration and Testing" approach is taken which couples really well with the dependency priority implementation order, this way as soon as components that depends on others are released, they can be integrated and tested immediately, allowing us to discover integration problems as soon as possible.
-\medbreak
+
+\subsubsection{Integration Diagrams}
+The following diagrams show the components to which the element just developed and unit tested is integrated with. The element just created is represented by a red square, while grey ones represent already existing and unit tested components. Note that in these diagrams if there are more that one grey square it does not mean that all the elements are integrated all together but just one by one, coupled with the one just developed.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig1.png}
+\caption{RequestManager Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig2.png}
+\caption{DataCollector Integration.}
+\end{figure}
+
 \noindent
+In the two diagrams above, RequestManager and DataCollector components are coupled twice, this means that the last component that get developed actually get integrated with the other one.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig3.png}
+\caption{CredentialManager Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig4.png}
+\caption{Track4RunManager Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig5.png}
+\caption{UserDataManager Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig6.png}
+\caption{StatisticsGenerator Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig7.png}
+\caption{UserLogger Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig8.png}
+\caption{DataSender Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig9.png}
+\caption{GPSAcquirer Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig10.png}
+\caption{HSAcquirer Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig11.png}
+\caption{HealthAnalyzer Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig12.png}
+\caption{UserInterfaceManager Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig13.png}
+\caption{RunManager Integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig14.png}
+\caption{RunDisplayer Integration.}
+\end{figure}
+
+
+\subsubsection{Third Party Request Integration}
+In the following two figures, integration including more that two components at the same time are shown. More precisely they explain the order in which components are integrated together in order test the complete functionality of third parties' requests. As we stated before we adopted  an "Incremental integration and Testing" approach and therefore we add to the integration one component at a time until we got the full chain of components which should perform the complete functionality.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig15.png}
+\caption{ThirdPartyRequest semi-chain integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig16.png}
+\caption{ThirdPartyRequest full-chain integration.}
+\end{figure}
+
+\subsubsection{Run Event Storing Integration}
+In the following two figures, integration including more that two components at the same time are shown. More precisely they explain the order in which components are integrated together in order test the complete functionality of storing into the Database all the information regarding run events. As we stated before we adopted  an "Incremental integration and Testing" approach and therefore we add to the integration one component at a time until we got the full chain of components which should perform the complete functionality.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig17.png}
+\caption{Run event storing semi-chain integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig18.png}
+\caption{Run event storing full-chain integration.}
+\end{figure}
+
+\subsubsection{Non so cosa mettere}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig19.png}
+\caption{SpectateRun semi-chain integration.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{Images/IntegrationPlanImages/fig20.png}
+\caption{SpectateRun full-chain integration.}
+\end{figure}
+
 
 
 \subsection{System Testing}
