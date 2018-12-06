@@ -28,11 +28,6 @@ This section shows how the requirements can be supplied by the designed componen
 		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
 		\item[•] DBMS: Store data incoming from DBInterface.
 		\end{enumerate}
-	
-	\item [R.5] After the registration, the system provides the password to access the data through provided e-mail.
-		\begin{enumerate}
-		\item[•] SAREBBE MEGLIO TOGLIERLA. (casino)
-		\end{enumerate}
 
 	\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
 		\begin{enumerate}
@@ -43,8 +38,8 @@ This section shows how the requirements can be supplied by the designed componen
 	
 	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
 		\begin{enumerate}
-		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to insert all the necessary credentials; then retrieve these informations. Moreover send these data to CredentialManager using CredentialInterface.
-		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] DataSender: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, send every ten minutes all the information acquired since the last message to UserDataManager using AcquireData interface.
+		\item[•] UserDataManager: When a data update is arrived through AcquireData interface, this component generates and sends an SQL query the allows the insertion of the new data in the DB.
 		\item[•] DBMS: Store data incoming from DBInterface.
 		\end{enumerate}	
 	\end{enumerate}
@@ -106,11 +101,79 @@ This section shows how the requirements can be supplied by the designed componen
 		\end{enumerate}	
 	\end{enumerate}
 	
-\item [G.3] Allow third parties two different ways to get users’ data.
+\item [G.3.1] Allow third parties two different ways to get users’ data.
 	\begin{enumerate}
 	\item [R.14] Allow third parties to insert the fiscal code of the user he wants to track.
-
+		\begin{enumerate}
+		\item[•] WebServer: This component in this specific case, has to offer to third parties a web page that allows them to fill in the fiscl code that they want to track.Then the request formulated has to be forwarded to RequestManager through AcceptInformationRequest interface.
+		\end{enumerate}	
+		
+		\item [R.8] The system has to collect all the useful data that match the request.
+	\item [R.15] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
+		\begin{enumerate}
+		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once a single mode request is picked up it wraps the request and send it to DataCollector.
+		\item[•] DataCollector: This component once a data request is received builds a DB query that match what third parties wants and send it to DB using DBInterface, requiring also all the information of the user involved.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\item[•] DataCollector: Once data are finally retrieved this component check, before return an answer to RequestManager, if the user involved has accepted the second part of the privacy policy; if yes wrap the information package and proceed as always, otherwise communicate to RequestManager that the request cannot be accepted.
+		\end{enumerate}	
+		
+	\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
 	\end{enumerate}
 	
+\item [G.3.2] Allow third parties to get data of a group of people.
+	\begin{enumerate}
+	\item [R.16] Allow third parties to insert search area and attributes in which they are interested to restrict their field of search.
+		\begin{enumerate}
+		\item[•] WebServer: This component in this specific case, has to offer to third parties a web page that allows them to fill in all the attriubutes that the users to track must have.Then the request formulated has to be forwarded to RequestManager through AcceptInformationRequest interface.
+		\end{enumerate}	
+		
+	\item [R.8] The system has to collect all the useful data that match the request.
+	\item [R.17] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
+		\begin{enumerate}
+		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once a group mode request is picked up it wraps the request and send it to DataCollector.
+		\item[•] DataCollector: This component once a data request is received builds a DB query that match what third parties wants and send it to DB using DBInterface, requiring also all the number of users involved in the specific query.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\item[•] DataCollector: Once data are finally retrieved this component check, before return an answer to RequestManager, if the number of users involved are less then 1000; if yes wrap the information package and proceed as always, otherwise communicate to RequestManager that the request cannot be accepted.
+		\end{enumerate}	
+		
+	\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
+	\end{enumerate}
+	
+\item [G.4] Provide data in an anonymous way, to protect users' privacy.
+	\begin{enumerate}
+    \item [R.15] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
+    \item [R.17] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
+    \end{enumerate}	
+
+
+\item [G.5] Retrieve user's position and health status.
+	\begin{enumerate}
+	\item [R.18] Allow users to be tracked from AutomatedSOS filling up the registration and agreeing only to first part of privacy policy.
+		\begin{enumerate}
+		\item[•] UserLogger: Receive from SignAccount interface that user has fill all the fields on registration page and has accepted the first part of pivacy policy (the only one presented) then, if decide finally to create an account pass all these information to WebInterface.
+		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
+		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\end{enumerate}
+		
+	\item [R.19] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
+		\begin{enumerate}
+		\item[•] HealthAnalyser: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, acquire health status parameters every 5 seconds and GPS location every ten minutes as before.
+		\end{enumerate}	
+	\end{enumerate}	
+	
+\item [G.6] Monitor user's health parameters.
+	\begin{enumerate}
+	\item [R.19] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
+	\item [R.20] The application sends to Data4Help service all the data retrieved in live acquisition.
+		\begin{enumerate}
+		\item[•] DataSender: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, send every ten minutes all the information acquired since the last message to UserDataManager using AcquireData interface.
+		\item[•] UserDataManager: When a data update is arrived through AcquireData interface, this component generates and sends an SQL query the allows the insertion of the new data in the DB.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\end{enumerate}	
+	\item [R.21] The application gets from Data4Help service all the historical data about the user.
+	
+	\end{enumerate}
+
 	
 \end{enumerate}
