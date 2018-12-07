@@ -241,9 +241,49 @@ This section shows how the requirements can be supplied by the designed componen
 \item [G.9] Allow athlete to enroll on a specific run.
 	\begin{enumerate}
 	\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
-	\item [R.34] Allow user to enroll in a run.
+		\begin{enumerate}
+		\item[•] RunManager: This component, when user wants to see all the runs in the system, has to send a request to WebServer.
+		\item[•] WebServer: Receive from WebInterface the request to see all the runs and forwards it to RequestManager using AcceptInformationRequest interface.
+		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once an on-demand request is picked up it wraps the request and sent it to DataCollector.
+		\item[•] DataCollector: This component once a data request is received builds a DB query that match what user wants and send it to DB using DBInterface.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface, then information goes in the opposite direction to RunManager.
+		\item[•] RunManager: When all the runs are finally arrived, this component shows to the user all the race in which he can partecipate.
+		\end{enumerate}	
 	\item [R.35] Deny user to enroll in a run if maximum number of participants is already reached.
-
+	\item [R.34] Allow user to enroll in a run.
+		\begin{enumerate}
+		\item[•] RunManager: This component, when user wants to enroll in a run, has to retrieve thorugh ManageRun interface which run he is interested in; then provides this information to WebServer.
+		\item[•] WebServer: Receive from WebInterface the request to enroll in a run and forwards it to Track4RunManager using RunInterface.
+		\item[•] Track4RunManager: This component has to create a query that ask to the DBMS if the user interested can partecipate to the specificated run.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide an answer to the DataCollector using DBInterface
+		\item[•] Track4RunManager: If the answer from DBMS is positive then creates and sends another query that ask to the DBMS to enroll the user,then communicates it to WebServer; otherwise communicate to WebServer that the user cannot be enrolled.
+		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] WebServer: Receives from Track4RunManager the answer about the enrolling then forwards it to RunManager through WebInterface.
+		\item[•] RunManager: This component, when the answer is arrived, displays to the user the result of the enrollment using ManagerRun interface.
+		\end{enumerate}	
+	\end{enumerate}
+	
+\item [G.10] \textbf{Allow spectators to watch in real time the position of every athletes in a specific run.}
+	\begin{enumerate}
+	\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
+	\item [R.36] Allow user to select a run to be viewed.
+		\begin{enumerate}
+		\item[•] RunDisplayer: This component, when user wants to spectate to a run, has to retrieve thorugh ShowLiveRun interface which run he is interested in; then creates and sends a live acquisition request for the specific user to WebServer.
+		\end{enumerate}	
+	\item [R.37] The application requests to Data4Help the position of all the other athletes involved.
+		\begin{enumerate}
+		\item[•] WebServer: Receive from WebInterface the live acquisition request and forwards it to RequestManager using AcceptInformationRequest interface.
+		\item[•] RequestManager: Once a real-time request is arrived, this component stores all the attributes selcted in order to make the subscription. Using a parallel thread automatically add into the priority queue data request to supply live acquisition.
+		\item[•] DataCollector: This component once a data request is received builds a DB query in order to retreive only new data that match what user wants and send it to DB using DBInterface.
+		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\end{enumerate}	
+	\item [R.38] The application receives and displays the position of all the other athletes involved.
+		\begin{enumerate}
+		\item[•] DataCollector: This component once data are arrived from DB, wrap them and send this package to RequestCollector using ProvideCollectedData interface.
+		\item[•] RequestCollector: This component receive information from DataCollector, unwrap and send them using ProvideInfromation interface to WebServer.
+		\item[•] WebServer: Provides to RunDisplayer using WebInterface all the positions of the athletes involved in the race.
+		\item[•] RunDisplayer: This component, using GoogleMapsAPI interface to compute the live positions, offers to the user a live map that specifies all the athletes' position inside the race path.
+		\end{enumerate}	
 	\end{enumerate}
 	
 \end{enumerate}

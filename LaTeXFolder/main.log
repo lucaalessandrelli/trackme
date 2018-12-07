@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  7 DEC 2018 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  7 DEC 2018 18:13
 entering extended mode
 **./main.tex
 (main.tex
@@ -1288,7 +1288,7 @@ Overfull \hbox (1.76074pt too wide) in paragraph at lines 254--256
  []
 
 [21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
@@ -1298,10 +1298,10 @@ File: Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png Graphic file (type png
 )
 <use Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png>
 Package pdftex.def Info: Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png  us
-ed on input line 325.
+ed on input line 326.
 (pdftex.def)             Requested size: 449.23705pt x 391.92761pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 320--329
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 321--330
 $[]$ 
  []
 
@@ -1314,15 +1314,15 @@ File: Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png Graphic file (type png
 )
 <use Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png>
 Package pdftex.def Info: Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png  us
-ed on input line 336.
+ed on input line 337.
 (pdftex.def)             Requested size: 472.56793pt x 236.28397pt.
 
-Overfull \hbox (17.32382pt too wide) in paragraph at lines 336--337
+Overfull \hbox (17.32382pt too wide) in paragraph at lines 337--338
  [] 
  []
 
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 332--340
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 333--341
 []$[]$ 
  []
 
@@ -1331,15 +1331,15 @@ t>
 File: Images/UseCaseDiagrams/Track4RunCaseDiagram.png Graphic file (type png)
 <use Images/UseCaseDiagrams/Track4RunCaseDiagram.png>
 Package pdftex.def Info: Images/UseCaseDiagrams/Track4RunCaseDiagram.png  used 
-on input line 345.
+on input line 346.
 (pdftex.def)             Requested size: 484.13344pt x 291.7279pt.
 
-Overfull \hbox (28.88933pt too wide) in paragraph at lines 345--346
+Overfull \hbox (28.88933pt too wide) in paragraph at lines 346--347
  [] 
  []
 
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 341--349
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 342--350
 []$[]$ 
  []
 
@@ -1353,7 +1353,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [25
 
 ]
-Overfull \hbox (7.1891pt too wide) in paragraph at lines 423--443
+Overfull \hbox (7.1891pt too wide) in paragraph at lines 424--444
 [][] 
  []
 
@@ -1376,7 +1376,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [30]
-Overfull \hbox (7.1891pt too wide) in paragraph at lines 623--645
+Overfull \hbox (7.1891pt too wide) in paragraph at lines 624--646
 [][] 
  []
 
@@ -1397,28 +1397,28 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <Images/Seq_Data4Help_onDem.png, id=580, 540.51938pt x 425.33907pt>
 File: Images/Seq_Data4Help_onDem.png Graphic file (type png)
 <use Images/Seq_Data4Help_onDem.png>
-Package pdftex.def Info: Images/Seq_Data4Help_onDem.png  used on input line 771
+Package pdftex.def Info: Images/Seq_Data4Help_onDem.png  used on input line 772
 .
 (pdftex.def)             Requested size: 432.41608pt x 340.2717pt.
 <Images/Seq_Data4Help_autoUp.png, id=581, 417.05812pt x 274.77657pt>
 File: Images/Seq_Data4Help_autoUp.png Graphic file (type png)
 <use Images/Seq_Data4Help_autoUp.png>
 Package pdftex.def Info: Images/Seq_Data4Help_autoUp.png  used on input line 77
-8.
+9.
 (pdftex.def)             Requested size: 333.64694pt x 219.82153pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 764--783
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 765--784
 $[]$ 
  []
 
 <Images/Seq_Data4Help_live.png, id=582, 635.37375pt x 477.28313pt>
 File: Images/Seq_Data4Help_live.png Graphic file (type png)
 <use Images/Seq_Data4Help_live.png>
-Package pdftex.def Info: Images/Seq_Data4Help_live.png  used on input line 788.
+Package pdftex.def Info: Images/Seq_Data4Help_live.png  used on input line 789.
 
 (pdftex.def)             Requested size: 457.46875pt x 343.64359pt.
 
-Overfull \hbox (2.22464pt too wide) in paragraph at lines 788--789
+Overfull \hbox (2.22464pt too wide) in paragraph at lines 789--790
  [] 
  []
 
@@ -1426,10 +1426,10 @@ Overfull \hbox (2.22464pt too wide) in paragraph at lines 788--789
 File: Images/Seq_Data4Help_registration.png Graphic file (type png)
 <use Images/Seq_Data4Help_registration.png>
 Package pdftex.def Info: Images/Seq_Data4Help_registration.png  used on input l
-ine 794.
+ine 795.
 (pdftex.def)             Requested size: 340.93344pt x 295.40338pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 784--800
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 785--801
 []$[]$ 
  []
 
@@ -1447,17 +1447,17 @@ Overfull \vbox (10.98485pt too high) has occurred while \output is active []
 <Images/Seq_AutoSOS_monitor.png, id=592, 447.17062pt x 440.39531pt>
 File: Images/Seq_AutoSOS_monitor.png Graphic file (type png)
 <use Images/Seq_AutoSOS_monitor.png>
-Package pdftex.def Info: Images/Seq_AutoSOS_monitor.png  used on input line 807
+Package pdftex.def Info: Images/Seq_AutoSOS_monitor.png  used on input line 808
 .
 (pdftex.def)             Requested size: 344.32243pt x 339.10542pt.
 <Images/Seq_Track4Run_raceUp.png, id=593, 545.78906pt x 350.05782pt>
 File: Images/Seq_Track4Run_raceUp.png Graphic file (type png)
 <use Images/Seq_Track4Run_raceUp.png>
 Package pdftex.def Info: Images/Seq_Track4Run_raceUp.png  used on input line 81
-5.
+6.
 (pdftex.def)             Requested size: 420.25887pt x 269.54533pt.
 
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 802--819
+Overfull \hbox (27.37506pt too wide) in paragraph at lines 803--820
 []$[]$ 
  []
 
@@ -1551,7 +1551,7 @@ rograms/MiKTeX 2.9/fonts/type1/public/lm/lmtt8.pfb><C:/Users/ERTY/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Users/ERTY/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/ERTY/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (48 pages, 3514535 bytes).
+Output written on main.pdf (48 pages, 3514536 bytes).
 PDF statistics:
  1041 PDF objects out of 1200 (max. 8388607)
  495 named destinations out of 1000 (max. 500000)
