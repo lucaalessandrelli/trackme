@@ -1,47 +1,45 @@
 \babel@toc {english}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Overview architecture \relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {2}{\ignorespaces Component Diagram\relax }}{9}{figure.caption.8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Entity Relationship Diagram Diagram.\relax }}{12}{figure.caption.9}
-\contentsline {figure}{\numberline {4}{\ignorespaces Deployment Diagram.\relax }}{13}{figure.caption.10}
-\contentsline {figure}{\numberline {5}{\ignorespaces Individual Information Request sequence diagram\relax }}{14}{figure.caption.11}
-\contentsline {figure}{\numberline {6}{\ignorespaces Send Ambulance Request sequence diagram\relax }}{15}{figure.caption.12}
-\contentsline {figure}{\numberline {7}{\ignorespaces Spectate A Run sequence diagram\relax }}{16}{figure.caption.13}
-\contentsline {figure}{\numberline {8}{\ignorespaces Component Interfaces Diagram\relax }}{17}{figure.caption.14}
-\contentsline {figure}{\numberline {9}{\ignorespaces Data4Help's homepage\relax }}{21}{figure.caption.15}
-\contentsline {figure}{\numberline {10}{\ignorespaces Individual request form\relax }}{22}{figure.caption.16}
-\contentsline {figure}{\numberline {11}{\ignorespaces Group request form\relax }}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {12}{\ignorespaces Welcome page.\relax }}{24}{figure.caption.18}
-\contentsline {figure}{\numberline {13}{\ignorespaces Registration form.\relax }}{24}{figure.caption.18}
-\contentsline {figure}{\numberline {14}{\ignorespaces Privacy Policy Conditions.\relax }}{25}{figure.caption.19}
-\contentsline {figure}{\numberline {15}{\ignorespaces Usage Conditions.\relax }}{25}{figure.caption.19}
-\contentsline {figure}{\numberline {16}{\ignorespaces Main menu.\relax }}{26}{figure.caption.20}
-\contentsline {figure}{\numberline {17}{\ignorespaces Warning message.\relax }}{26}{figure.caption.20}
-\contentsline {figure}{\numberline {18}{\ignorespaces Welcome page. \relax }}{27}{figure.caption.21}
-\contentsline {figure}{\numberline {19}{\ignorespaces Registration form.\relax }}{27}{figure.caption.21}
-\contentsline {figure}{\numberline {20}{\ignorespaces Privacy Policy Conditions pt.1\relax }}{28}{figure.caption.22}
-\contentsline {figure}{\numberline {21}{\ignorespaces Privacy Policy Conditions pt.2\relax }}{28}{figure.caption.22}
-\contentsline {figure}{\numberline {22}{\ignorespaces Main menu.\relax }}{29}{figure.caption.23}
-\contentsline {figure}{\numberline {23}{\ignorespaces Pomote a run view.\relax }}{29}{figure.caption.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Enroll to a run.\relax }}{30}{figure.caption.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Spectate a run view\relax }}{30}{figure.caption.24}
-\contentsline {figure}{\numberline {26}{\ignorespaces Implementation tree.\relax }}{37}{figure.caption.25}
-\contentsline {figure}{\numberline {27}{\ignorespaces RequestManager Integration.\relax }}{38}{figure.caption.26}
-\contentsline {figure}{\numberline {28}{\ignorespaces DataCollector Integration.\relax }}{38}{figure.caption.27}
-\contentsline {figure}{\numberline {29}{\ignorespaces CredentialManager Integration.\relax }}{39}{figure.caption.28}
-\contentsline {figure}{\numberline {30}{\ignorespaces Track4RunManager Integration.\relax }}{39}{figure.caption.29}
-\contentsline {figure}{\numberline {31}{\ignorespaces UserDataManager Integration.\relax }}{39}{figure.caption.30}
-\contentsline {figure}{\numberline {32}{\ignorespaces StatisticsGenerator Integration.\relax }}{39}{figure.caption.31}
+\contentsline {figure}{\numberline {1}{\ignorespaces Overview architecture \relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2}{\ignorespaces Component Diagram\relax }}{9}{figure.caption.9}
+\contentsline {figure}{\numberline {3}{\ignorespaces Entity Relationship Diagram Diagram.\relax }}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {4}{\ignorespaces Deployment Diagram.\relax }}{13}{figure.caption.11}
+\contentsline {figure}{\numberline {5}{\ignorespaces Individual Information Request sequence diagram\relax }}{14}{figure.caption.12}
+\contentsline {figure}{\numberline {6}{\ignorespaces Send Ambulance Request sequence diagram\relax }}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {7}{\ignorespaces Spectate A Run sequence diagram\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {8}{\ignorespaces Component Interfaces Diagram\relax }}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {9}{\ignorespaces Data4Help's homepage\relax }}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Individual request form\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Group request form\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {12}{\ignorespaces Welcome page.\relax }}{24}{figure.caption.19}
+\contentsline {figure}{\numberline {13}{\ignorespaces Registration form.\relax }}{24}{figure.caption.19}
+\contentsline {figure}{\numberline {14}{\ignorespaces Privacy Policy Conditions.\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {15}{\ignorespaces Usage Conditions.\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {16}{\ignorespaces Main menu.\relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {17}{\ignorespaces Warning message.\relax }}{26}{figure.caption.21}
+\contentsline {figure}{\numberline {18}{\ignorespaces Welcome page. \relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {19}{\ignorespaces Registration form.\relax }}{27}{figure.caption.22}
+\contentsline {figure}{\numberline {20}{\ignorespaces Privacy Policy Conditions pt.1\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {21}{\ignorespaces Privacy Policy Conditions pt.2\relax }}{28}{figure.caption.23}
+\contentsline {figure}{\numberline {22}{\ignorespaces Main menu.\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {23}{\ignorespaces Pomote a run view.\relax }}{29}{figure.caption.24}
+\contentsline {figure}{\numberline {24}{\ignorespaces Enroll to a run.\relax }}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {25}{\ignorespaces Spectate a run view\relax }}{30}{figure.caption.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Implementation tree\relax }}{37}{figure.caption.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces RequestManager Integration.\relax }}{38}{figure.caption.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces DataCollector Integration.\relax }}{39}{figure.caption.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces CredentialManager Integration.\relax }}{39}{figure.caption.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Track4RunManager Integration.\relax }}{39}{figure.caption.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces UserDataManager Integration.\relax }}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces StatisticsGenerator Integration.\relax }}{40}{figure.caption.31}
 \contentsline {figure}{\numberline {33}{\ignorespaces UserLogger Integration.\relax }}{40}{figure.caption.32}
-\contentsline {figure}{\numberline {34}{\ignorespaces DataSender Integration.\relax }}{40}{figure.caption.33}
-\contentsline {figure}{\numberline {35}{\ignorespaces GPSAcquirer Integration.\relax }}{40}{figure.caption.34}
-\contentsline {figure}{\numberline {36}{\ignorespaces HSAcquirer Integration.\relax }}{40}{figure.caption.35}
-\contentsline {figure}{\numberline {37}{\ignorespaces HealthAnalyzer Integration.\relax }}{41}{figure.caption.36}
-\contentsline {figure}{\numberline {38}{\ignorespaces UserInterfaceManager Integration.\relax }}{41}{figure.caption.37}
-\contentsline {figure}{\numberline {39}{\ignorespaces RunManager Integration.\relax }}{41}{figure.caption.38}
-\contentsline {figure}{\numberline {40}{\ignorespaces RunDisplayer Integration.\relax }}{41}{figure.caption.39}
-\contentsline {figure}{\numberline {41}{\ignorespaces ThirdPartyRequest semi-chain integration.\relax }}{42}{figure.caption.40}
-\contentsline {figure}{\numberline {42}{\ignorespaces ThirdPartyRequest full-chain integration.\relax }}{42}{figure.caption.41}
-\contentsline {figure}{\numberline {43}{\ignorespaces Run event storing semi-chain integration.\relax }}{42}{figure.caption.42}
-\contentsline {figure}{\numberline {44}{\ignorespaces Run event storing full-chain integration.\relax }}{43}{figure.caption.43}
-\contentsline {figure}{\numberline {45}{\ignorespaces SpectateRun semi-chain integration.\relax }}{43}{figure.caption.44}
-\contentsline {figure}{\numberline {46}{\ignorespaces SpectateRun full-chain integration.\relax }}{43}{figure.caption.45}
+\contentsline {figure}{\numberline {34}{\ignorespaces DataSender Integration.\relax }}{40}{figure.caption.32}
+\contentsline {figure}{\numberline {35}{\ignorespaces GPSAcquirer Integration.\relax }}{40}{figure.caption.33}
+\contentsline {figure}{\numberline {36}{\ignorespaces HSAcquirer Integration.\relax }}{40}{figure.caption.33}
+\contentsline {figure}{\numberline {37}{\ignorespaces HealthAnalyzer Integration.\relax }}{41}{figure.caption.34}
+\contentsline {figure}{\numberline {38}{\ignorespaces UserInterfaceManager Integration.\relax }}{41}{figure.caption.35}
+\contentsline {figure}{\numberline {39}{\ignorespaces RunManager Integration.\relax }}{41}{figure.caption.35}
+\contentsline {figure}{\numberline {40}{\ignorespaces RunDisplayer Integration.\relax }}{41}{figure.caption.36}
+\contentsline {figure}{\numberline {41}{\ignorespaces ThirdPartyRequest semi-chain integration.\relax }}{42}{figure.caption.37}
+\contentsline {figure}{\numberline {42}{\ignorespaces ThirdPartyRequest full-chain integration.\relax }}{42}{figure.caption.38}
+\contentsline {figure}{\numberline {43}{\ignorespaces Run event storing semi-chain integration.\relax }}{43}{figure.caption.39}
+\contentsline {figure}{\numberline {44}{\ignorespaces Run event storing full-chain integration.\relax }}{43}{figure.caption.40}
