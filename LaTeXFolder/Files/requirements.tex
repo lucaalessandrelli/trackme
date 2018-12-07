@@ -303,6 +303,7 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	
 	\item [G.10] \textbf{Allow spectators to watch in real time the position of every athletes in a specific run.}
 		\begin{enumerate}
+		\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
 		\item [D.17] All athletes have their tracking devices with them and the application is enabled for the entire duration of the run.	
 		\item [R.36] Allow user to select a run to be viewed.
 		\item [R.37] The application requests to Data4Help the position of all the other athletes involved.
@@ -422,7 +423,7 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Request Group Monitoring \\ \hline
+Name             & Request Group Monitoring and subscription \\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
@@ -432,8 +433,9 @@ Event Flow       & \begin{enumerate}
             \item The Third Party inserts all the attributes.
             \item The system accepts the request.
             \item The system shows all the group's data that have been collected until the moment of the request along with some statistics. 
+            \item The system subscribe the third party to the group.
         \end{enumerate}\\ \hline
-Exit Condition   & The request's outcome is shown.\\ \hline
+Exit Condition   & The request's outcome is shown and third party is subscribed.\\ \hline
 Exceptions       & \begin{itemize}
 \item If the group request get rejected by the system a warning message will be displayed saying the request is rejected.
 \end{itemize}\\ \hline
@@ -444,25 +446,6 @@ Special Requirements & The system rejects group monitoring requests when the gro
 \FloatBarrier
 \clearpage
 
-\FloatBarrier
-\begin{table}[h]
-\begin{tabular}{|l|p{.75\textwidth}|}
-\hline
-Name             & Subscribe To A Group\\ \hline
-Actors           & Third Party  \\ \hline
-Entry Conditions & The third party has just sent an accepted monitoring request to a group. \\ \hline
-Event Flow       & \begin{enumerate}
-            \item The Third Party requests to follow the selected group.
-			\item The system links the third party to the group.
-            \item The system sends new data to the third party.
-        \end{enumerate}\\ \hline
-Exit Condition   & The Third Party is subscribed to the selected group.\\ \hline
-Exceptions       & \begin{itemize}
-            \item If the third party is already subscribed a warning message is shown saying the subscription have been already done.
-        \end{itemize}\\ \hline
-\end{tabular}
-\end{table}
-\FloatBarrier
 
 \FloatBarrier
 \begin{table}[h]
