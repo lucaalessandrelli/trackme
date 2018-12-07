@@ -173,7 +173,7 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
 		\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
 		\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application. 
-		\item [D.4] Devices used to monitor individuals always work and report 			the correct values.	
+		\item [D.4] Devices used to monitor individuals always work and report the correct values.	
     	\item [D.5] Partner application always report correct values to Data4Help.
     	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
     	\end{enumerate}	
@@ -253,15 +253,14 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		
 	\item [G.7] \textbf{Send an ambulance to user's location whenever certain parameters are below the threshold.}
 		\begin{enumerate}
-		\item [R.29] The application has to control health status with data retrieved in local to immediately realize whether certain parameters are critical.
-		\item [R.30] The application sends an ambulance request to the nearest hospital whenever parameters are critical.
+		\item [R.23] The application has to control health status with data retrieved in local to immediately realize whether certain parameters are critical.
+		\item [R.24] The application sends an ambulance request to the nearest hospital whenever parameters are critical.
 		\item [D.10] The first aid system is always up and ready to receive messages from AutomatedSOS.
-		\item [R.31] Supply to the hospital the user's location and all the useful information to provide efficient first aid.
-		\item [R.32] In the case no answer arrives from the hospital the software must repeat another time the request until an answer in reached.
-		\item [R.33] As soon as the acknowledgement message is received a warning message is displayed on the user's smartwatch.
+		\item [R.25] Supply to the hospital the user's location and all the useful information to provide efficient first aid.
+		\item [R.26] In the case no answer arrives from the hospital the software must repeat another time the request until an answer in reached.
+		\item [R.27] As soon as the acknowledgement message is received a warning message is displayed on the user's smartwatch.
 		\item [D.11] The ambulance successfully reach the location of the individual.
 		\end{enumerate}
-		
   	\end{enumerate}
   	
   	
@@ -270,43 +269,44 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	\begin{enumerate}
 	\item [G.5] \textbf{Retrieve user's position and health status.}
 		\begin{enumerate}
-		\item [R.34] Allow users to be tracked from Track4Run filling up the registration and agreeing to privacy policy (both can be accepted).
+		\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
+		\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application. 
 		\item [D.4] Devices used to monitor individuals always report correct values.
-		\item [R.22] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve location and health status.
+		\item [R.28] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve GPS location with a resolution of 10 seconds when the user is in the run .
 		\end{enumerate}
 		
 	\item [G.8] \textbf{Allow user to manage a run.}
 		\begin{enumerate}
-		\item [R.35] Allow users to create a run providing all the general information about the competition.
+		\item [R.29] Allow users to create a run once all the general information are inserted.
 		\item [D.4] Devices used to monitor individuals always report correct values.
 			
 		\item [G.8.1] \textbf{Allow promoters to define a path for the run.}
 			\begin{enumerate}
-			\item [R.36] Allow promoters to define a path for the run by selecting the routes inside a map.
+			\item [R.30] Allow promoters to define a path for the run by selecting the routes inside a map.
 			\item [D.14] The path defined by the organizer actually exist.
 			\end{enumerate}
 			
 		\item [G.8.2] \textbf{Allow promoters to invite athletes to the run.}
 			\begin{enumerate}
-			\item [R.37] Allow promoters to send a participation request.
-			\item [R.38] Allow promoters to specify maximum number of athletes that can participate.
+			\item [R.31] Allow promoters to send a participation request.
+			\item [R.32] Allow promoters to specify maximum number of athletes that can participate.
 			\end{enumerate}
 	\end{enumerate}
 	
 	\item [G.9] \textbf{Allow athlete to enroll on a specific run.}
 		\begin{enumerate}
-		\item [R.39] Allow the user to see all the runs generated (which he is invited or not).
-		\item [R.40] Allow user to enroll in a run.
-		\item [R.41] Deny user to enroll in a run if maximum number of participants is already reached.
+		\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
+		\item [R.34] Allow user to enroll in a run.
+		\item [R.35] Deny user to enroll in a run if maximum number of participants is already reached.
 		\item [D.16] If an athlete enroll to a run then athlete also participates to the run.
 		\end{enumerate}
 	
 	\item [G.10] \textbf{Allow spectators to watch in real time the position of every athletes in a specific run.}
 		\begin{enumerate}
 		\item [D.17] All athletes have their tracking devices with them and the application is enabled for the entire duration of the run.	
-		\item [R.42] Allow user to select a run to be viewed.
-		\item [R.43] The application requests to Data4Help the position of all the other athletes involved.
-		\item [R.44] The application receives and displays the position of all the other athletes involved.
+		\item [R.36] Allow user to select a run to be viewed.
+		\item [R.37] The application requests to Data4Help the position of all the other athletes involved.
+		\item [R.38] The application receives and displays the position of all the other athletes involved.
 		\item [D.18] Athletes never go out of the defined path.
 		\item [D.13] During a run athletes always wear a smartwatch on which Track4Run is installed.
 		\end{enumerate}

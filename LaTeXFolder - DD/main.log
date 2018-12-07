@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  6 DEC 2018 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  7 DEC 2018 12:30
 entering extended mode
 **./main.tex
 (main.tex
@@ -1423,59 +1423,59 @@ Overfull \hbox (48.06996pt too wide) in paragraph at lines 160--161
 
 
 ]
-Overfull \hbox (10.0718pt too wide) in paragraph at lines 74--75
+Overfull \hbox (10.0718pt too wide) in paragraph at lines 70--71
 []\T1/ptm/m/n/10.95 DataCollector: This com-po-nent once data are ar-rived from
  DB, asks through Pro-videStatis-
  []
 
-[29] [30]) [31] (Files/imp.tex
-<Images/ImplementationPlan.png, id=595, 562.5015pt x 437.83575pt>
+[29] [30] [31] [32]) [33] (Files/imp.tex
+<Images/ImplementationPlan.png, id=603, 562.5015pt x 437.83575pt>
 File: Images/ImplementationPlan.png Graphic file (type png)
 <use Images/ImplementationPlan.png>
 Package pdftex.def Info: Images/ImplementationPlan.png  used on input line 9.
 (pdftex.def)             Requested size: 393.74837pt x 306.48294pt.
- [32
+ [34
 
  <./Images/ImplementationPlan.png>]
-<Images/IntegrationPlanImages/fig1.png, id=601, 296.90926pt x 162.6075pt>
+<Images/IntegrationPlanImages/fig1.png, id=609, 296.90926pt x 162.6075pt>
 File: Images/IntegrationPlanImages/fig1.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig1.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig1.png  used on input l
 ine 39.
 (pdftex.def)             Requested size: 207.83505pt x 113.82446pt.
-<Images/IntegrationPlanImages/fig2.png, id=602, 296.307pt x 162.6075pt>
+<Images/IntegrationPlanImages/fig2.png, id=610, 296.307pt x 162.6075pt>
 File: Images/IntegrationPlanImages/fig2.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig2.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig2.png  used on input l
 ine 45.
 (pdftex.def)             Requested size: 207.41348pt x 113.82446pt.
-<Images/IntegrationPlanImages/fig3.png, id=603, 295.70474pt x 163.20975pt>
+<Images/IntegrationPlanImages/fig3.png, id=611, 295.70474pt x 163.20975pt>
 File: Images/IntegrationPlanImages/fig3.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig3.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig3.png  used on input l
 ine 54.
 (pdftex.def)             Requested size: 206.9919pt x 114.24603pt.
- [33 <./Images/IntegrationPlanImages/fig1.png> <./Images/IntegrationPlanImages/
-fig2.png>]
-<Images/IntegrationPlanImages/fig4.png, id=610, 296.307pt x 162.6075pt>
+[35 <./Images/IntegrationPlanImages/fig1.png> <./Images/IntegrationPlanImages/f
+ig2.png>]
+<Images/IntegrationPlanImages/fig4.png, id=618, 296.307pt x 162.6075pt>
 File: Images/IntegrationPlanImages/fig4.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig4.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig4.png  used on input l
 ine 60.
 (pdftex.def)             Requested size: 207.41348pt x 113.82446pt.
-<Images/IntegrationPlanImages/fig5.png, id=611, 114.4275pt x 163.20975pt>
+<Images/IntegrationPlanImages/fig5.png, id=619, 114.4275pt x 163.20975pt>
 File: Images/IntegrationPlanImages/fig5.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig5.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig5.png  used on input l
 ine 66.
 (pdftex.def)             Requested size: 80.0987pt x 114.24603pt.
-<Images/IntegrationPlanImages/fig6.png, id=612, 115.632pt x 161.403pt>
+<Images/IntegrationPlanImages/fig6.png, id=620, 115.632pt x 161.403pt>
 File: Images/IntegrationPlanImages/fig6.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig6.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig6.png  used on input l
 ine 72.
 (pdftex.def)             Requested size: 80.94183pt x 112.98132pt.
-<Images/IntegrationPlanImages/fig7.png, id=613, 116.8365pt x 163.20975pt>
+<Images/IntegrationPlanImages/fig7.png, id=621, 116.8365pt x 163.20975pt>
 File: Images/IntegrationPlanImages/fig7.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig7.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig7.png  used on input l
@@ -1484,28 +1484,28 @@ ine 78.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34 <./Images/IntegrationPlanImages/fig3.png> <./Images/IntegrationPlanImages/
+ [36 <./Images/IntegrationPlanImages/fig3.png> <./Images/IntegrationPlanImages/
 fig4.png> <./Images/IntegrationPlanImages/fig5.png> <./Images/IntegrationPlanIm
 ages/fig6.png>]
-<Images/IntegrationPlanImages/fig8.png, id=622, 118.041pt x 161.403pt>
+<Images/IntegrationPlanImages/fig8.png, id=630, 118.041pt x 161.403pt>
 File: Images/IntegrationPlanImages/fig8.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig8.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig8.png  used on input l
 ine 84.
 (pdftex.def)             Requested size: 82.62811pt x 112.98132pt.
-<Images/IntegrationPlanImages/fig9.png, id=623, 114.4275pt x 160.80075pt>
+<Images/IntegrationPlanImages/fig9.png, id=631, 114.4275pt x 160.80075pt>
 File: Images/IntegrationPlanImages/fig9.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig9.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig9.png  used on input l
 ine 90.
 (pdftex.def)             Requested size: 80.0987pt x 112.55974pt.
-<Images/IntegrationPlanImages/fig10.png, id=624, 116.23425pt x 162.6075pt>
+<Images/IntegrationPlanImages/fig10.png, id=632, 116.23425pt x 162.6075pt>
 File: Images/IntegrationPlanImages/fig10.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig10.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig10.png  used on input 
 line 96.
 (pdftex.def)             Requested size: 81.3634pt x 113.82446pt.
-<Images/IntegrationPlanImages/fig11.png, id=625, 684.75826pt x 161.403pt>
+<Images/IntegrationPlanImages/fig11.png, id=633, 684.75826pt x 161.403pt>
 File: Images/IntegrationPlanImages/fig11.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig11.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig11.png  used on input 
@@ -1519,49 +1519,49 @@ Overfull \hbox (24.0834pt too wide) in paragraph at lines 102--103
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35 <./Images/IntegrationPlanImages/fig7.png> <./Images/IntegrationPlanImages/
+ [37 <./Images/IntegrationPlanImages/fig7.png> <./Images/IntegrationPlanImages/
 fig8.png> <./Images/IntegrationPlanImages/fig9.png> <./Images/IntegrationPlanIm
 ages/fig10.png>]
-<Images/IntegrationPlanImages/fig12.png, id=634, 133.09724pt x 162.00525pt>
+<Images/IntegrationPlanImages/fig12.png, id=643, 133.09724pt x 162.00525pt>
 File: Images/IntegrationPlanImages/fig12.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig12.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig12.png  used on input 
 line 108.
 (pdftex.def)             Requested size: 93.16742pt x 113.40288pt.
-<Images/IntegrationPlanImages/fig13.png, id=635, 118.041pt x 163.812pt>
+<Images/IntegrationPlanImages/fig13.png, id=644, 118.041pt x 163.812pt>
 File: Images/IntegrationPlanImages/fig13.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig13.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig13.png  used on input 
 line 114.
 (pdftex.def)             Requested size: 82.62811pt x 114.6676pt.
-<Images/IntegrationPlanImages/fig14.png, id=636, 298.11375pt x 164.41425pt>
+<Images/IntegrationPlanImages/fig14.png, id=645, 298.11375pt x 164.41425pt>
 File: Images/IntegrationPlanImages/fig14.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig14.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig14.png  used on input 
 line 120.
 (pdftex.def)             Requested size: 208.67819pt x 115.08917pt.
-<Images/IntegrationPlanImages/fig15.png, id=637, 290.2845pt x 171.039pt>
+<Images/IntegrationPlanImages/fig15.png, id=646, 290.2845pt x 171.039pt>
 File: Images/IntegrationPlanImages/fig15.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig15.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig15.png  used on input 
 line 129.
 (pdftex.def)             Requested size: 203.19775pt x 119.72647pt.
- [36 <./Images/IntegrationPlanImages/fig11.png> <./Images/IntegrationPlanImages
+ [38 <./Images/IntegrationPlanImages/fig11.png> <./Images/IntegrationPlanImages
 /fig12.png> <./Images/IntegrationPlanImages/fig13.png> <./Images/IntegrationPla
 nImages/fig14.png>]
-<Images/IntegrationPlanImages/fig16.png, id=646, 458.31226pt x 171.039pt>
+<Images/IntegrationPlanImages/fig16.png, id=655, 458.31226pt x 171.039pt>
 File: Images/IntegrationPlanImages/fig16.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig16.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig16.png  used on input 
 line 135.
 (pdftex.def)             Requested size: 320.81638pt x 119.72647pt.
-<Images/IntegrationPlanImages/fig17.png, id=647, 287.8755pt x 172.2435pt>
+<Images/IntegrationPlanImages/fig17.png, id=656, 287.8755pt x 172.2435pt>
 File: Images/IntegrationPlanImages/fig17.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig17.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig17.png  used on input 
 line 143.
 (pdftex.def)             Requested size: 201.51146pt x 120.56961pt.
-<Images/IntegrationPlanImages/fig18.png, id=648, 459.51675pt x 172.2435pt>
+<Images/IntegrationPlanImages/fig18.png, id=657, 459.51675pt x 172.2435pt>
 File: Images/IntegrationPlanImages/fig18.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig18.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig18.png  used on input 
@@ -1570,32 +1570,32 @@ line 149.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [37 <./Images/IntegrationPlanImages/fig15.png> <./Images/IntegrationPlanImages
+ [39 <./Images/IntegrationPlanImages/fig15.png> <./Images/IntegrationPlanImages
 /fig16.png> <./Images/IntegrationPlanImages/fig17.png>]
-<Images/IntegrationPlanImages/fig19.png, id=657, 289.68225pt x 171.64125pt>
+<Images/IntegrationPlanImages/fig19.png, id=665, 289.68225pt x 171.64125pt>
 File: Images/IntegrationPlanImages/fig19.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig19.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig19.png  used on input 
 line 156.
 (pdftex.def)             Requested size: 202.77618pt x 120.14804pt.
-<Images/IntegrationPlanImages/fig20.png, id=658, 460.119pt x 172.2435pt>
+<Images/IntegrationPlanImages/fig20.png, id=666, 460.119pt x 172.2435pt>
 File: Images/IntegrationPlanImages/fig20.png Graphic file (type png)
 <use Images/IntegrationPlanImages/fig20.png>
 Package pdftex.def Info: Images/IntegrationPlanImages/fig20.png  used on input 
 line 162.
 (pdftex.def)             Requested size: 322.0811pt x 120.56961pt.
- [38 <./Images/IntegrationPlanImages/fig18.png> <./Images/IntegrationPlanImages
-/fig19.png> <./Images/IntegrationPlanImages/fig20.png>]) [39] (Files/effort.tex
+ [40 <./Images/IntegrationPlanImages/fig18.png> <./Images/IntegrationPlanImages
+/fig19.png> <./Images/IntegrationPlanImages/fig20.png>]) [41] (Files/effort.tex
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
-[40
+[42
 
-] [41
+] [43
 
-]) [42
+]) [44
 
 ] (Files/reference.tex
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
@@ -1603,7 +1603,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
 ("C:\Users\ERTY\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
-[43
+[45
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
@@ -1616,8 +1616,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 22567 strings out of 492970
- 420654 string characters out of 3127037
+ 22569 strings out of 492970
+ 420668 string characters out of 3127037
  484574 words of memory out of 3000000
  25787 multiletter control sequences out of 15000+200000
  57039 words of font info for 69 fonts, out of 3000000 for 9000
@@ -1631,9 +1631,9 @@ lm/lmtt10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
 times/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (43 pages, 3919304 bytes).
+Output written on main.pdf (45 pages, 3924020 bytes).
 PDF statistics:
- 742 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
+ 750 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
  528 words of extra memory for PDF output out of 10000 (max. 10000000)
 
