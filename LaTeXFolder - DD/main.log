@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  7 DEC 2018 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.26)  7 DEC 2018 18:43
 entering extended mode
 **./main.tex
 (main.tex
@@ -1166,10 +1166,10 @@ Package pdftex.def Info: Images/ComponentDiagram.png  used on input line 32.
 <Images/ERDiagram.png, id=339, 752.8125pt x 752.8125pt>
 File: Images/ERDiagram.png Graphic file (type png)
 <use Images/ERDiagram.png>
-Package pdftex.def Info: Images/ERDiagram.png  used on input line 116.
+Package pdftex.def Info: Images/ERDiagram.png  used on input line 117.
 (pdftex.def)             Requested size: 489.32233pt x 489.32233pt.
 
-Overfull \hbox (34.07822pt too wide) in paragraph at lines 116--117
+Overfull \hbox (34.07822pt too wide) in paragraph at lines 117--118
  [][] 
  []
 
@@ -1179,10 +1179,10 @@ Overfull \hbox (34.07822pt too wide) in paragraph at lines 116--117
 <Images/DeploymentDiagram.png, id=345, 4064.4347pt x 2628.82124pt>
 File: Images/DeploymentDiagram.png Graphic file (type png)
 <use Images/DeploymentDiagram.png>
-Package pdftex.def Info: Images/DeploymentDiagram.png  used on input line 136.
+Package pdftex.def Info: Images/DeploymentDiagram.png  used on input line 138.
 (pdftex.def)             Requested size: 487.71112pt x 315.44493pt.
 
-Overfull \hbox (32.46701pt too wide) in paragraph at lines 136--137
+Overfull \hbox (32.46701pt too wide) in paragraph at lines 138--139
  [][] 
  []
 
@@ -1192,15 +1192,15 @@ pt>
 File: Images/SequenceDiagrams/IndividualRequest.pdf Graphic file (type pdf)
 <use Images/SequenceDiagrams/IndividualRequest.pdf>
 Package pdftex.def Info: Images/SequenceDiagrams/IndividualRequest.pdf  used on
- input line 148.
+ input line 150.
 (pdftex.def)             Requested size: 473.64227pt x 415.61119pt.
 
-Overfull \hbox (18.39816pt too wide) in paragraph at lines 148--149
+Overfull \hbox (18.39816pt too wide) in paragraph at lines 150--151
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
+Underfull \hbox (badness 10000) in paragraph at lines 146--153
 
  []
 
@@ -1211,15 +1211,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--151
 File: Images/SequenceDiagrams/SendAmbulance.pdf Graphic file (type pdf)
 <use Images/SequenceDiagrams/SendAmbulance.pdf>
 Package pdftex.def Info: Images/SequenceDiagrams/SendAmbulance.pdf  used on inp
-ut line 158.
+ut line 160.
 (pdftex.def)             Requested size: 458.2298pt x 485.8142pt.
 
-Overfull \hbox (2.98569pt too wide) in paragraph at lines 158--159
+Overfull \hbox (2.98569pt too wide) in paragraph at lines 160--161
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--161
+Underfull \hbox (badness 10000) in paragraph at lines 156--163
 
  []
 
@@ -1230,15 +1230,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--161
 File: Images/SequenceDiagrams/SpectateRun.pdf Graphic file (type pdf)
 <use Images/SequenceDiagrams/SpectateRun.pdf>
 Package pdftex.def Info: Images/SequenceDiagrams/SpectateRun.pdf  used on input
- line 168.
+ line 170.
 (pdftex.def)             Requested size: 464.60538pt x 416.86009pt.
 
-Overfull \hbox (9.36127pt too wide) in paragraph at lines 168--169
+Overfull \hbox (9.36127pt too wide) in paragraph at lines 170--171
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--170
+Underfull \hbox (badness 10000) in paragraph at lines 166--172
 
  []
 
@@ -1246,18 +1246,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--170
 <Images/ComponentInterface.pdf, id=499, 549.96133pt x 519.44711pt>
 File: Images/ComponentInterface.pdf Graphic file (type pdf)
 <use Images/ComponentInterface.pdf>
-Package pdftex.def Info: Images/ComponentInterface.pdf  used on input line 179.
+Package pdftex.def Info: Images/ComponentInterface.pdf  used on input line 181.
 
 (pdftex.def)             Requested size: 439.96967pt x 415.55826pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--181
+Underfull \hbox (badness 10000) in paragraph at lines 177--183
 
  []
 
 [17
 
  <./Images/ComponentInterface.pdf>] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
@@ -1689,7 +1689,7 @@ lm/lmtt10.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
 times/utmb8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Users/ERTY/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (49 pages, 3942381 bytes).
+Output written on main.pdf (49 pages, 3942723 bytes).
 PDF statistics:
  831 PDF objects out of 1000 (max. 8388607)
  141 named destinations out of 1000 (max. 500000)
