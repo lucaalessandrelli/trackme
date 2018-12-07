@@ -1,5 +1,88 @@
 \subsection{Purpose}
-\subsection{Scope}
+The following \textit{Design Document} aims to give more technical details than the \textit{RASD} about TrackMe's application system. While the \textit{RASD} presented a general view of the system and what functions the system is supposed to provide, this document presents the implementation of the system including components, their interaction with each other, run-time processes and deployment design. This document also includes the implementation, integration and testing plan. For these reasons, inside, there are both narrative and graphical documentations about the system design.
+\bigbreak
+\noindent
+This document, that is mainly addressed to the development team, covers the below topics:
+\begin{itemize}[noitemsep]
+\item Overview of the high level architecture
+\item Main components and their interfaces provided one for another
+\item Runtime behaviour
+\item Design patterns
+\item User Interface design
+\item Design constraints and restrictions
+\item Implementation plan
+\item Integration plan
+\item Testing plan
+\end{itemize}
+
+\subsection{Scope} 
+This document describes the implementation details of TrackMe's system, which is composed by three different software-based services:
+
+\begin{itemize}[noitemsep,nolistsep]
+\item Data4Help
+\item AutomatedSOS
+\item Track4Run
+\end{itemize}
+\bigbreak
+\noindent
+Data4Help is a location-based health information service-to-be that allows third parties to monitor the location and health status of individuals and it is the main service among the three. This system, supporting the registration of Third Parties and individuals, supports Third Parties' request in order to access to the data of some specific individual (Individual monitoring request) or to access to anonymized data of groups of individuals (Group monitoring request). The other two software-based services, AutomatedSOS and Track4Run, exploit the features offered by Data4Help.
+\bigbreak
+\noindent
+AutomatedSOS is a service-to-be thought to help elderly people. Constantly monitoring the health status of the subscribed customers, this service sends to the user’s location an ambulance as soon as the recorded values are anomalous, for example when some health parameters are below certain thresholds.
+\bigbreak
+\noindent
+Finally, Track4Run is a service-to-be that tracks athletes participating in a run. The service, allows organizers to define the path for the run, participants to enroll to the run and spectators to see on a map the position of all the runners during the run.
 \subsection{Definitions, Acronyms, Abbreviations}
+
+\begin{enumerate}
+\item[•] {\Large Definitions}
+	\begin{enumerate}
+		\item Single request: request to access to the data of some specific  individuals.
+		\item Group request: request to access to anonymized data of gropus of individuals.
+		\item Live/real-time acquisition/: third parties can access to data as soon they are ready, 				through service updates.
+		\item On demand acquisition: third parties can access to data when they request 				them.
+		\item Subscribers: third parties allowed to receive live acquisition about 						preselected	user/group.
+		\item User credentials: information that an individual has to provide to become a 				registered user: name, surname, date of birth, address, email, telephone
+			number, job, marital status and fiscal code. 
+		\item Third parties' credentials: information that a company has to provide to 					become a registered one: company name, p.iva.
+		\item Race information: all the information about the run such as name, date, promoters, 				maximum number of participants and race path.
+		\item Partner Application: Application installed on users' device, not necessarily developed by TrackMe, that is in charge with retrieve location and health status. 
+	\end{enumerate}
+\end{enumerate}
 \subsection{Revision History}
+This is a report on all versions of the document along with the reason of the updates/changes.
+
+\begin{table}[h]
+\begin{tabular}{|l|p{.45\textwidth}|p{.45\textwidth}|}
+\hline
+Version & Changes & Motivation\\ \hline
+2.0     & Corrected orthographic errors. & / \\ \hline
+ & Added text assumptions, modified use cases, mock-ups, requirements and class diagram. & In the first version of the document Data4Help would also answer to third party requests with data retrieved by AutomatedSOS, leading to major exploitation of very sensitive data.   \\ \hline
+ & Modified Product Functions, requirements, text assumptions and use cases. & In the first version of the document Data4Help provided only raw data as answers to third parties' requests. Statistics could also be useful.  \\ \hline
+ & Modified requirements, mock-ups, product functions, text assumptions and use cases. & In the first version of the document the logic behind promoting and enrolling to a run event wasn't explained enough. \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
 \subsection{Document Structure}
+This document is composed by 6 sections:
+
+\begin{center}
+\centering
+\begin{table}[H]
+\centering
+\begin{tabular} { l p{10 cm} }
+\toprule
+\textbf{Section 1} & This section introduces the Design Document, defining the main use of the document and which topics are covered.                                                                                                                                  \\ \midrule
+\textbf{Section 2} & This section, first gives an overview of the high level architecture of our system, then describes the main components in more detail showing how they interact between each other. Then, this section focuses on the entity relationship diagram about the data of the model and on the \textit{Deployment View} where the main nodes and the communication between them are illustrated. The interaction among the components is again explained in more detail through several sequence diagrams in the \textit{Runtime View} and in the \textit{Component Interfaces} subsection. Finally, in the last part of the section, the selected architectural styles and patterns are described. \\ \midrule
+\textbf{Section 3} &  This section presents the user interface design, focusing on the interaction between the user and the system.  \\ \midrule
+\textbf{Section 4}  & This section describes how the requirements defined in the \textit{RASD} map to the design components previously defined in the document.\\ \midrule
+\textbf{Section 5} &  This section describes the order in which the several components of the system are implemented, integrated and tested. The reasons of the selected order are explained in detail as well as the different kinds of test the system is subject to.
+\\ \midrule
+\textbf {Section 6} & This section describes the hours that each group member has spent in implementing the design document.
+This section contains the list of document references. \\ \bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+\end{center}
+\clearpage
