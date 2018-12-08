@@ -4,12 +4,12 @@ This section shows how the requirements can be supplied by the designed componen
 
 \item [G.1] Acquire user’s position and health status.
 	\begin{enumerate}
-	\item [R.1] Retrieve user credentials inserted into partner application as group attributes.
+	\item [ R.1] Retrieve user credentials inserted into partner application as group attributes.
 		\begin{enumerate}
 		\item[•] UserLogger: Receive from SignAccount interface user's credentials then it store them locally. After this operation waits for privacy policy appceptance.
 		\end{enumerate}
 
-	\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
+	\item [ R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
 		\begin{enumerate}
 		\item[•] UserLogger: Receive from SignAccount interface that user has accepted the first part of pivacy policy then, if decide finally to create an account pass all these information to WebInterface.
 		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
@@ -65,7 +65,7 @@ This section shows how the requirements can be supplied by the designed componen
 		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
 		\end{enumerate}	
 			
-	\item [R.9] The system has to generate a statistic on data selected.
+	\item [R.9 ] The system has to generate a statistic on data selected.
 		\begin{enumerate}
 		\item[•] DataCollector: This component once data are arrived from DB, asks through ProvideStatistic interface to compute some kind of statistic on the data.
 		\item[•] StatisticGenerator: This component receive data from ProvideStatistic interface, compute statistics and send back them to DataCollector.
