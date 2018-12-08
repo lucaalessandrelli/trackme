@@ -149,12 +149,12 @@ The following Sequence Diagram shows the interaction between components when a t
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.8, angle=0,origin=c]{Images/SequenceDiagrams/IndividualRequest.pdf}
-\caption{Individual Information Request Dequence Diagram}
+\caption{Individual Information Request Sequence Diagram}
 \clearpage
 \end{figure}
 \newpage
 \subsubsection{Send Ambulance Request}
-In the diagram below, the interaction between components to send an ambulance request to the first aid is shown. The data retrieved by the GPS Acquirer and HealthStatus Acquirer are both sent to Data4Help and to the HealthAnalyzer.
+In the diagram below, the interaction between components to send an ambulance request to the first aid is shown. The data retrieved by the GPS Acquirer and HealthStatus Acquirer are both sent to Data4Help and to the HealthAnalyser.
 \\[0.5cm]
 \begin{figure}[H]
 \centering
@@ -183,75 +183,76 @@ The following Diagram shows the dependencies between the main interfaces offered
 \caption{Component Interfaces Diagram}
 \end{figure}
 
+\begin{center}
 \begin{enumerate}
 \item[1.1] \textbf{WebServer}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.1.1] \textbf{WebInterface:} Interface for third parties that want to interact with the system in order to obtain information through Data4Help service. This interface is user also by Track4Run and AutomatedSOS in order to perform a various number of tasks.
 	\end{enumerate}
 	
 \item[1.2] \textbf{RequestManager}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.2.1] \textbf{AcceptInformationRequest:} Interface that allows the WebServer to submit requests to be evaluated.
-		\item[1.2.1] \textbf{ProvideInformation:} Interface that provides to WebServer the information answers that match previous requests.
+		\item[1.2.2] \textbf{ProvideInformation:} Interface that provides to WebServer the information answers that match previous requests.
 	\end{enumerate}
 
 \item[1.3] \textbf{DataCollector}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.3.1] \textbf{AcceptDataRequest:} Interface that accepts requests from the RequestManager formatted in the proper way.
-		\item[1.3.1] \textbf{ProvideInformation:} Interface that provide to RequestManager the information answers formatted in the proper way.
+		\item[1.3.2] \textbf{ProvideInformation:} Interface that provide to RequestManager the information answers formatted in the proper way.
 	\end{enumerate}
 	
 \item[1.4] \textbf{StatisticsGenerator}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.4.1] \textbf{ProvideStatistics:} Interface that provides statistics to the DataCollector.
 	\end{enumerate}
 	
 \item[1.5] \textbf{UserDataManager}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.5.1] \textbf{AcquireData:} Interface that allows partner application to send to Data4Help the acquired data.
 	\end{enumerate}
 
 \item[1.6] \textbf{Track4RunManager}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.6.1] \textbf{RunInterface:} Interface that allows Track4Run application to create run events and to enroll a user to a specific run. 
 	\end{enumerate}
 	
 \item[1.7] \textbf{CredentialsManager}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[1.7.1] \textbf{CredentialsInterface:} Interface that saves (sign in) or checks (sign up) the credentials both from third party and individuals provided by the WebServer. Actually these operations are not performed by this interface that is only in charge of send credentials to the CredentialsManager component.
 	\end{enumerate}
 
 \item[2.1] \textbf{DBMS}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[2.1.1] \textbf{DBInterface:} Interface that allows to store users' data into the database and to get users' data already collected in the database. This interface also allows to store and get the information about run events which are available in the database.
 	\end{enumerate}
 	
 \item[3.1] \textbf{UserLogger}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[3.1.1] \textbf{SignAccount:} Interface that manages sign in and sign up operations.
 	\end{enumerate}
 	
 \item[4.1] \textbf{HealthAnalyser}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[4.1.1] \textbf{CallAmbulance:} Software interface that allows AutomatedSOS to call, through the internet or in the worst case through telephone call, First Aid whenever is necessary in order to provide help to the user. Moreover it provides to First Aid a special report on which parameters are critical.	
 	\end{enumerate}
 \item[4.2] \textbf{UserInteractionManager}
-	\begin{enumerate}
-		\item[2.2.1] \textbf{InteractionInterface:} Interface that allows the user to interact with the App, such us set the preferences, see live health status parameter values and see the (past) acquired info. This interface is also in charge of displaying the warning message on the smartwatch device.
+	\begin{enumerate}[nolistsep]
+		\item[4.2.1] \textbf{InteractionInterface:} Interface that allows the user to interact with the App, such us set the preferences, see live health status parameter values and see the (past) acquired info. This interface is also in charge of displaying the warning message on the smartwatch device.
 	\end{enumerate}	
 	
 \item[5.1] \textbf{RunDisplayer}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[5.1.1] \textbf{ShowLiveRun:} Interface that allows to show to the user the map in which all the athletes involved in the run are displayed.
 	\end{enumerate}	
 
 \item[5.2] \textbf{RunManager}
-	\begin{enumerate}
+	\begin{enumerate}[nolistsep]
 		\item[5.2.1] \textbf{ManageRun:} Interface that allows a user to create and manage a run providing all the useful information. This interface also allows a user to enroll to a run.
 	\end{enumerate}		
-\clearpage
 \end{enumerate}
 \clearpage
+\end{center}
 
 
 
