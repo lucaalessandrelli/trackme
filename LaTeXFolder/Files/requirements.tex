@@ -142,9 +142,9 @@ The mockups showed below represent a basic idea of what the Track4Run's App for 
 \end{figure}
 \end{enumerate}
 
-\subsubsection{Hardware and Software Interfaces}
+\subsubsection{Hardware, Software and Communication Interfaces}
 None of the three services-to-be offer any hardware or software interface to the external world. In order to send an ambulance request to the nearest hospital, AutomatedSOS uses a platform provided by the hospital. All the user data needed for the ambulance intervention (such as the location, health status and so on) are sent, for example, by email. For this reason none of the three services under analysis offer any communication interface.
-\subsubsection{Communication Interfaces}
+
 \subsection{Scenarios}
 \begin{enumerate}
 \item[•]{\Large Scenario 1} \\
@@ -401,16 +401,18 @@ Exceptions       & \begin{itemize}
 \begin{table}[h]
 \begin{tabular}{|l|p{.75\textwidth}|}
 \hline
-Name             & Request Individual Monitoring \\ \hline
+Name             & Request Individual Monitoring and subscription\\ \hline
 Actors           & Third Party  \\ \hline
 Entry Conditions & The third party is logged in.    \\ \hline
 Event Flow       & \begin{enumerate}
             \item The Third Party enters the Individual Request section.         
             \item The system shows to the third party all the information fields needed for the identification of the individual.
+            \item The Third Party can ask to subscribe to new data as soon as they are produced (live acquisition).
             \item The Third Party fills all the attribute fields and confirms he wants to track that specific individual.
             \item The system shows all the individual's data that have been collected until the moment of the request along with some statistics. 
+            \item The system subscribe the Third Party to the group if it was asked. 
         \end{enumerate}\\ \hline
-Exit Condition   & The request's outcome is shown to the third party.\\ \hline
+Exit Condition   & The request's outcome is shown and third party is subscribed if it was asked.\\ \hline
 Exceptions       & \begin{itemize}
 \item If the inserted attributes are not linked to any user account then a warning message is displayed saying that the individual is not registered.
 \item If the individual that correspond to the attributes inserted didn't accept the individual treatment of data policy then a warning message is displayed saying that the request is rejected.
@@ -431,11 +433,12 @@ Event Flow       & \begin{enumerate}
             \item The system shows to the third party all the information fields needed for defining the group.
             \item The Third Party insert the search area.
             \item The Third Party inserts all the attributes.
+            \item The Third Party can ask to subscribe to new data as soon as they are produced (live acquisition).
             \item The system accepts the request.
             \item The system shows all the group's data that have been collected until the moment of the request along with some statistics. 
-            \item The system subscribe the third party to the group.
+            \item The system subscribe the Third Party to the group if it was asked. 
         \end{enumerate}\\ \hline
-Exit Condition   & The request's outcome is shown and third party is subscribed.\\ \hline
+Exit Condition   & The request's outcome is shown and third party is subscribed if it was asked.\\ \hline
 Exceptions       & \begin{itemize}
 \item If the group request get rejected by the system a warning message will be displayed saying the request is rejected.
 \end{itemize}\\ \hline
@@ -807,6 +810,8 @@ Track4Run automated retrieve athletes' position and update spectators' live map.
 \begin{enumerate} 
 \item[•] Data4Help service is build to perform trend research from users that download specific partner applications. In order to perform this type of monitoring there is a high use of resources, especially in live acquisition when data must be exchanged within 2 minutes. Therefore , in its first release, this application is developed to track 10.000 users simultaneously (included users from AutomateSOS and Track4Run). 
 Since third parties are very few in comparison to users, to serve them a less performance is required. 
+
+\item[•] Data4Help unsubscribes third parties after one month from live acquisition because it is a very expensive process.
 
 \item[•] AutomatedSOS is a very expensive application in terms of performance because it must monitor the individuals all the day long guarantying a data collection with an interval of 2 seconds.
 
