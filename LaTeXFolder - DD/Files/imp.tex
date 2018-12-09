@@ -176,10 +176,10 @@ The next two figures shows integration including more than two components at the
 Once the system is integrated completely and once it has an acceptable performance it will be tested as a whole. This due to the fact that in the future the system could possibly be subject to heavy workloads. System Testing will identify the following problems:
 
 \begin{itemize}
-\item Inefficient algorithms.
-\item Query optimization problems: taking into account that the system's functionality heavily relies on queries this will for sure be a very useful test.
-\item Hardware issues.
-\item Network issues.
+\item Inefficient algorithms: this test is addressed in the largest path to RequestManager component and how it manages the requests in order to speed up the answers.
+\item Query optimization problems: taking into account that the system's functionality heavily relies on queries, testing on DB query optimization is for sure a good test to implement.
+\item Hardware issues: this test is addressed to the hardware of devices that our system can not control, such as GPS system and HS system, in order to check if these data are subjected to a relevant noise.
+\item Network issues: test WebServer component in order to check how much load connection requires to supply on requests and understand if is necessary to expand the broadband.
 \end{itemize}
 
 \noindent
