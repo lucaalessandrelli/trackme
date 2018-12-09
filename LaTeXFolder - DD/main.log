@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 DEC 2018 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 DEC 2018 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1157,7 +1157,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--184
 [18
 
  <./Images/ComponentInterface.pdf>] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
 
  []
 
@@ -1565,7 +1565,7 @@ Here is how much of TeX's memory you used:
  26255 multiletter control sequences out of 15000+600000
  58797 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,21n,77p,1690b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,21n,77p,1717b,640s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/tex
@@ -1573,7 +1573,7 @@ mf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on main.pdf (49 pages, 5388619 bytes).
+Output written on main.pdf (49 pages, 5389234 bytes).
 PDF statistics:
  853 PDF objects out of 1000 (max. 8388607)
  650 compressed objects within 7 object streams

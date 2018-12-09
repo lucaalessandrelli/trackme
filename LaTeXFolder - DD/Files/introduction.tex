@@ -1,5 +1,5 @@
 \subsection{Purpose}
-The following \textit{Design Document} aims to give more technical details than \textit{RASD} about TrackMe's application system. While the \textit{RASD} presented a general view of the system and which functions the system is supposed to provide, this document presents the implementation of the system including components and the interaction with one another, the run-time processes and the deployment design. This document also includes the implementation, integration and testing plan. For these reasons both narrative and graphical documentations about the system design are present.
+The following \textit{Design Document} aims to give more technical details than \textit{RASD} about TrackMe's application system. While the \textit{RASD} presented a general view of the system and which functions the system is supposed to provide, this document presents the implementation of the system including components and the interaction with one another, the run-time processes and the deployment design. This document also includes the implementation, integration and test plan. For these reasons both narrative and graphical documentations about the system design are present.
 \bigbreak
 \noindent
 This document, that is mainly addressed to the development team, covers the topics below:
@@ -12,7 +12,7 @@ This document, that is mainly addressed to the development team, covers the topi
 \item Design constraints and restrictions.
 \item Implementation plan.
 \item Integration plan.
-\item Testing plan.
+\item Test plan.
 \end{itemize}
 
 \subsection{Scope} 
@@ -25,13 +25,13 @@ This document describes the implementation details of TrackMe's system, which is
 \end{itemize}
 \bigbreak
 \noindent
-Data4Help is a location-based health information service-to-be that allows third parties to monitor the location and health status of individuals and it is the main service among the three. This system, allowing the registration of Third Parties and individuals, supports Third Parties' requests in order to access the data of some specific individual (Individual monitoring request) or to access anonymized data of groups of individuals (Group monitoring request). The other two software-based services, AutomatedSOS and Track4Run, exploit the features offered by Data4Help.
+Data4Help is a location-based health information service-to-be that allows third parties to monitor the location and health status of individuals and it is the main service among the three. This system, allowing the registration of third parties and individuals, supports third parties' requests in order to access the data of some specific individual (individual monitoring request) or to access anonymized data of groups of individuals (group monitoring request). The other two software-based services, AutomatedSOS and Track4Run, exploit the features offered by Data4Help.
 \bigbreak
 \noindent
 AutomatedSOS is a service-to-be thought to help elderly people. Constantly monitoring the health status of the subscribed customers, this service sends to the user's location an ambulance as soon as the recorded values are anomalous, for example when some health parameters are below certain thresholds.
 \bigbreak
 \noindent
-Finally, Track4Run is a service-to-be that tracks athletes participating in a run. The service, allows organizers to define the path for the run, participants to enroll to the run and spectators to see on a map the position of all the runners during the run.
+Finally, Track4Run is a service-to-be that tracks athletes participating in a run. The service, allows organizers to define the path for the run, participants to enroll to the run and spectators to see on a map the position of all runners during the run.
 \subsection{Definitions, Acronyms, Abbreviations}
 
 \begin{enumerate}
@@ -49,7 +49,7 @@ Finally, Track4Run is a service-to-be that tracks athletes participating in a ru
 	\end{enumerate}
 \end{enumerate}
 \subsection{Revision History}
-This is a report on all versions of the document along with the reason of the updates/changes.
+This is a report about all the document's versions along with the reason of the updates/changes.
 
 \begin{table}[h]
 \centering
@@ -72,12 +72,12 @@ This document is composed by seven sections:
 \begin{tabular} { p{4cm}  p{10 cm} }
 \toprule
 \textbf{1. Introduction} & This section introduces the \textit{Design Document}, defining the main use of the document and which topics are covered.                                                                                                                                  \\ \midrule
-\textbf{2. Architectural Design} & This section, first gives an overview of the high level architecture of our system, then describes the main components in more detail showing how they interact between each other. Then, this section focuses on the entity relationship diagram about the data of the model and on the \textit{Deployment View} where the main nodes and the communication between them are illustrated. The interaction among the components is again explained in more detail through several sequence diagrams in the \textit{Runtime View} and in the \textit{Component Interfaces} subsection. Finally, in the last part of the section, the selected architectural styles and patterns are described. \\ \midrule
+\textbf{2. Architectural Design} & This section, first gives an overview of the high level architecture of our system, then describes the main components in more detail showing how they interact between each other. Then, this section focuses on the entity relationship diagram about the data of the model and on the \textit{Deployment View} where the main nodes and the communication between them are illustrated. The interaction among the components is again explained in more detail through several Sequence Diagrams in the \textit{Runtime View} and in the \textit{Component Interfaces} subsection. Finally, in the last part of the section, the selected architectural styles and patterns are described. \\ \midrule
 \textbf{3. User Interface Design} &  This section presents the user interface design, focusing on the interaction between the user and the system.  \\ \midrule
 \textbf{4. Requirements Traceability}  & This section describes how the requirements defined in the \textit{RASD} map to the design components previously defined in the document.\\ \midrule
 \textbf{5. Implementation, Integration and Test Plan} &  This section describes the order in which the several components of the system are implemented, integrated and tested. The reasons of the selected order are explained in detail as well as the different kinds of tests the system is subject to.
 \\ \midrule
-\textbf {6. Effort Spent} & This section describes the hours that each group member has spent at writing the design document. \\ \midrule
+\textbf {6. Effort Spent} & This section include information about the number of hours each group member has worked for this document. \\ \midrule
 \textbf{7. Reference Documents} & This section contains the list of  reference documents. \\ \bottomrule
 \end{tabular}
 \caption{Document Structure}
