@@ -1,16 +1,25 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Group monitoring request.\relax }}{15}{figure.caption.8}
-\contentsline {figure}{\numberline {2}{\ignorespaces Individual monitoring request.\relax }}{16}{figure.caption.9}
-\contentsline {figure}{\numberline {3}{\ignorespaces Welcome page that the user see in the first App access. Sign up and Sign in are two possibilities.\relax }}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {4}{\ignorespaces Privacy policy conditions regarding Data4Help's treatment of data and group monitoring request.\relax }}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {5}{\ignorespaces Message that communicates to the user the importance of wearing the smartwatch.\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {6}{\ignorespaces Main menu showing the various functions offered to user.\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {7}{\ignorespaces Fields the user have to fill to complete the registration.\relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {8}{\ignorespaces Warning message that communicates to the user that an ambulance has been sent to the user location.\relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {9}{\ignorespaces Welcome page. \relax }}{18}{figure.caption.13}
-\contentsline {figure}{\numberline {10}{\ignorespaces Privacy policy conditions 1.\relax }}{18}{figure.caption.13}
-\contentsline {figure}{\numberline {11}{\ignorespaces Privacy policy conditions 2.\relax }}{19}{figure.caption.14}
-\contentsline {figure}{\numberline {12}{\ignorespaces Registration form.\relax }}{19}{figure.caption.14}
-\contentsline {figure}{\numberline {13}{\ignorespaces Main user menu.\relax }}{19}{figure.caption.15}
-\contentsline {figure}{\numberline {14}{\ignorespaces Promote a run view.\relax }}{19}{figure.caption.15}
-\contentsline {figure}{\numberline {15}{\ignorespaces Enroll to a run view.\relax }}{20}{figure.caption.16}
-\contentsline {figure}{\numberline {16}{\ignorespaces Spectate a run view.\relax }}{20}{figure.caption.16}
+\babel@toc {english}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces World Phenomena\relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {2}{\ignorespaces Data4Help Calss Diagram\relax }}{11}{figure.caption.10}
+\contentsline {figure}{\numberline {3}{\ignorespaces AutomatedSOS Class Diagram\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {4}{\ignorespaces Track4Run Class Diagram\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {5}{\ignorespaces Data Request Object State Chart\relax }}{12}{figure.caption.13}
+\contentsline {figure}{\numberline {6}{\ignorespaces Group Monitoring Request Mockup\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {7}{\ignorespaces Individual Monitoring Request Mockup\relax }}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {8}{\ignorespaces Welcome Page Mockup\relax }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {9}{\ignorespaces Registration Form Mockup\relax }}{17}{figure.caption.16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Privacy Policy Conditions Mockup\relax }}{18}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Usage Conditions Mockup\relax }}{18}{figure.caption.17}
+\contentsline {figure}{\numberline {12}{\ignorespaces Main Menu Mockup\relax }}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {13}{\ignorespaces Warning Message Mockup\relax }}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {14}{\ignorespaces Welcome Page Mockup\relax }}{19}{figure.caption.19}
+\contentsline {figure}{\numberline {15}{\ignorespaces Registration Form Mockup\relax }}{19}{figure.caption.19}
+\contentsline {figure}{\numberline {16}{\ignorespaces Privacy Policy pt.1 Mockup\relax }}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {17}{\ignorespaces Privacy Policy pt.2 Mockup\relax }}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {18}{\ignorespaces Main Menu Mockup\relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {19}{\ignorespaces Promote a Run View Mockup\relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {20}{\ignorespaces Enroll to a Run View Mockup\relax }}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {21}{\ignorespaces Spectate a Run View Mockup\relax }}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {22}{\ignorespaces Data4Help Use Case Diagrams\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {23}{\ignorespaces AutomatedSOS Use Case Diagram\relax }}{27}{figure.caption.24}
+\contentsline {figure}{\numberline {24}{\ignorespaces Track4Run Use Case Diagram\relax }}{27}{figure.caption.25}
