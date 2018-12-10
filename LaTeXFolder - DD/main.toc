@@ -20,7 +20,6 @@
 \contentsline {subsubsection}{\numberline {2.4.3}Spectate A Run}{17}{subsubsection.2.4.3}
 \contentsline {subsection}{\numberline {2.5}Component Interfaces}{18}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}Selected Architectural Styles and Patterns}{20}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Other Design Decisions}{21}{subsection.2.7}
 \contentsline {section}{\numberline {3}User Interface Design}{22}{section.3}
 \contentsline {section}{\numberline {4}Requirements Traceability}{32}{section.4}
 \contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{39}{section.5}
