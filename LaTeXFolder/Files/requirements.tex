@@ -2,13 +2,13 @@
 \subsubsection{User Interfaces}
 \begin{enumerate}
 \item[•]{\Large Data4Help}
+\medbreak
+\noindent
+The third parties interested in having location and health status information of individuals can make the request on the Data4Help’s website. Since the individuals do not need any particular Data4Help’s App for their data retrievement, Data4Help does not offer any other user interface besides its website. 
+On the website, thought for the third parties, it is possible to make both group and individual monitoring requests and to view all the provided data. The third parties in order to send a data request must register through the registration function offered by the website.
 \bigbreak
 \noindent
-The third parties interested in having location and health status information of individuals can make the request on the Data4Help’s Website. Since the individuals do not need any particular Data4Help’s App for their data retrievement, Data4Help does not offer any other user interface besides its Website. 
-On the Website thought, for the third parties it is possible to make both group and individual requests and to view all the data provided to the specific third party. The third parties in order to send a data request must register through the registration function offered by the Website.
-\bigbreak
-\noindent
-The following mockups represent a basic idea of what the Data4Help’s Website will look like in the first release.
+The following mockups represent a basic idea of what the Data4Help’s website will look like in the first release.
 \\ [2cm]
 \begin{figure}[H]
 \centering
@@ -22,9 +22,9 @@ The following mockups represent a basic idea of what the Data4Help’s Website w
 \end{figure}
 \newpage
 \item[•]{\Large AutomatedSOS}
-\bigbreak
+\medbreak
 \noindent
-TrackMe offers to AutomatedSOS users an App for smartwatches, with which the users can see their location and health status information. No interface is offered to the third parties since they interact exclusively with Data4Help's Interface. 
+TrackMe offers to AutomatedSOS users an App for smartwatch, with which the users can see their location and health status information. No additional interface is offered to the third parties since they interact exclusively with Data4Help's interface. 
 \begin{figure}[H]
 \begin{center}
         \begin{minipage}[c]{.40\textwidth}
@@ -40,6 +40,7 @@ TrackMe offers to AutomatedSOS users an App for smartwatches, with which the use
         \end{minipage}
       \end{center}
 \end{figure}
+\clearpage
 \begin{figure}[H]
 \begin{center}
         \begin{minipage}[c]{.40\textwidth}
@@ -73,9 +74,9 @@ TrackMe offers to AutomatedSOS users an App for smartwatches, with which the use
 
 \newpage
 \item[•]{\Large Track4Run}
-\bigbreak
+\medbreak
 \noindent
-Track4Run users can use an App for smartphone and another one for smartwatches. The first one could be used by everyone, while the second one is made only for the athletes. Like for AutomatedS0S, there is not any interface provided for the third parties.
+Track4Run users can use an App for smartphone and another one for smartwatch. The first one could be used by everyone, while the second one is made specifically for the athletes. Like for AutomatedS0S, there is not any interface provided for third parties.
 \bigbreak
 \noindent
 The mockups showed below represent a basic idea of what the Track4Run's App for smartphone will look like in the first release.
@@ -170,13 +171,13 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		\item [D.1] User's information are collected from partner applications or from the other two TrackMe applications installed on users' devices.
 		\item [D.2] All the partner applications require to submit user credentials.
 		\item [D.3] The identification (fiscal code, social security number) and the secondary data (attributes) given by the individual during the registration are correct.
+		\item [D.4] Devices used to monitor individuals always work and report the correct values.	
+    	     \item [D.5] Partner application always report correct values to Data4Help.
 		\item [R.1] Retrieve user credentials inserted into partner application as group attributes.
 		\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
 		\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
 		\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application. 
-		\item [D.4] Devices used to monitor individuals always work and report the correct values.	
-    	\item [D.5] Partner application always report correct values to Data4Help.
-    	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
+       	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
     	\end{enumerate}	
     	
     \item [G.2] \textbf{Provide to third parties, the user's position and health status.}
@@ -208,18 +209,18 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		\begin{enumerate}
 		\item [D.6] In order to perform an individual request, third parties has to know the user's fiscal code or security number.
 		\item [D.7] Security number and fiscal code are not information given to third parties by Data4Help.
-    	\item [R.14] Allow third parties to insert the fiscal code of the user he wants to track.
-    	\item [R.15] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
     	\item [R.8] Collect all the useful data retrieved by Data4Help that are produced by the interested users. 
     	\item [R.10] Send all the collected information to request applicant.
+    	\item [R.14] Allow third parties to insert the fiscal code of the user he wants to track.
+    	\item [R.15] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
     	\end{enumerate}
     
     	\item [G.3.2] \textbf{Allow third parties to get data of a group of people.}
 		\begin{enumerate}
+	\item [R.8] Collect all the useful data retrieved by Data4Help that are produced by the interested users.
+    	\item [R.10] Send all the collected information to request applicant.
     	\item [R.16] Allow third parties to insert search area and attributes in which they are interested to restrict their field of search.
     	\item [R.17] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
-    	\item [R.8] Collect all the useful data retrieved by Data4Help that are produced by the interested users.
-    	\item [R.10] Send all the collected information to request applicant.
     	\end{enumerate}
     	\end{enumerate}
     	
@@ -237,9 +238,9 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	\begin{enumerate}
 	\item [G.5] \textbf{Retrieve user's position and health status.}
 		\begin{enumerate}
-		\item [R.18] Allow users to be tracked from AutomatedSOS filling up the registration and agreeing only to first part of privacy policy.
 		\item [D.4] Devices used to monitor individuals always report correct values.
-		\item [D.9] The user always dresses a smartwatch on which AutomatedSOS is installed and running.    
+		\item [D.9] The user always dresses a smartwatch on which AutomatedSOS is installed and running.
+		\item [R.18] Allow users to be tracked from AutomatedSOS filling up the registration and agreeing only to first part of privacy policy.    
 		\item [R.19] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
 		\end{enumerate}
 	
@@ -254,13 +255,13 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 		
 	\item [G.7] \textbf{Send an ambulance to user's location whenever certain parameters are below the threshold.}
 		\begin{enumerate}
+		\item [D.10] The first aid system is always up and ready to receive messages from AutomatedSOS.
+		\item [D.11] The ambulance successfully reach the location of the individual.
 		\item [R.23] The application has to control health status with data retrieved in local to immediately realize whether certain parameters are critical.
 		\item [R.24] The application sends an ambulance request to the nearest hospital whenever parameters are critical.
-		\item [D.10] The first aid system is always up and ready to receive messages from AutomatedSOS.
 		\item [R.25] Supply to the hospital the user's location and all the useful information to provide efficient first aid.
 		\item [R.26] In the case no answer arrives from the hospital the software must repeat another time the request until an answer in reached.
 		\item [R.27] As soon as the acknowledgement message is received a warning message is displayed on the user's smartwatch.
-		\item [D.11] The ambulance successfully reach the location of the individual.
 		\end{enumerate}
   	\end{enumerate}
   	
@@ -270,21 +271,21 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	\begin{enumerate}
 	\item [G.5] \textbf{Retrieve user's position and health status.}
 		\begin{enumerate}
+		\item [D.4] Devices used to monitor individuals always report correct values.
 		\item [R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
 		\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application. 
-		\item [D.4] Devices used to monitor individuals always report correct values.
 		\item [R.28] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve GPS location with a resolution of 10 seconds when the user is in the run .
 		\end{enumerate}
 		
 	\item [G.8] \textbf{Allow user to manage a run.}
 		\begin{enumerate}
-		\item [R.29] Allow users to create a run once all the general information are inserted.
 		\item [D.4] Devices used to monitor individuals always report correct values.
+		\item [R.29] Allow users to create a run once all the general information are inserted.
 			
 		\item [G.8.1] \textbf{Allow promoters to define a path for the run.}
 			\begin{enumerate}
-			\item [R.30] Allow promoters to define a path for the run by selecting the routes inside a map.
 			\item [D.14] The path defined by the organizer actually exist.
+			\item [R.30] Allow promoters to define a path for the run by selecting the routes inside a map.
 			\end{enumerate}
 			
 		\item [G.8.2] \textbf{Allow promoters to invite athletes to the run.}
@@ -296,21 +297,21 @@ Lately Eddie and his friends are bored of what they usually do so they decided t
 	
 	\item [G.9] \textbf{Allow athlete to enroll on a specific run.}
 		\begin{enumerate}
-		\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
-		\item [R.34] Allow user to enroll in a run.
-		\item [R.35] Deny user to enroll in a run if maximum number of participants is already reached.
 		\item [D.16] If an athlete enroll to a run then athlete also participates to the run.
+		\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
+		\item [R.34] Allow user to enroll to a run.
+		\item [R.35] Deny user to enroll to a run if maximum number of participants is already reached.
 		\end{enumerate}
 	
 	\item [G.10] \textbf{Allow spectators to watch in real time the position of every athletes in a specific run.}
 		\begin{enumerate}
+		\item [D.13] During a run athletes always wear a smartwatch on which Track4Run is installed.
+		\item [D.17] All athletes have their tracking devices with them and the application is enabled for the entire duration of the run.
+		\item [D.18] Athletes never go out of the defined path.
 		\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
-		\item [D.17] All athletes have their tracking devices with them and the application is enabled for the entire duration of the run.	
 		\item [R.36] Allow user to select a run to be viewed.
 		\item [R.37] The application requests to Data4Help the position of all the other athletes involved.
 		\item [R.38] The application receives and displays the position of all the other athletes involved.
-		\item [D.18] Athletes never go out of the defined path.
-		\item [D.13] During a run athletes always wear a smartwatch on which Track4Run is installed.
 		\end{enumerate}
 	\end{enumerate}
 
@@ -771,10 +772,7 @@ Exceptions       & None.\\ \hline
 
 \subsection{Sequence Diagram}
 \begin{enumerate}
-\item[•]{\Large Data4Help}
-
-
-Individual request with on-demand acquisition performance and automatic data update inside Data4Help.
+\item[•]{\Large Data4Help} 's idividual request with on-demand acquisition performance and automatic data update inside Data4Help.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.75]{Images/Seq_Data4Help_onDem.png}
@@ -800,16 +798,15 @@ Group request with live acquisition and user registration performances.
 \caption{User Registration Sequence Diagram}
 \end{figure}
 
-\item[•]{\Large AutomatedSOS}
-AutomatedSOS monitor and ambulance caller services.
+\item[•]{\Large AutomatedSOS} 
+'s monitoring and ambulance call services.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.72]{Images/Seq_AutoSOS_monitor.png}
 \caption{AutomatedSOS Sequence Diagram}
 \end{figure}
 
-\item[•]{\Large Track4Run}
-Track4Run automated retrieve athletes' position and update spectators' live map.
+\item[•]{\Large Track4Run} automatically retrieves athletes' position and update spectators' live map.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.72]{Images/Seq_Track4Run_raceUp.png}
@@ -820,7 +817,7 @@ Track4Run automated retrieve athletes' position and update spectators' live map.
 
 \subsection{Performance Requirements}
 \begin{enumerate} 
-\item[•] Data4Help service is build to perform trend research from users that download specific partner applications. In order to perform this type of monitoring there is a high use of resources, especially in live acquisition when data must be exchanged within 2 minutes. Therefore , in its first release, this application is developed to track 10.000 users simultaneously (included users from AutomateSOS and Track4Run). 
+\item[•] Data4Help service is build to perform trend research from users that download specific partner applications. In order to perform this type of monitoring there is a high use of resources, especially in live acquisition when data must be exchanged within 2 minutes. Therefore, in its first release, this application is developed to track 10.000 users simultaneously (included users from AutomateSOS and Track4Run). 
 Since third parties are very few in comparison to users, to serve them a less performance is required. 
 
 \item[•] Data4Help unsubscribes third parties after one month from live acquisition because it is a very expensive process.
