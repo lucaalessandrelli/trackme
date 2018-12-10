@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 DEC 2018 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 DEC 2018 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,21 +1039,22 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- (./main.lot)
+ (./main.lot [5])
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [5] (./Files/introduction.tex
+ [6] (./Files/introduction.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-<Images/WordPhen.png, id=360, 548.0475pt x 237.13594pt>
+<Images/WordPhen.png, id=388, 548.0475pt x 237.13594pt>
 File: Images/WordPhen.png Graphic file (type png)
 <use Images/WordPhen.png>
 Package pdftex.def Info: Images/WordPhen.png  used on input line 54.
 (pdftex.def)             Requested size: 438.4386pt x 189.709pt.
- [6
+ [7
 
-] [7 <./Images/WordPhen.png>]
+]
+[8 <./Images/WordPhen.png>]
 Underfull \hbox (badness 2990) in paragraph at lines 85--85
 []|\T1/ptm/m/n/10.95 Modified Prod-uct Func-tions, re-quire-ments,
  []
@@ -1069,66 +1070,58 @@ Overfull \hbox (25.52461pt too wide) in paragraph at lines 80--88
  []
 
 
-Overfull \hbox (25.52461pt too wide) in paragraph at lines 91--100
+Overfull \hbox (25.52461pt too wide) in paragraph at lines 92--101
 [][] 
  []
 
-[8]
-Underfull \hbox (badness 3965) in paragraph at lines 115--115
+[9]
+Underfull \hbox (badness 3965) in paragraph at lines 116--116
 []|\T1/ptm/b/n/10.95 3. Spe-cific Re-quire-
  []
 
-[9
+[10
 
 ]) (./Files/overview.tex
-<Images/Class_Data4Help.png, id=388, 978.65625pt x 737.75626pt>
+<Images/Class_Data4Help.png, id=415, 978.65625pt x 737.75626pt>
 File: Images/Class_Data4Help.png Graphic file (type png)
 <use Images/Class_Data4Help.png>
 Package pdftex.def Info: Images/Class_Data4Help.png  used on input line 6.
 (pdftex.def)             Requested size: 440.39125pt x 331.98724pt.
-<Images/Class_AutoSOS.png, id=389, 494.59781pt x 376.40625pt>
+<Images/Class_AutoSOS.png, id=416, 447.17062pt x 361.35pt>
 File: Images/Class_AutoSOS.png Graphic file (type png)
 <use Images/Class_AutoSOS.png>
 Package pdftex.def Info: Images/Class_AutoSOS.png  used on input line 13.
-(pdftex.def)             Requested size: 247.2983pt x 188.20265pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10
-
-
-
-]
-Overfull \vbox (10.22035pt too high) has occurred while \output is active []
-
-
-[11 <./Images/Class_Data4Help.png (PNG copy)> <./Images/Class_AutoSOS.png>]
-<Images/Class_Track4Run.png, id=398, 579.66562pt x 531.48563pt>
+(pdftex.def)             Requested size: 214.63945pt x 173.44603pt.
+<Images/Class_Track4Run.png, id=418, 579.66562pt x 531.48563pt>
 File: Images/Class_Track4Run.png Graphic file (type png)
 <use Images/Class_Track4Run.png>
 Package pdftex.def Info: Images/Class_Track4Run.png  used on input line 21.
 (pdftex.def)             Requested size: 405.76317pt x 372.0374pt.
-<Images/StateChart.png, id=399, 915.42pt x 391.4625pt>
+<Images/StateChart.png, id=419, 915.42pt x 391.4625pt>
 File: Images/StateChart.png Graphic file (type png)
 <use Images/StateChart.png>
-Package pdftex.def Info: Images/StateChart.png  used on input line 26.
+Package pdftex.def Info: Images/StateChart.png  used on input line 27.
 (pdftex.def)             Requested size: 457.70888pt x 195.73076pt.
 
-Overfull \hbox (2.46477pt too wide) in paragraph at lines 26--27
-[][] 
+Overfull \hbox (2.46477pt too wide) in paragraph at lines 27--28
+ [][] 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 18--30
+Overfull \hbox (17.0pt too wide) in paragraph at lines 17--31
 []$[]$ 
  []
 
+[11
 
+
+
+ <./Images/Class_Data4Help.png (PNG copy)> <./Images/Class_AutoSOS.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12 <./Images/Class_Track4Run.png> <./Images/StateChart.png>] [13] [14]) [15]
 (./Files/requirements.tex
-<Images/Mockups/Grouprequest.jpg, id=452, 1367.1075pt x 798.985pt>
+<Images/Mockups/Grouprequest.jpg, id=476, 1367.1075pt x 798.985pt>
 File: Images/Mockups/Grouprequest.jpg Graphic file (type jpg)
 <use Images/Mockups/Grouprequest.jpg>
 Package pdftex.def Info: Images/Mockups/Grouprequest.jpg  used on input line 15
@@ -1139,7 +1132,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--17
 
  []
 
-<Images/Mockups/IndividualRequest.jpg, id=453, 1367.1075pt x 798.985pt>
+<Images/Mockups/IndividualRequest.jpg, id=477, 1367.1075pt x 798.985pt>
 File: Images/Mockups/IndividualRequest.jpg Graphic file (type jpg)
 <use Images/Mockups/IndividualRequest.jpg>
 Package pdftex.def Info: Images/Mockups/IndividualRequest.jpg  used on input li
@@ -1148,19 +1141,19 @@ ne 20.
 [16
 
  <./Images/Mockups/Grouprequest.jpg>]
-<Images/Mockups/AutomatedSOSMockup1.png, id=458, 611.28375pt x 914.41624pt>
+<Images/Mockups/AutomatedSOSMockup1.png, id=482, 611.28375pt x 914.41624pt>
 File: Images/Mockups/AutomatedSOSMockup1.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup1.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup1.png  used on input 
 line 32.
 (pdftex.def)             Requested size: 176.88531pt x 264.6107pt.
-<Images/Mockups/AutomatedSOSMockup6.png, id=459, 605.26125pt x 916.42375pt>
+<Images/Mockups/AutomatedSOSMockup6.png, id=483, 605.26125pt x 916.42375pt>
 File: Images/Mockups/AutomatedSOSMockup6.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup6.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup6.png  used on input 
 line 38.
 (pdftex.def)             Requested size: 174.76395pt x 264.6107pt.
-<Images/Mockups/AutomatedSOSMockup2.png, id=460, 622.325pt x 913.4125pt>
+<Images/Mockups/AutomatedSOSMockup2.png, id=484, 622.325pt x 913.4125pt>
 File: Images/Mockups/AutomatedSOSMockup2.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup2.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup2.png  used on input 
@@ -1171,18 +1164,13 @@ Overfull \hbox (2.05917pt too wide) in paragraph at lines 47--48
  [][] 
  []
 
-
-Underfull \hbox (badness 1286) in paragraph at lines 48--48
-[]\T1/ptm/m/n/10.95 Figure 10: |Pri-vacy Pol-icy Con-di-tions
- []
-
-<Images/Mockups/AutomatedSOSMockup4.png, id=461, 609.27625pt x 913.4125pt>
+<Images/Mockups/AutomatedSOSMockup4.png, id=485, 609.27625pt x 913.4125pt>
 File: Images/Mockups/AutomatedSOSMockup4.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup4.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup4.png  used on input 
 line 53.
 (pdftex.def)             Requested size: 180.29274pt x 270.30118pt.
-<Images/Mockups/AutomatedSOSMockup5.png, id=462, 611.28375pt x 912.40875pt>
+<Images/Mockups/AutomatedSOSMockup5.png, id=486, 611.28375pt x 912.40875pt>
 File: Images/Mockups/AutomatedSOSMockup5.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup5.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup5.png  used on input 
@@ -1193,7 +1181,7 @@ Overfull \hbox (21.75378pt too wide) in paragraph at lines 62--63
  [][] 
  []
 
-<Images/Mockups/AutomatedSOSMockup7.png, id=463, 612.2875pt x 914.41624pt>
+<Images/Mockups/AutomatedSOSMockup7.png, id=487, 612.2875pt x 914.41624pt>
 File: Images/Mockups/AutomatedSOSMockup7.png Graphic file (type png)
 <use Images/Mockups/AutomatedSOSMockup7.png>
 Package pdftex.def Info: Images/Mockups/AutomatedSOSMockup7.png  used on input 
@@ -1203,13 +1191,13 @@ line 68.
 up1.png> <./Images/Mockups/AutomatedSOSMockup6.png>] [18 <./Images/Mockups/Auto
 matedSOSMockup2.png> <./Images/Mockups/AutomatedSOSMockup4.png> <./Images/Mocku
 ps/AutomatedSOSMockup5.png> <./Images/Mockups/AutomatedSOSMockup7.png>]
-<Images/Mockups/Track4RunMockup1.jpg, id=478, 792.9625pt x 1368.11125pt>
+<Images/Mockups/Track4RunMockup1.jpg, id=502, 792.9625pt x 1368.11125pt>
 File: Images/Mockups/Track4RunMockup1.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup1.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup1.jpg  used on input lin
 e 87.
 (pdftex.def)             Requested size: 171.49997pt x 295.90848pt.
-<Images/Mockups/Track4RunMockup4.jpg, id=479, 784.9325pt x 1369.115pt>
+<Images/Mockups/Track4RunMockup4.jpg, id=503, 784.9325pt x 1369.115pt>
 File: Images/Mockups/Track4RunMockup4.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup4.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup4.jpg  used on input lin
@@ -1222,37 +1210,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--97
 
 [19 <./Images/Mockups/Track4RunMockup1.jpg> <./Images/Mockups/Track4RunMockup4.
 jpg>]
-<Images/Mockups/Track4RunMockup2.jpg, id=485, 792.9625pt x 1368.11125pt>
+<Images/Mockups/Track4RunMockup2.jpg, id=509, 792.9625pt x 1368.11125pt>
 File: Images/Mockups/Track4RunMockup2.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup2.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup2.jpg  used on input lin
 e 103.
 (pdftex.def)             Requested size: 171.49997pt x 295.90848pt.
-<Images/Mockups/Track4RunMockup3.jpg, id=486, 792.9625pt x 1368.11125pt>
+<Images/Mockups/Track4RunMockup3.jpg, id=510, 792.9625pt x 1368.11125pt>
 File: Images/Mockups/Track4RunMockup3.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup3.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup3.jpg  used on input lin
 e 109.
 (pdftex.def)             Requested size: 171.49997pt x 295.90848pt.
-<Images/Mockups/Track4RunMockup5.jpg, id=487, 784.9325pt x 1371.1225pt>
+<Images/Mockups/Track4RunMockup5.jpg, id=511, 784.9325pt x 1371.1225pt>
 File: Images/Mockups/Track4RunMockup5.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup5.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup5.jpg  used on input lin
 e 118.
 (pdftex.def)             Requested size: 169.39198pt x 295.90848pt.
-<Images/Mockups/Track4RunMockup6.jpg, id=488, 783.92876pt x 1365.1pt>
+<Images/Mockups/Track4RunMockup6.jpg, id=512, 783.92876pt x 1365.1pt>
 File: Images/Mockups/Track4RunMockup6.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup6.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup6.jpg  used on input lin
 e 124.
 (pdftex.def)             Requested size: 169.92896pt x 295.90848pt.
-<Images/Mockups/Track4RunMockup7.jpg, id=489, 783.92876pt x 1365.1pt>
+<Images/Mockups/Track4RunMockup7.jpg, id=513, 783.92876pt x 1365.1pt>
 File: Images/Mockups/Track4RunMockup7.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup7.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup7.jpg  used on input lin
 e 133.
 (pdftex.def)             Requested size: 169.92896pt x 295.90848pt.
-<Images/Mockups/Track4RunMockup8.jpg, id=490, 789.95125pt x 1367.1075pt>
+<Images/Mockups/Track4RunMockup8.jpg, id=514, 789.95125pt x 1367.1075pt>
 File: Images/Mockups/Track4RunMockup8.jpg Graphic file (type jpg)
 <use Images/Mockups/Track4RunMockup8.jpg>
 Package pdftex.def Info: Images/Mockups/Track4RunMockup8.jpg  used on input lin
@@ -1288,7 +1276,7 @@ Overfull \hbox (1.76074pt too wide) in paragraph at lines 255--257
  []
 
 [24] [25]
-<Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png, id=516, 691.1421pt x 602.9
+<Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png, id=540, 691.1421pt x 602.9
 727pt>
 File: Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png Graphic file (type png
 )
@@ -1309,7 +1297,7 @@ $[]$
 [26
 
  <./Images/UseCaseDiagrams/Data4HelpUseCaseDiagram.png>]
-<Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png, id=522, 727.0362pt x 363.5
+<Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png, id=546, 727.0362pt x 363.5
 181pt>
 File: Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png Graphic file (type png
 )
@@ -1327,7 +1315,7 @@ Overfull \hbox (27.37506pt too wide) in paragraph at lines 336--346
 []$[]$ 
  []
 
-<Images/UseCaseDiagrams/Track4RunCaseDiagram.png, id=523, 691.6239pt x 416.757p
+<Images/UseCaseDiagrams/Track4RunCaseDiagram.png, id=547, 691.6239pt x 416.757p
 t>
 File: Images/UseCaseDiagrams/Track4RunCaseDiagram.png Graphic file (type png)
 <use Images/UseCaseDiagrams/Track4RunCaseDiagram.png>
@@ -1348,44 +1336,88 @@ Overfull \hbox (27.37506pt too wide) in paragraph at lines 347--357
 
  <./Images/UseCaseDiagrams/AutomatedSOSCaseDiagram.png> <./Images/UseCaseDiagra
 ms/Track4RunCaseDiagram.png>]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 366--383
+[][] 
+ []
+
+
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 389--405
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [28
 
 ]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 411--430
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29]
-Overfull \hbox (7.1891pt too wide) in paragraph at lines 436--458
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 436--458
 [][] 
  []
 
 [30
 
 ]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 466--484
+[][] 
+ []
+
+
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 490--508
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [31
 
 ]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 515--528
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [32]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 536--555
+[][] 
+ []
+
+
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 561--577
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [33
 
 ]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 583--598
+[][] 
+ []
+
+
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 604--621
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [34]
-Overfull \hbox (7.1891pt too wide) in paragraph at lines 627--649
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 627--649
 [][] 
  []
 
@@ -1393,92 +1425,85 @@ Overfull \hbox (7.1891pt too wide) in paragraph at lines 627--649
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [35]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 656--675
+[][] 
+ []
+
+
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 681--697
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [36
 
 ]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 703--719
+[][] 
+ []
+
+
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 725--742
+[][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37] [38]
-<Images/Seq_Data4Help_onDem.png, id=661, 540.51938pt x 425.33907pt>
+[37]
+Overfull \hbox (8.12813pt too wide) in paragraph at lines 748--763
+[][] 
+ []
+
+[38]
+<Images/Seq_Data4Help_onDem.png, id=686, 540.51938pt x 425.33907pt>
 File: Images/Seq_Data4Help_onDem.png Graphic file (type png)
 <use Images/Seq_Data4Help_onDem.png>
-Package pdftex.def Info: Images/Seq_Data4Help_onDem.png  used on input line 781
+Package pdftex.def Info: Images/Seq_Data4Help_onDem.png  used on input line 780
 .
-(pdftex.def)             Requested size: 432.41608pt x 340.2717pt.
-<Images/Seq_Data4Help_autoUp.png, id=662, 417.05812pt x 274.77657pt>
+(pdftex.def)             Requested size: 405.38853pt x 319.00351pt.
+<Images/Seq_Data4Help_autoUp.png, id=687, 417.05812pt x 274.77657pt>
 File: Images/Seq_Data4Help_autoUp.png Graphic file (type png)
 <use Images/Seq_Data4Help_autoUp.png>
 Package pdftex.def Info: Images/Seq_Data4Help_autoUp.png  used on input line 78
-8.
-(pdftex.def)             Requested size: 333.64694pt x 219.82153pt.
-
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 774--793
-$[]$ 
- []
-
-<Images/Seq_Data4Help_live.png, id=663, 635.37375pt x 477.28313pt>
-File: Images/Seq_Data4Help_live.png Graphic file (type png)
-<use Images/Seq_Data4Help_live.png>
-Package pdftex.def Info: Images/Seq_Data4Help_live.png  used on input line 798.
-
-(pdftex.def)             Requested size: 457.46875pt x 343.64359pt.
-
-Overfull \hbox (2.22464pt too wide) in paragraph at lines 798--799
- [] 
- []
-
-<Images/Seq_Data4Help_registration.png, id=664, 473.51906pt x 410.2828pt>
-File: Images/Seq_Data4Help_registration.png Graphic file (type png)
-<use Images/Seq_Data4Help_registration.png>
-Package pdftex.def Info: Images/Seq_Data4Help_registration.png  used on input l
-ine 804.
-(pdftex.def)             Requested size: 340.93344pt x 295.40338pt.
-
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 794--810
-[]$[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+6.
+(pdftex.def)             Requested size: 312.79282pt x 206.08191pt.
  [39
 
  <./Images/Seq_Data4Help_onDem.png> <./Images/Seq_Data4Help_autoUp.png>]
-Overfull \vbox (10.98485pt too high) has occurred while \output is active []
+<Images/Seq_Data4Help_live.png, id=692, 635.37375pt x 477.28313pt>
+File: Images/Seq_Data4Help_live.png Graphic file (type png)
+<use Images/Seq_Data4Help_live.png>
+Package pdftex.def Info: Images/Seq_Data4Help_live.png  used on input line 794.
 
-
-[40 <./Images/Seq_Data4Help_live.png> <./Images/Seq_Data4Help_registration.png>
-]
-<Images/Seq_AutoSOS_monitor.png, id=674, 447.17062pt x 440.39531pt>
+(pdftex.def)             Requested size: 425.6982pt x 319.77803pt.
+<Images/Seq_Data4Help_registration.png, id=693, 473.51906pt x 410.2828pt>
+File: Images/Seq_Data4Help_registration.png Graphic file (type png)
+<use Images/Seq_Data4Help_registration.png>
+Package pdftex.def Info: Images/Seq_Data4Help_registration.png  used on input l
+ine 799.
+(pdftex.def)             Requested size: 317.2561pt x 274.88805pt.
+<Images/Seq_AutoSOS_monitor.png, id=694, 447.17062pt x 440.39531pt>
 File: Images/Seq_AutoSOS_monitor.png Graphic file (type png)
 <use Images/Seq_AutoSOS_monitor.png>
-Package pdftex.def Info: Images/Seq_AutoSOS_monitor.png  used on input line 817
+Package pdftex.def Info: Images/Seq_AutoSOS_monitor.png  used on input line 807
 .
-(pdftex.def)             Requested size: 344.32243pt x 339.10542pt.
-<Images/Seq_Track4Run_raceUp.png, id=675, 545.78906pt x 350.05782pt>
+(pdftex.def)             Requested size: 321.9626pt x 317.08437pt.
+ [40 <./Images/Seq_Data4Help_live.png> <./Images/Seq_Data4Help_registration.png
+>]
+<Images/Seq_Track4Run_raceUp.png, id=699, 545.78906pt x 350.05782pt>
 File: Images/Seq_Track4Run_raceUp.png Graphic file (type png)
 <use Images/Seq_Track4Run_raceUp.png>
-Package pdftex.def Info: Images/Seq_Track4Run_raceUp.png  used on input line 82
+Package pdftex.def Info: Images/Seq_Track4Run_raceUp.png  used on input line 81
 5.
-(pdftex.def)             Requested size: 420.25887pt x 269.54533pt.
-
-Overfull \hbox (27.37506pt too wide) in paragraph at lines 812--829
-[]$[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(pdftex.def)             Requested size: 392.96782pt x 252.04143pt.
  [41 <./Images/Seq_AutoSOS_monitor.png> <./Images/Seq_Track4Run_raceUp.png>] [4
-2])
-[43] (./Files/alloy.tex
+2]) [43] (./Files/alloy.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 6.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
+nput line 7.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 7.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1495,23 +1520,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46])
-<Images/alloyResult.png, id=897, 552.56438pt x 350.81062pt>
+<Images/alloyResult.png, id=920, 552.56438pt x 350.81062pt>
 File: Images/alloyResult.png Graphic file (type png)
 <use Images/alloyResult.png>
-Package pdftex.def Info: Images/alloyResult.png  used on input line 10.
+Package pdftex.def Info: Images/alloyResult.png  used on input line 11.
 (pdftex.def)             Requested size: 386.79242pt x 245.56575pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
-<Images/alloyGeneratedWorld.png, id=954, 1283.79625pt x 636.87938pt>
+<Images/alloyGeneratedWorld.png, id=978, 1283.79625pt x 636.87938pt>
 File: Images/alloyGeneratedWorld.png Graphic file (type png)
 <use Images/alloyGeneratedWorld.png>
-Package pdftex.def Info: Images/alloyGeneratedWorld.png  used on input line 15.
+Package pdftex.def Info: Images/alloyGeneratedWorld.png  used on input line 17.
 
 (pdftex.def)             Requested size: 513.5094pt x 254.74724pt.
 
-Overfull \hbox (58.26529pt too wide) in paragraph at lines 15--16
+Overfull \hbox (58.26529pt too wide) in paragraph at lines 17--18
  [][] 
  []
 
@@ -1519,7 +1544,7 @@ Overfull \hbox (58.26529pt too wide) in paragraph at lines 15--16
 (./Files/effort.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
+(hyperref)                than one, level fixed on input line 5.
 
 [49
 
@@ -1530,19 +1555,19 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 ] (./Files/reference.tex) [52
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 986E4891A37144788ADD80A3E48141CA;3461.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
- 23866 strings out of 492649
- 428447 string characters out of 6129622
- 668494 words of memory out of 5000000
+ 23872 strings out of 492649
+ 428549 string characters out of 6129622
+ 668463 words of memory out of 5000000
  26690 multiletter control sequences out of 15000+600000
  59393 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1559,10 +1584,10 @@ lm/lmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtti10.
 pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texl
 ive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (52 pages, 3437031 bytes).
+Output written on main.pdf (52 pages, 3438278 bytes).
 PDF statistics:
- 1135 PDF objects out of 1200 (max. 8388607)
- 1014 compressed objects within 11 object streams
- 510 named destinations out of 1000 (max. 500000)
+ 1155 PDF objects out of 1200 (max. 8388607)
+ 1033 compressed objects within 11 object streams
+ 516 named destinations out of 1000 (max. 500000)
  570 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 DEC 2018 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  9 DEC 2018 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1538,7 +1538,7 @@ line 170.
 /fig18.png>]) [46] (./Files/effort.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
+(hyperref)                than one, level fixed on input line 5.
 
 [47
 
@@ -1556,10 +1556,6 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9518D45A112E4E35909122C0F09B9658;2478.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
@@ -1577,7 +1573,7 @@ mf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on main.pdf (50 pages, 5391374 bytes).
+Output written on main.pdf (50 pages, 5391370 bytes).
 PDF statistics:
  859 PDF objects out of 1000 (max. 8388607)
  655 compressed objects within 7 object streams

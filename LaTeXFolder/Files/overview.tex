@@ -1,28 +1,29 @@
 \subsection{Product perspective}
-\begin{minipage}{\textwidth}
 The following Class Diagrams represent the three services and the domain model where they work.
 White class are dedicated to perform Data4Help service, the other two applications are listed below.
 \begin{figure}[H]
+\centering
 \includegraphics[scale=0.45]{Images/Class_Data4Help.png}
-\caption{Data4Help Calss Diagram}
+\caption{Data4Help Class Diagram}
 \end{figure}
-\bigbreak
+\noindent
 {\color{Salmon} Red classes} are dedicated to {\color{Salmon} AutomatedSOS} application, supported by Data4Help service (white ones).
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.50]{Images/Class_AutoSOS.png}
+\includegraphics[scale=0.48]{Images/Class_AutoSOS.png}
 \caption{AutomatedSOS Class Diagram}
 \end{figure}
-\end{minipage}
 
 \begin{minipage}{\textwidth}
 {\color{LimeGreen} Green classes} are dedicated to {\color{LimeGreen} Track4Run} application, supported by Data4Help service (white ones).
 \begin{figure}[H]
+\centering
 \includegraphics[scale=0.7]{Images/Class_Track4Run.png}
 \caption{Track4Run Class Diagram}
 \end{figure}
 The following State Chart represents the behaviour of a Data Request Object.
 \begin{figure}[H]
+\centering
 \includegraphics[scale=0.5]{Images/StateChart.png}
 \caption{Data Request Object State Chart}
 \end{figure}
@@ -49,7 +50,7 @@ A user can also be a simple spectator and see on a map the position of all runne
 
 \subsection{User characteristics}
 \begin{enumerate}
-\item Third party: Company interested in retrieving useful data from TrackMe's users. Usually, this information can be relevant for marketing strategy.
+\item Third Party: Company interested in retrieving useful data from TrackMe's users. Usually, this information can be relevant for marketing strategy.
 
 \item User: Individual whose data are acquired from TrackMe through Data4Help service and are provided to third parties. AutomatedSOS is a service thought for elderly people, while Track4Run is a service thought for athletes, promoters and spectators of runs. User's privacy is protected by each service.
 
