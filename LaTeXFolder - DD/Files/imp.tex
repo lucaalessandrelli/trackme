@@ -20,10 +20,7 @@ The other component that will be implemented in parallel to the Database is the 
 Then the components belonging to the second level of the tree will be developed since they form a big part of the business logic of our system and most of them manage information requests.
 \medbreak
 \noindent
-As soon as the DataSender is completed then the AutomatedSOS component will be developed, especially the HealthAnalyzer, since, in order to have faster reaction time, it contains part of the logic of our system and also this component performs a critical functionality: calling an ambulance in case of need.
-\medbreak
-\noindent
-Lastly, the two components of the Track4Run application will be developed.
+As soon as the DataSender is completed, GPSAcquirer and HSAcquirer will be developed, since they interact directly with DataSender in order to store the retrieved data into the Database (already developed in the previous step). Then, once HSAcquirer is completed, the last two components of AutomatedSOS will be developed, starting with HealthAnalyzer, since it contains part of the logic of our system (in order to have faster reaction time), moreover, this component performs a critical functionality: calling an ambulance whenever necessary. Finally, the last component of this branch to be developed will be UserIntercationManager.
 
 \subsection{Integration and Test Plan}
 Every component of the system must be subjected to Unit Testing during its development in order to identify as soon as possible any problem within the component. This way, before actually preceding to any Integration Test, we are pretty sure that all components work well in isolation.
@@ -138,7 +135,7 @@ In the two diagrams above, RequestManager and DataCollector components are coupl
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.35]{Images/IntegrationPlanImages/fig14.png}
+\includegraphics[scale=0.42]{Images/IntegrationPlanImages/fig14.png}
 \caption{RunDisplayer Integration}
 \end{figure}
 
@@ -147,7 +144,7 @@ In the two diagrams above, RequestManager and DataCollector components are coupl
 In the following two figures, integrations including more than two components at the same time are shown. More precisely, they explain the order in which components are integrated together in order to test the complete functionality of third parties' requests. As we stated before we adopted  an \textit{Incremental Integration and Testing} approach and, therefore, we add to the integration one component at a time until we got the full chain of components which should perform the complete functionality.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.35]{Images/IntegrationPlanImages/fig15.png}
+\includegraphics[scale=0.65]{Images/IntegrationPlanImages/fig15.png}
 \caption{ThirdPartyRequest semi-chain integration}
 \end{figure}
 
@@ -161,7 +158,7 @@ In the following two figures, integrations including more than two components at
 The next two figures shows integration including more than two components at the same time. More precisely, they explain the order in which components are integrated together in order to test the complete functionality of storing into the Database all the information regarding run events. 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.35]{Images/IntegrationPlanImages/fig17.png}
+\includegraphics[scale=0.65]{Images/IntegrationPlanImages/fig17.png}
 \caption{Run event storing semi-chain integration}
 \end{figure}
 

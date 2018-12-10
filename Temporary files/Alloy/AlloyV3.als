@@ -106,7 +106,7 @@ sig Track4RunSpectator extends Track4RunUser {
 	watchingRun: one Run
 }
 
--------------------------------------------------------- FACTS --------------------------------------------------------
+-------------------- FACTS ---------------------
 
 --------------- DATA4HELP FACTS ---------------
 
@@ -133,10 +133,14 @@ fact GroupAttributesInGroupRequest {
 	all g: GroupAttributes | one ga: GroupRequest | g in ga.groupAttributes
 }
 
+fact GroupAnswerRightUserLocatin {
+	all a: AcquisitionSetData | all g: GroupInformationAnswer | one u: User | (a in g.acquisitionData) implies ( a in u.retrievedData and 
+	g.groupRequest.groupAttributes.area = u.credentials.address)
+}
+
 fact ThirdPartyInRequest {
 	all t: ThirdParty | some r:InformationRequest | t in r.partyApplicant
 }
-
 
 fact AcquisitionDataInUser {
 	all a: AcquisitionSetData | one u: User | a in u.retrievedData
@@ -178,6 +182,10 @@ fact NoAloneFirstAid {
 	all f: FirstAid | some r: Report | f in r.receiver
 }
 
+fact NoAloneReport {
+	all r: Report | one a : AmbulanceRequest | r in a.report
+}
+
 fact AmbulanceRequestSentThereIsParamDown {
 	 all a: AmbulanceRequest | some h: HealthStatus | some p: Parameter |
 			(h in a.report.user.retrievedData.healthStatusAcquisition and a.time = h.time and p in h.parameter and p.value < p.threshold)
@@ -193,7 +201,7 @@ fact AmbulanceRequestSent {
 --------------- TRACK4RUN FACTS ---------------
 
 fact RunnerNotSpectator {
-	all t1, t2 :Track4RunSpectator | all r: Run |  (r in t1.watchingRun and t2 in r.athletes) implies ( t1 != t2)
+	all t1, t2 :Track4RunUser | all r: Run |  (r in t1.watchingRun and t2 in r.athletes) implies ( t1 != t2)
 }
 
 fact NoLocationInMoreMaps {
@@ -222,7 +230,7 @@ fact MapLocationsAreRunnersLocations2 {
 	 all r: Run | all l: Location | some t : Track4RunUser | l in r.map.athletesLocation implies (t in r.athletes and l in t.retrievedData.locationAcquisition)
 }
 
--------------------------------------------------------- PREDICATES --------------------------------------------------------
+---------------- PREDICATES ---------------------
 
 ------------- DATA4HELP PREDICATES -------------
 
@@ -250,7 +258,7 @@ pred MapLocationsAreRunnersLocations {
 
 }
 
--------------------------------------------------------- ASSERTIONS --------------------------------------------------------
+----------------- ASSERTIONS -------------------
 
 ------------- DATA4HELP ASSERTIONS -------------
 
@@ -270,17 +278,19 @@ assert WatchingAthletesPosition {
 	MapLocationsAreRunnersLocations 
 }
 
----------------------------------------------------------------------------------------------------------------------------
-
+-------------------------------------------------
 pred show {
 	IndividualAnswerRegardOnlyPolicyAgreedUsers and MinimumGroupMembers and AmbulanceRequestSent
 	and MapLocationsAreRunnersLocations
 }
 
-run show for 6  but exactly 1 Run,  2 Track4RunSpectator, 1 IndividualInformationAnswer, 1 AmbulanceRequest
+run show for 10 but exactly 2 Track4RunSpectator,
+exactly 2 IndividualInformationAnswer, exactly 1 GroupRequest, 
+exactly 1 GroupInformationAnswer, exactly 1 AmbulanceRequest,
+2 IndividualRequest
 
 check WatchingAthletesPosition for 20
-check AmbulanceEmergency for 10
+check AmbulanceEmergency for 20
 check UserPrivacy for 20
 
 
