@@ -1,5 +1,5 @@
 \noindent
-This section shows how the requirements can be supplied by the designed components
+This section shows how the requirements can be supplied by the designed components.
 
 \begin{enumerate}
 
@@ -7,53 +7,53 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [ R.1] Retrieve user credentials inserted into partner application as group attributes.
 		\begin{enumerate}
-		\item[•] UserLogger: Receive from SignAccount interface user's credentials then it store them locally. After this operation waits for privacy policy appceptance.
+		\item[•] UserLogger: Receives user's credentials from SignAccount interface and then stores them locally. After this operation it waits for the privacy policy acceptance.
 		\end{enumerate}
 
 	\item [ R.3] Allow individuals to agree the privacy policy (first part) so that they can be tracked in group mode through installed application.  
 		\begin{enumerate}
-		\item[•] UserLogger: Receive from SignAccount interface that user has accepted the first part of pivacy policy then, if decide finally to create an account pass all these information to WebInterface.
-		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
-		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] UserLogger: Receives from SignAccount interface that the user has accepted the first part of the privacy policy. Then if the user decided to create the account, it passes all these information to the WebInterface.
+		\item[•] WebServer: Receives from WebInterface the credentials and provides them to the CredentialManager through CredentialInterface.
+		\item[•] CredentialManager: Checks the inserted credentials, if they are valid it stores them into the DB using DBInterface.
+		\item[•] DBMS: Stores data incoming from DBInterface.
 		\end{enumerate}
 	
 	\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application.
 		\begin{enumerate}
-		\item[•] UserLogger: Receive from SignAccount interface that user has accepted the als the second part of pivacy policy then, if decide finally to create an account pass all these information to WebInterface.
-		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
-		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
+		\item[•] UserLogger: Receives from SignAccount interface that user has accepted the second part of the privacy policy. Then if the user decides to create the account, it passes all these information to the WebInterface.
+		\item[•] WebServer: Receives from WebInterface the credentials and provides them to CredentialManager through CredentialInterface.
+		\item[•] CredentialManager: Checks the inserted credentials, if they are valid it stores them into the DB using DBInterface.
 		\item[•] DBMS: Store data incoming from DBInterface.
 		\end{enumerate}
 
 	\item [R.2] Allow users already registered in Data4Help world to sign in with their account without providing user credentials again.
 		\begin{enumerate}
-		\item[•] UserLogger: Whenever a user start the application automaticcaly this component inform the WebServer.
-		\item[•] WebServer: Receive from WebInterface users' log request and send those to CredentialManager.
-		\item[•] CredentialManager: Check the users' availability and communicate it in reverse order allowing UserLogger to decide if user is admissible or not.
+		\item[•] UserLogger: This component automatically inform the WebServer whenever a user starts the application.
+		\item[•] WebServer: Receives users' log requests from WebInterface and sends them to the CredentialManager.
+		\item[•] CredentialManager: Checks the users' availability and communicate it in reverse order allowing the UserLogger to decide if a user is admissible or not.
 		\end{enumerate}
 	
 	\item [R.5] For each user registered the system has to automatically retrieve and store data from partner applications with a resolution of 10 minutes; independently from the requests reached.
 		\begin{enumerate}
-		\item[•] DataSender: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, send every ten minutes all the information acquired since the last message to UserDataManager using AcquireData interface.
-		\item[•] UserDataManager: When a data update is arrived through AcquireData interface, this component generates and sends an SQL query the allows the insertion of the new data in the DB.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] DataSender: This component, exploiting the data acquired by GPSAcquirer and HSAcquirer, sends every ten minutes all the information acquired since the last message to the UserDataManager using the AcquireData interface.
+		\item[•] UserDataManager: When a data update is arrived through the AcquireData interface, this component generates and sends an SQL query that allows the insertion of the new data into the DB.
+		\item[•] DBMS: Stores data incoming from the DBInterface.
 		\end{enumerate}	
 	\end{enumerate}
 
 \item [G.2] Provide to third parties, the user’s position and health status.
 	\begin{enumerate}
-	\item [R.6] Allow third parties to register to Data4Help service specifying all their credentials.
+	\item [R.6] Allows third parties to register to Data4Help service specifying all their credentials.
 		\begin{enumerate}
-		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to insert all the necessary credentials; then retrieve these informations. Moreover send these data to CredentialManager using CredentialInterface.
-		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] WebServer: using the WebInterface, it provides to third parties a web page that allows them to insert all the necessary credentials; then it retrieves these information. Moreover it sends these data to the CredentialManager using CredentialInterface.
+		\item[•] CredentialManager: Checks the inserted credentials  and if they are valid it stores them into the DB using DBInterface.
+		\item[•] DBMS: Stores data incoming from DBInterface.
 		\end{enumerate}
 		
 	\item [R.7] The system should allow third parties to send information requests.
 		\begin{enumerate}
-		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to make a request inserting all the necessary information. Then pass the request using AcceptInformationRequest interface.
-		\item[•] RequestManager: Receive requests from AcceptInformationRequest interface and stack them in a queue sorted by urgence criteria.
+		\item[•] WebServer: Using the WebInterface, it provides to third parties a web page that allows them to make a request inserting all the necessary information. Then it passes the requests using the AcceptInformationRequest interface.
+		\item[•] RequestManager: Receives requests from AcceptInformationRequest interface and stacks them in a queue sorted by urgency criteria.
 		\end{enumerate}	
 	\end{enumerate}
 
@@ -61,23 +61,23 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.8] The system has to collect all the useful data that match the request.
 		\begin{enumerate}
-		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once an on-demand request is picked up it wraps the request and send it to DataCollector.
-		\item[•] DataCollector: This component once a data request is received builds a DB query that match what third partie wants and send it to DB using DBInterface.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\item[•] RequestManager: This component periodically checks the queue in order to select the most urgent request. Once an on-demand request is picked up it wraps the request and send it to the DataCollector.
+		\item[•] DataCollector: Once a data request is received, this component builds a DB query that matches what third party wants and sends it to the DB using DBInterface.
+		\item[•] DBMS: When the query is arrived, this component computes it and provides data to the DataCollector using DBInterface.
 		\end{enumerate}	
 			
 	\item [R.9 ] The system has to generate a statistic on data selected.
 		\begin{enumerate}
-		\item[•] DataCollector: This component once data are arrived from DB, asks through ProvideStatistic interface to compute some kind of statistic on the data.
-		\item[•] StatisticGenerator: This component receive data from ProvideStatistic interface, compute statistics and send back them to DataCollector.
+		\item[•] DataCollector: Once data are arrived from the DB, this component asks to compute some kind of statistic on the data through the ProvideStatistic interface.
+		\item[•] StatisticGenerator: This component receives data from ProvideStatistic interface, computes statistics and sends them back to the DataCollector.
 		\end{enumerate}	
 		
 	\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
 	\item [R.11] The system has to send all the statistics already produced.
 		\begin{enumerate}
-		\item[•] DataCollector: This component once data are arrived from DB and statistics are generated, wrap them and send this package to RequestCollector using ProvideCollectedData interface.
-		\item[•] RequestCollector: This component receive information from DataCollector, unwrap and send them using ProvideInfromation interface to WebServer.
-		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to see statisitics and download retrieved information.
+		\item[•] DataCollector: Once data are arrived from the DB and statistics are generated, this component wraps them and sends this package to the RequestCollector using the ProvideCollectedData interface.
+		\item[•] RequestCollector: This component receives information from DataCollector, unwraps and sends them using ProvideInfromation interface to the WebServer.
+		\item[•] WebServer: Using WebInterface, it provides to third parties a web page that allows them to see statistics and download retrieved information.
 		\end{enumerate}	
 	\end{enumerate}
 
@@ -85,16 +85,16 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.12] Allow third parties to subscribe to groups or individuals in order to receive live data.
 		\begin{enumerate}
-		\item[•] RequestManager: Once a real-time request is acquired this component stores all the attributes selcted in order to make the subscription. Using a parallel thread automatically add into the priority queue data request to supply live acquisition.
-		\item[•] DataCollector: This component once a data request is received builds a DB query in order to retreive only new data that match what third partie wants and send it to DB using DBInterface.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\item[•] RequestManager: Once a real-time request is acquired this component stores all the attributes selected in order to make the subscription. Using a parallel thread it automatically adds into the priority queue the data request to supply the live acquisition.
+		\item[•] DataCollector: Once a data request is received, this component builds a DB query in order to retrieve only new data that matches what the third party wants and it sends it to DB using the DBInterface.
+		\item[•] DBMS: It computes the received query and provides data to the DataCollector using the DBInterface.
 		\end{enumerate}	
 			
 	\item [R.13] Provide to subscribed third parties raw data as soon as they are available by the system.
 		\begin{enumerate}
-		\item[•] DataCollector: This component once data are arrived from DB, wrap them and send this package to RequestCollector using ProvideCollectedData interface.
-		\item[•] RequestCollector: This component receive information from DataCollector, unwrap and send them using ProvideInfromation interface to WebServer.
-		\item[•] WebServer: Provide to third parties using WebInterface a web page that allows them to download retrieved information.
+		\item[•] DataCollector: Once data are arrived from DB, this component wraps them and sends this package to the RequestCollector using ProvideCollectedData interface.
+		\item[•] RequestCollector: This component receive information from DataCollector, unwraps and sends them using the ProvideInfromation interface to the WebServer.
+		\item[•] WebServer: Using WebInterface, it provides to third parties a web page that allows them to download retrieved information.
 		\end{enumerate}	
 	\end{enumerate}
 	
@@ -102,16 +102,16 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.14] Allow third parties to insert the fiscal code of the user he wants to track.
 		\begin{enumerate}
-		\item[•] WebServer: This component in this specific case, has to offer to third parties a web page that allows them to fill in the fiscl code that they want to track.Then the request formulated has to be forwarded to RequestManager through AcceptInformationRequest interface.
+		\item[•] WebServer: In this specific case this component has to offer to third parties a web page that allows them to fill in the fiscal code that they want to track. Then the request formulated has to be forwarded to the RequestManager through the AcceptInformationRequest interface.
 		\end{enumerate}	
 		
 	\item [R.8] The system has to collect all the useful data that match the request.
 	\item [R.15] Deny third parties to receive single mode information about users that have not accepted the second part of the privacy policy.
 		\begin{enumerate}
-		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once a single mode request is picked up it wraps the request and send it to DataCollector.
-		\item[•] DataCollector: This component once a data request is received builds a DB query that match what third parties wants and send it to DB using DBInterface, requiring also all the information of the user involved.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
-		\item[•] DataCollector: Once data are finally retrieved this component check, before return an answer to RequestManager, if the user involved has accepted the second part of the privacy policy; if yes wrap the information package and proceed as always, otherwise communicate to RequestManager that the request cannot be accepted.
+		\item[•] RequestManager: This component periodically checks the queue in order to select the most urgent request. Once a single mode request is picked up it wraps the request and sends it to the DataCollector.
+		\item[•] DataCollector: Once a data request is received, this component builds a DB query that matches what third parties wants and it sends it to the DB using the DBInterface, requiring also all the information of the user involved.
+		\item[•] DBMS: Compute the received query and provides data to the DataCollector using DBInterface.
+		\item[•] DataCollector: Once data are retrieved this component checks, before it returns an answer to the RequestManager, if the user involved has accepted the second part of the privacy policy: if he/she did it wraps the information package and proceeds as always, otherwise it communicates to the RequestManager that the request cannot be accepted.
 		\end{enumerate}	
 		
 	\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
@@ -121,16 +121,16 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.16] Allow third parties to insert search area and attributes in which they are interested to restrict their field of search.
 		\begin{enumerate}
-		\item[•] WebServer: This component in this specific case, has to offer to third parties a web page that allows them to fill in all the attriubutes that the users to track must have.Then the request formulated has to be forwarded to RequestManager through AcceptInformationRequest interface.
+		\item[•] WebServer: In this specific case this component has to offer to third parties a web page that allows them to fill in all the attributes that the users to track must have. Then the request formulated has to be forwarded to the RequestManager through the AcceptInformationRequest interface.
 		\end{enumerate}	
 		
 	\item [R.8] The system has to collect all the useful data that match the request.
 	\item [R.17] Deny third parties to receive information if the provided information can hurt users' privacy, for this purpose group request under 1000 users involved are rejected.
 		\begin{enumerate}
-		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once a group mode request is picked up it wraps the request and send it to DataCollector.
-		\item[•] DataCollector: This component once a data request is received builds a DB query that match what third parties wants and send it to DB using DBInterface, requiring also all the number of users involved in the specific query.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
-		\item[•] DataCollector: Once data are finally retrieved this component check, before return an answer to RequestManager, if the number of users involved are less then 1000; if yes wrap the information package and proceed as always, otherwise communicate to RequestManager that the request cannot be accepted.
+		\item[•] RequestManager: This component periodically checks the queue in order to select the most urgent request. Once a group mode request is picked up it wraps the request and sends it to the DataCollector.
+		\item[•] DataCollector: Once a data request is received, this component builds a DB query that matches what the third party wants and it sends it to the DB using DBInterface, requiring also all the number of users involved in the specific query.
+		\item[•] DBMS: This component computes the received query and provides data to the DataCollector using DBInterface.
+		\item[•] DataCollector: Once data are finally retrieved this component checks, before it returns an answer to RequestManager, if the number of users involved are less then 1000; if so it wraps the information package and proceeds as always, otherwise it communicates to the RequestManager that the request cannot be accepted.
 		\end{enumerate}	
 		
 	\item [R.10] The system has to send to the third party all the raw data collected until the moment of the request.
@@ -147,15 +147,15 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.18] Allow users to be tracked from AutomatedSOS filling up the registration and agreeing only to first part of privacy policy.
 		\begin{enumerate}
-		\item[•] UserLogger: Receive from SignAccount interface that user has fill all the fields on registration page and has accepted the first part of pivacy policy (the only one presented) then, if decide finally to create an account pass all these information to WebInterface.
-		\item[•] WebServer: Receive from WebInterface the credentials and provide them to credential manager through CredentialInterface.
-		\item[•] CredentialManager: Check the credentials inserted and if they are valid store them into DB using DBInterface.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] UserLogger: Receives from the SignAccount interface that user has filled all the fields on the registration page and has accepted the first part of privacy policy (the only one presented) then, if the user decides to create an account, it passes all these information to the WebInterface.
+		\item[•] WebServer: Receives the credentials from the WebInterface and provides them to the CredentialManager through CredentialInterface.
+		\item[•] CredentialManager: Checks the credentials inserted and if they are valid it stores them into the DB using DBInterface.
+		\item[•] DBMS: Stores data incoming from the DBInterface.
 		\end{enumerate}
 		
 	\item [R.19] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
 		\begin{enumerate}
-		\item[•] HealthAnalyser: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, acquire health status parameters every 5 seconds and GPS location every ten minutes as before.
+		\item[•] HealthAnalyser: Exploiting the data acquired by GPSAcquirer and HSAcquirer, this component acquires health status parameters every 5 seconds and the GPS location every ten minutes like before.
 		\end{enumerate}	
 	\end{enumerate}	
 	
@@ -163,23 +163,23 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.19] The application has to retrieve users' health status every 2 seconds in order to guarantee a reaction time of 5 seconds.
 		\begin{enumerate}
-		\item[•] HealthAnalyser: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, acquire health status parameters every 5 seconds and GPS location every ten minutes as before.
+		\item[•] HealthAnalyser: Exploiting the data acquired by GPSAcquirer and HSAcquirer, this component acquires health status parameters every 5 seconds and the GPS location every ten minutes like before.
 		\end{enumerate}	
 	\item [R.20] The application sends to Data4Help service all the data retrieved in live acquisition.
 		\begin{enumerate}
-		\item[•] DataSender: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, send every ten minutes all the information acquired since the last message to UserDataManager using AcquireData interface.
-		\item[•] UserDataManager: When a data update is arrived through AcquireData interface, this component generates and sends an SQL query the allows the insertion of the new data in the DB.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] DataSender: Exploiting the data acquired by GPSAcquirer and HSAcquirer, this component sends every ten minutes all the information acquired since the last message to the UserDataManager using AcquireData interface.
+		\item[•] UserDataManager: When a data update is arrived through the AcquireData interface, this component generates and sends an SQL query that allows the insertion of the new data into the DB.
+		\item[•] DBMS: Stores data incoming from the DBInterface.
 		\end{enumerate}	
 	\item [R.21] The application gets from Data4Help service all the historical data about the user.
 		\begin{enumerate}
-		\item[•] HealthAnalyser: This component, when user requires it or is necessary on check the health parameters, sends to WebServer a request in order to retreive all the historical data about the user using WebInterface. From this point in ahead the sequence of action takes the standard procedure of managing request (R.8 , R.10) until WebServer.
-		\item[•] WebServer: Once the retrieved information is arrived to WebServer this component sends the package to HealthAnalyser component.
+		\item[•] HealthAnalyser: When the user requires it or when it is necessary to check the health parameters, this component sends a request to the WebServer in order to retrieve all the historical data about the user using WebInterface. From this point the sequence of action takes the standard procedure of managing requests (R.8 , R.10) until the WebServer.
+		\item[•] WebServer: Once the retrieved information is arrived to the WebServer, this component sends the package to the HealthAnalyser component.
 		\end{enumerate}
 	\item [R.22] Allow the user to set personal threshold values.
 		\begin{enumerate}
 		\item[•] UserInteractionManager: This component has to show to the users a human interface that allows them to personalize the threshold parameters of their health status.
-		\item[•] HealthAnalyser: Exploiting the service offered by UserInteractionManager, this component has to store (and use it when is necessary) all the settings generated by the user.
+		\item[•] HealthAnalyser: Exploiting the service offered by UserInteractionManager, this component has to store (and to use them when necessary) all the settings generated by the user.
 		\end{enumerate}
 	\end{enumerate}
 
@@ -187,16 +187,16 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.23] The application has to control health status with data retrieved in local to immediately realize whether certain parameters are critical.
 		\begin{enumerate}
-		\item[•] HealthAnalyser: This component periodically check the last parameters acquired and compare them to the historical ones and then decides with a special algorthm if the user urgent needs an ambulance.
+		\item[•] HealthAnalyser: This component periodically checks the last parameters acquired and compares them to the historical ones and then decides with a special algorithm if the user needs an ambulance.
 		\end{enumerate}	
 	\item [R.24] The application sends an ambulance request to the nearest hospital whenever parameters are critical.
 	\item [R.25] Supply to the hospital the user's location and all the useful information to provide efficient first aid.
 		\begin{enumerate}
-		\item[•] HealthAnalyser: This component when the analysis founds something bad, sends an ambulance request to the nearest hospital specyfing the location of the user.
+		\item[•] HealthAnalyser: When the analysis finds something bad, this component sends an ambulance request to the nearest hospital specifying the user's location and health status.
 		\end{enumerate}	
 	\item [R.26] In the case no answer arrives from the hospital the software must repeat another time the request until an answer in reached.
 		\begin{enumerate}
-		\item[•] HealthAnalyser: When an ambulance request is sent, this component actives a trigger that resend the request if an answer from the hospital is not arrived in time.
+		\item[•] HealthAnalyser: When an ambulance request is sent, this component actives a trigger that resend the request if an answer from the hospital is not received in time.
 		\end{enumerate}	
 	\item [R.27] As soon as the acknowledgement message is received a warning message is displayed on the user's smartwatch.
 		\begin{enumerate}
@@ -210,9 +210,9 @@ This section shows how the requirements can be supplied by the designed componen
 	\item [R.4] During the registration allow individuals to specify if they are also interested to be tracked in single mode (agree the second part of privacy policy) through installed application. 
 	\item [R.28] The application has to interact with Smartwatch/Smartphone APIs in order to retrieve GPS location with a resolution of 10 seconds when the user is in the run.
 		\begin{enumerate}
-		\item[•] DataSender: This component, exploting the data acquired by GPSAcquirer and HSAcquirer, send every ten seconds all the information acquired since the last message to UserDataManager using AcquireData interface when run is active.
-		\item[•] UserDataManager: When a data update is arrived through AcquireData interface, this component generates and sends an SQL query the allows the insertion of the new data in the DB.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] DataSender: Exploiting the data acquired by GPSAcquirer and HSAcquirer, this component sends every ten seconds all the information acquired since the last message to the UserDataManager using AcquireData interface when the run is active.
+		\item[•] UserDataManager: When a data update is arrived through the AcquireData interface, this component generates and sends an SQL query the allows the insertion of the new data in the DB.
+		\item[•] DBMS: Stores data incoming from the DBInterface.
 		\end{enumerate}	
 	\end{enumerate}
 	
@@ -220,22 +220,22 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.30] Allow promoters to define a path for the run by selecting the routes inside a map.
 		\begin{enumerate}
-		\item[•] RunManager: This component allows the promoters to specify, using ManageRun interface, the path of the race displyaing a map in which he has to select the track.
+		\item[•] RunManager: This component allows the promoters to specify, using ManageRun interface, the path of the race, displaying a map in which the promoter has to select the track.
 		\end{enumerate}	
 	\item [R.31] Allow promoters to send a participation request.
 		\begin{enumerate}
-		\item[•] RunManager: This component allows the promoters to specify, using ManageRun interface, the athletes that he want to invite in the run.
+		\item[•] RunManager: This component allows the promoters to specify, using ManageRun interface, the athletes that the promoter wants to invite to the run.
 		\end{enumerate}	
 	\item [R.32] Allow promoters to specify maximum number of athletes that can participate.
 		\begin{enumerate}
-		\item[•] RunManager: This component allows the promoters to specify, using ManageRun interface, the number of athletes allowed.
+		\item[•] RunManager: This component allows the promoters to specify, using ManageRun interface, the number of allowed athletes.
 		\end{enumerate}	
 	\item [R.29] Allow users to create a run once all the general information are inserted.
 		\begin{enumerate}
-		\item[•] RunManager: This component once all the information above are submitted and is also specified the name and description of the run, provides all these information to the WebServer.
-		\item[•] WebServer: Receive from WebInterface the inforamtion about the new race and forwards it to Track4RunManager component.
-		\item[•] Track4RunManager: Check all the information about the new run that the user want to create and if they are good creates and send an SQL query in order to store these information to DBMS.
-		\item[•] DBMS: Store data incoming from DBInterface.
+		\item[•] RunManager: Once all the information above are submitted and once the name and the description of the run are also specified, this component provides all these information to the WebServer.
+		\item[•] WebServer: Receives from WebInterface the information about the new race and forwards it to the Track4RunManager component.
+		\item[•] Track4RunManager: Checks all the information about the new run that the user wants to create and if they are good, the component creates and sends an SQL query in order to store these information to the DBMS.
+		\item[•] DBMS: Stores data incoming from the DBInterface.
 		\end{enumerate}	
 	\end{enumerate}	
 	
@@ -243,24 +243,24 @@ This section shows how the requirements can be supplied by the designed componen
 	\begin{enumerate}
 	\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
 		\begin{enumerate}
-		\item[•] RunManager: This component, when user wants to see all the runs in the system, has to send a request to WebServer.
-		\item[•] WebServer: Receive from WebInterface the request to see all the runs and forwards it to RequestManager using AcceptInformationRequest interface.
-		\item[•] RequestManager: This component periodically check the queue in order to select the more urgent request. Once an on-demand request is picked up it wraps the request and sent it to DataCollector.
-		\item[•] DataCollector: This component once a data request is received builds a DB query that match what user wants and send it to DB using DBInterface.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface, then information goes in the opposite direction to RunManager.
-		\item[•] RunManager: When all the runs are finally arrived, this component shows to the user all the race in which he can partecipate.
+		\item[•] RunManager: When user wants to see all the runs in the system, this component sends a request to the WebServer.
+		\item[•] WebServer: Receives from the WebInterface the request to see all the runs and forwards it to the RequestManager using AcceptInformationRequest interface.
+		\item[•] RequestManager: This component periodically checks the queue in order to select the most urgent request. Once an on-demand request is picked up it wraps the request and sends it to the DataCollector.
+		\item[•] DataCollector: Once a data request is received, this component builds a DB query that matches what the user wants and sends it to the DB using DBInterface.
+		\item[•] DBMS: When the query is arrived, this component computes it and provides data to the DataCollector using DBInterface, then the information goes in the opposite direction to the RunManager.
+		\item[•] RunManager: When all the runs are finally arrived, this component shows to the user all the race in which he can participate.
 		\end{enumerate}	
 	\item [R.35] Deny user to enroll in a run if maximum number of participants is already reached.
 	\item [R.34] Allow user to enroll in a run.
 		\begin{enumerate}
-		\item[•] RunManager: This component, when user wants to enroll in a run, has to retrieve thorugh ManageRun interface which run he is interested in; then provides this information to WebServer.
-		\item[•] WebServer: Receive from WebInterface the request to enroll in a run and forwards it to Track4RunManager using RunInterface.
-		\item[•] Track4RunManager: This component has to create a query that ask to the DBMS if the user interested can partecipate to the specificated run.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide an answer to the DataCollector using DBInterface
-		\item[•] Track4RunManager: If the answer from DBMS is positive then creates and sends another query that ask to the DBMS to enroll the user,then communicates it to WebServer; otherwise communicate to WebServer that the user cannot be enrolled.
-		\item[•] DBMS: Store data incoming from DBInterface.
-		\item[•] WebServer: Receives from Track4RunManager the answer about the enrolling then forwards it to RunManager through WebInterface.
-		\item[•] RunManager: This component, when the answer is arrived, displays to the user the result of the enrollment using ManagerRun interface.
+		\item[•] RunManager: When user wants to enroll in a run, this component retrieves through ManageRun interface which run he/she is interested in; then it provides this information to the WebServer.
+		\item[•] WebServer: Receives from the WebInterface the request to enroll in a run and forwards it to the Track4RunManager using RunInterface.
+		\item[•] Track4RunManager: This component has to create a query that asks to the DBMS if the interested user can participate to the specific run.
+		\item[•] DBMS: This component computes the received query and provides an answer to the DataCollector using DBInterface
+		\item[•] Track4RunManager: If the answer from DBMS is positive the component creates and sends another query that asks the DBMS to enroll the user, then it communicates it to WebServer; In the other case it communicates to the WebServer that the user cannot be enrolled.
+		\item[•] DBMS: Stores data incoming from DBInterface.
+		\item[•] WebServer: Receives from Track4RunManager the answer about the enrolling and forwards it to the RunManager through WebInterface.
+		\item[•] RunManager: When the answer is arrived, this component displays to the user the result of the enrollment using ManagerRun interface.
 		\end{enumerate}	
 	\end{enumerate}
 	
@@ -269,22 +269,22 @@ This section shows how the requirements can be supplied by the designed componen
 	\item [R.33] Allow the user to see all the runs generated (which he is invited or not).
 	\item [R.36] Allow user to select a run to be viewed.
 		\begin{enumerate}
-		\item[•] RunDisplayer: This component, when user wants to spectate to a run, has to retrieve thorugh ShowLiveRun interface which run he is interested in; then creates and sends a live acquisition request for the specific user to WebServer.
+		\item[•] RunDisplayer: When user wants to spectate to a run, this component has to retrieve through the ShowLiveRun interface which run he/she is interested in; then it creates and sends a live acquisition request for the specific user to the WebServer.
 		\end{enumerate}	
 	\item [R.37] The application requests to Data4Help the position of all the other athletes involved.
 		\begin{enumerate}
-		\item[•] WebServer: Receive from WebInterface the live acquisition request and forwards it to RequestManager using AcceptInformationRequest interface.
-		\item[•] RequestManager: Once a real-time request is arrived, this component stores all the attributes selcted in order to make the subscription. Using a parallel thread automatically add into the priority queue data request to supply live acquisition.
-		\item[•] DataCollector: This component once a data request is received builds a DB query in order to retreive only new data that match what user wants and send it to DB using DBInterface.
-		\item[•] DBMS: This component when the query is arrived, compute it and provide data to the DataCollector using DBInterface.
+		\item[•] WebServer: Receives from WebInterface the live acquisition request and forwards it ton the RequestManager using AcceptInformationRequest interface.
+		\item[•] RequestManager: Once a real-time request is arrived, this component stores all the attributes selected in order to make the subscription. Using a parallel thread the component automatically add into the priority queue the data request to supply the live acquisition.
+		\item[•] DataCollector: Once a data request is received this component builds a DB query in order to retrieve only new data that matches what user wants and it sends it to the DB using DBInterface.
+		\item[•] DBMS: When the query is received this component computes it and provides data to the DataCollector using DBInterface.
 		\end{enumerate}	
 	\item [R.38] The application receives and displays the position of all the other athletes involved.
 		\begin{enumerate}
-		\item[•] DataCollector: This component once data are arrived from DB, wrap them and send this package to RequestCollector using ProvideCollectedData interface.
-		\item[•] RequestCollector: This component receive information from DataCollector, unwrap and send them using ProvideInfromation interface to WebServer.
-		\item[•] WebServer: Provides to RunDisplayer using WebInterface all the positions of the athletes involved in the race.
-		\item[•] RunDisplayer: This component, using GoogleMapsAPI interface to compute the live positions, offers to the user a live map that specifies all the athletes' position inside the race path.
+		\item[•] DataCollector: Once data are arrived from DB, this component wraps them and sends this package to the RequestCollector using ProvideCollectedData interface.
+		\item[•] RequestCollector: This component receive information from DataCollector, unwraps and sends them using ProvideInfromation interface to the WebServer.
+		\item[•] WebServer: Provides to the RunDisplayer all the positions of the athletes involved in the race using WebInterface.
+		\item[•] RunDisplayer: Using the GoogleMapsAPI interface to compute the live positions, this component offers to the user a live map that specifies all the athletes' position inside the race path.
 		\end{enumerate}	
 	\end{enumerate}
 	
-\end{enumerate}
+\end{enumerate} 
