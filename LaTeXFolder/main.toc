@@ -41,10 +41,10 @@
 \contentsline {subsubsection}{\numberline {3.7.5}Portability}{43}{subsubsection.3.7.5}
 \contentsline {section}{\numberline {4}Formal Analysis Using Alloy}{44}{section.4}
 \contentsline {subsection}{\numberline {4.1}Code}{44}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Results}{48}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Generated World}{48}{subsection.4.3}
-\contentsline {section}{\numberline {5}Effort Spent}{49}{section.5}
-\contentsline {subsubsection}{\numberline {5.0.1}Luca Alessandrelli}{49}{subsubsection.5.0.1}
-\contentsline {subsubsection}{\numberline {5.0.2}Andrea Caraffa}{50}{subsubsection.5.0.2}
-\contentsline {subsubsection}{\numberline {5.0.3}Andrea Bionda}{51}{subsubsection.5.0.3}
-\contentsline {section}{\numberline {6}Reference Documents}{52}{section.6}
+\contentsline {subsection}{\numberline {4.2}Results}{49}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Generated World}{50}{subsection.4.3}
+\contentsline {section}{\numberline {5}Effort Spent}{51}{section.5}
+\contentsline {subsubsection}{\numberline {5.0.1}Luca Alessandrelli}{51}{subsubsection.5.0.1}
+\contentsline {subsubsection}{\numberline {5.0.2}Andrea Caraffa}{52}{subsubsection.5.0.2}
+\contentsline {subsubsection}{\numberline {5.0.3}Andrea Bionda}{53}{subsubsection.5.0.3}
+\contentsline {section}{\numberline {6}Reference Documents}{54}{section.6}
