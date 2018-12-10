@@ -29,7 +29,7 @@ Every component of the system must be subjected to Unit Testing during its devel
 As said in the previous subsection, the Integration Plan will also follow a Top-Down approach. More precisely, an \textit{Incremental Integration and Testing} approach is taken, since it couples really well with the dependency priority implementation order. This way, as soon as components that depend on others are released, they can be integrated and tested immediately, allowing us to discover integration problems as soon as possible.
 
 \subsubsection{Integration Diagrams}
-The following diagrams show the components to which the element just developed and already subjected to Unit Test is integrated with. The element just created is represented by a red square, the grey ones on the upper lever represent already developed and unit tested components, while the grey ones on the same level represent components that could be already developed and unit tested or not. In these diagrams, if there are more than one grey square, it does not mean that all the showed elements are integrated all together, but just one by one, coupled with the one just developed or that will be soon developed.
+The following diagrams show the components to which the element just developed and already subjected to Unit Test is integrated with. The element just created is represented by a blue square, the grey ones on the upper lever represent already developed and unit tested components, while the grey ones on the same level represent components that could or could not be already developed and unit tested. In these diagrams, if there are more than one grey square, it does not mean that all the showed elements are integrated all together, but it means that they will be integrated just one by one, coupled with the one just developed or that will be developed soon.
 
 \begin{figure}[H]
 \centering
@@ -141,7 +141,7 @@ In the two diagrams above, RequestManager and DataCollector components are coupl
 
 \newpage
 \subsubsection{Third Party Request Integration}
-In the following two figures, integrations including more than two components at the same time are shown. More precisely, they explain the order in which components are integrated together in order to test the complete functionality of third parties' requests. As we stated before we adopted  an \textit{Incremental Integration and Testing} approach and, therefore, we add to the integration one component at a time until we got the full chain of components which should perform the complete functionality.
+In the following two figures, the integration including more than two components at the same time are shown. More precisely, they explain the order in which components are integrated together in order to test the complete functionality of third parties' requests. As we stated before we adopted  an \textit{Incremental Integration and Testing} approach and, therefore, we add to the integration one component at a time until we got the full chain of components which should perform the complete functionality.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{Images/IntegrationPlanImages/fig15.png}
@@ -173,10 +173,10 @@ The next two figures shows integration including more than two components at the
 Once the system is integrated completely and once it has an acceptable performance it will be tested as a whole. This due to the fact that in the future the system could possibly be subject to heavy workloads. System Testing will identify the following problems:
 
 \begin{itemize}
-\item Inefficient algorithms: this test is addressed in the largest path to RequestManager component and how it manages the requests in order to speed up the answers.
+\item Inefficient algorithms: it's really important to have efficient algorithms implemented in the system, especially for the RequestManager, that manages the requests deciding which one is more urgent, and especially for the HealthAnalyzer which needs to have very small reaction time in order to call the ambulance as soon as possible.
 \item Query optimization problems: taking into account that the system's functionality heavily relies on queries, testing on DB query optimization is for sure a good test to implement.
-\item Hardware issues: this test is addressed to the hardware of devices that our system can not control, such as GPS system and HS system, in order to check if these data are subjected to a relevant noise.
-\item Network issues: test WebServer component in order to check how much load connection requires to supply on requests and understand if is necessary to expand the broadband.
+\item Hardware issues: taking into account that the system relies on some piece of hardware that our system cannot directly test, such as the GPS and HS hardware retrievers, it can be important to check if the data retrieved are subjected to relevant noise.
+\item Network issues: it's really important to check how much request load the Web Server can withstand and if necessary to expand the connection broadband.
 \end{itemize}
 
 \noindent
