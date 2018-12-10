@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  10 DEC 2018 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  10 DEC 2018 17:59
 entering extended mode
 **./main.tex
 (main.tex
@@ -1647,16 +1647,12 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8380C71BE1B75B612E7550B437C84135;3510.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
  ) 
 Here is how much of TeX's memory you used:
  23956 strings out of 492970
  436422 string characters out of 3126593
- 670852 words of memory out of 3000000
+ 670853 words of memory out of 3000000
  26757 multiletter control sequences out of 15000+200000
  59393 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1675,7 +1671,7 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Users/luca
 a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/
 lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Us
 ers/lucaa/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (52 pages, 3551471 bytes).
+Output written on main.pdf (52 pages, 3551473 bytes).
 PDF statistics:
  1145 PDF objects out of 1200 (max. 8388607)
  517 named destinations out of 1000 (max. 500000)
